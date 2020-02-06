@@ -10,9 +10,9 @@ namespace Toys4U_Testing
         [TestMethod]
         public void InstanceOK()
         {
-            //create an instance of the class we want to create
+            //create a instanc of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
-            //test to see that it exists
+            //test to see that it exist
             Assert.IsNotNull(AnCustomer);
         }
     }
