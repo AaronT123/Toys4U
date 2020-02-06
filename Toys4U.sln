@@ -5,31 +5,11 @@ VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toys4U Back Office", "Toys4U Back Office\Toys4U Back Office.csproj", "{DB79DE9B-7A54-4ADE-B8E4-C0ED2EBC51E3}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Toys4U Front Office", "Toys4U Front Office\", "{C1AE1AA0-AA62-4131-BDED-F60C4C653DEA}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_50247"
-		Debug.AspNetCompiler.PhysicalPath = "Toys4U Front Office\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50247\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_50247"
-		Release.AspNetCompiler.PhysicalPath = "Toys4U Front Office\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50247\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "50247"
-		SlnRelativePath = "Toys4U Front Office\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toys4U Classes", "Toys4U Classes\Toys4U Classes.csproj", "{E8E1B7CA-8FCE-400E-8DE3-C273DD32343E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toys4U Testing", "Toys4U Testing\Toys4U Testing.csproj", "{D3D100DD-FAF6-4DBF-85A6-4C6F8732B34E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toys4U Front Office", "Toys4U Front Office\Toys4U Front Office.csproj", "{FCA405E4-B5D9-4AB8-907D-65BA9FF9A129}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +21,6 @@ Global
 		{DB79DE9B-7A54-4ADE-B8E4-C0ED2EBC51E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB79DE9B-7A54-4ADE-B8E4-C0ED2EBC51E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB79DE9B-7A54-4ADE-B8E4-C0ED2EBC51E3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1AE1AA0-AA62-4131-BDED-F60C4C653DEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1AE1AA0-AA62-4131-BDED-F60C4C653DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1AE1AA0-AA62-4131-BDED-F60C4C653DEA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1AE1AA0-AA62-4131-BDED-F60C4C653DEA}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{E8E1B7CA-8FCE-400E-8DE3-C273DD32343E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E8E1B7CA-8FCE-400E-8DE3-C273DD32343E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8E1B7CA-8FCE-400E-8DE3-C273DD32343E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +29,10 @@ Global
 		{D3D100DD-FAF6-4DBF-85A6-4C6F8732B34E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3D100DD-FAF6-4DBF-85A6-4C6F8732B34E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3D100DD-FAF6-4DBF-85A6-4C6F8732B34E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCA405E4-B5D9-4AB8-907D-65BA9FF9A129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCA405E4-B5D9-4AB8-907D-65BA9FF9A129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCA405E4-B5D9-4AB8-907D-65BA9FF9A129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCA405E4-B5D9-4AB8-907D-65BA9FF9A129}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
