@@ -1,19 +1,15 @@
-﻿<%@ Page Language="C#" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Toys4U_Front_Office.Default" %>
 
 <!DOCTYPE html>
 
-<script runat="server">
-
-</script>
-<%--test four --%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
 </head>
 <body>
-  <%--  Hello --%>
     <form id="form1" runat="server">
         <div>
+            fefe
         </div>
     </form>
 </body>
