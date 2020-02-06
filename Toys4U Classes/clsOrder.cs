@@ -6,5 +6,6 @@ namespace Toys4U_Classes
     {
         public int OrderId { get; set; }
         public DateTime OrderDate { get; set; }
+        public int CustomerNo { get; set; }
     }
 }
