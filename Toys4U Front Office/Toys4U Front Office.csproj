@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="AnStaff.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="StaffViewer.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +88,13 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffViewer.aspx.cs">
+      <DependentUpon>StaffViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffViewer.aspx.designer.cs">
+      <DependentUpon>StaffViewer.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
