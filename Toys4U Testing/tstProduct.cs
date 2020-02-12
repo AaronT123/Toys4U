@@ -14,6 +14,7 @@ namespace Toys4U_Testing
             clsProduct AnProduct = new clsProduct();
             //test to see that it exists
             Assert.IsNotNull(AnProduct);
+            //assert
         }
     }
 }
