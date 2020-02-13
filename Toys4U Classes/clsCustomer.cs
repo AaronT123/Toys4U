@@ -2,9 +2,13 @@
 {
     public class clsCustomer
     {
-        public bool CustomerID { get; set; }
+        public int CustomerID { get; set; }
         public string EmailAddress { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Password { get; set; }
+        public string PhoneNumber { get; set; }
+        public string PostCode { get; set; }
+        public string StreetName { get; set; }
     }
 }
