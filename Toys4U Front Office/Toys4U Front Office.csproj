@@ -67,16 +67,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AnProduct.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="ProductViewer.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnProduct.aspx.cs">
+      <DependentUpon>AnProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnProduct.aspx.designer.cs">
+      <DependentUpon>AnProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductViewer.aspx.cs">
+      <DependentUpon>ProductViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductViewer.aspx.designer.cs">
+      <DependentUpon>ProductViewer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -88,6 +104,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toys4U Classes\Toys4U Classes.csproj">
+      <Project>{E8E1B7CA-8FCE-400E-8DE3-C273DD32343E}</Project>
+      <Name>Toys4U Classes</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
