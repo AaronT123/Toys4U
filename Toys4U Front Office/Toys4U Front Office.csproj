@@ -68,8 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AnCustomer.aspx" />
+    <Content Include="AnOrder.aspx" />
     <Content Include="CustomerViewer.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="OrderViewer.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +81,13 @@
     </Compile>
     <Compile Include="AnCustomer.aspx.designer.cs">
       <DependentUpon>AnCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnOrder.aspx.cs">
+      <DependentUpon>AnOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnOrder.aspx.designer.cs">
+      <DependentUpon>AnOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerViewer.aspx.cs">
       <DependentUpon>CustomerViewer.aspx</DependentUpon>
@@ -93,6 +102,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderViewer.aspx.cs">
+      <DependentUpon>OrderViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderViewer.aspx.designer.cs">
+      <DependentUpon>OrderViewer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
