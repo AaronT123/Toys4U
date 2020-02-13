@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="ProductViewer.aspx.designer.cs">
       <DependentUpon>ProductViewer.aspx</DependentUpon>
+    </Compile>
 
     <Compile Include="OrderViewer.aspx.cs">
       <DependentUpon>OrderViewer.aspx</DependentUpon>
@@ -132,6 +133,7 @@
     <Compile Include="OrderViewer.aspx.designer.cs">
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+     
     <Compile Include="StaffViewer.aspx.cs">
       <DependentUpon>StaffViewer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
