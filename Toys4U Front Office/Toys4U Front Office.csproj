@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AnStaff.aspx" />
+    <Content Include="AnCustomer.aspx" />
+    <Content Include="CustomerViewer.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="StaffViewer.aspx" />
     <Content Include="Web.config" />
@@ -79,6 +81,19 @@
     </Compile>
     <Compile Include="AnStaff.aspx.designer.cs">
       <DependentUpon>AnStaff.aspx</DependentUpon>
+    <Compile Include="AnCustomer.aspx.cs">
+      <DependentUpon>AnCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnCustomer.aspx.designer.cs">
+      <DependentUpon>AnCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerViewer.aspx.cs">
+      <DependentUpon>CustomerViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerViewer.aspx.designer.cs">
+      <DependentUpon>CustomerViewer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -107,7 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Toys4U Classes\Toys4U Classes.csproj">
-      <Project>{E8E1B7CA-8FCE-400E-8DE3-C273DD32343E}</Project>
+      <Project>{e8e1b7ca-8fce-400e-8de3-c273dd32343e}</Project>
       <Name>Toys4U Classes</Name>
     </ProjectReference>
   </ItemGroup>
