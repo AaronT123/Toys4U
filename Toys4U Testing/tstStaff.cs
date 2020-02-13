@@ -106,7 +106,7 @@ namespace Toys4U_Testing
             //create an instance of the class we want to create
             clsStaff AnStaff = new clsStaff();
             //creaate some test data to assign to the property
-            string TestData = "7.78";
+            Decimal TestData = 7.78m;
             //assign the data to the property
             //enters as a string but later converted to decimal using validaiton. 
             AnStaff.HourlyPay = TestData;
