@@ -20,14 +20,17 @@ namespace Toys4U_Front_Office
             //create a new instance of the clsStaff
             clsStaff AnStaff = new clsStaff();
             //capture the data
+            AnStaff.DateOfBirth = Convert.ToDateTime(TextBoxDateOfBirth.Text);
+            AnStaff.DateJoined = Convert.ToDateTime(TextBoxDateJoined.Text);
             AnStaff.Email = TextBoxEmail.Text;
-            AnStaff.FirstName = TextBoxFirstName.Text;
-            AnStaff.HourlyPay = TextBoxHourlyPay.Text;
-            AnStaff.JobTitle = TextBoxJobTitle.Text;
+            AnStaff.HourlyPay = Convert.ToDecimal(TextBoxHourlyPay.Text);
             AnStaff.LastName = TextBoxLastName.Text;
             AnStaff.Password = TextBoxPassword.Text;
             AnStaff.PhoneNumber = TextBoxPhoneNumber.Text;
-           
+            AnStaff.FirstName = TextBoxFirstName.Text;
+            AnStaff.JobTitle = TextBoxJobTitle.Text;
+          
+         
             //store the first name in the session object
             Session["AnStaff"] = AnStaff;
             //redurect to the viewer page

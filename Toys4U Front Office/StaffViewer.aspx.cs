@@ -16,14 +16,17 @@ namespace Toys4U_Front_Office
             //get the data from the session object
             AnStaff = (clsStaff)Session["AnStaff"];
             //display the first name for this entry
+            Response.Write((AnStaff.DateOfBirth).ToString("dd/MM/yyyy"));
+            Response.Write((AnStaff.DateJoined).ToString("dd/MM/yyyy"));
             Response.Write(AnStaff.Email);
-            Response.Write(AnStaff.FirstName);
             Response.Write(AnStaff.HourlyPay);
-            Response.Write(AnStaff.JobTitle);
             Response.Write(AnStaff.LastName);
             Response.Write(AnStaff.Password);
             Response.Write(AnStaff.PhoneNumber);
-         
+            Response.Write(AnStaff.FirstName);         
+            Response.Write(AnStaff.JobTitle);
+        
+           
         }
     }
 }

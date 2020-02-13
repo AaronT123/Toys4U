@@ -9,7 +9,7 @@ namespace Toys4U_Classes
         public DateTime DateOfBirth { get; set; }
         public string Email { get; set; }
         public string FirstName { get; set; }
-        public object HourlyPay { get; set; }
+        public decimal HourlyPay { get; set; }
         public string JobTitle { get; set; }
         public string LastName { get; set; }
         public string Password { get; set; }

@@ -8,42 +8,79 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-        </div>
-        <asp:TextBox ID="TextBoxDateJoined" runat="server" style="z-index: 1; left: 214px; top: 102px; position: absolute; bottom: 544px;"></asp:TextBox>
-        <asp:TextBox ID="TextBoxDateOfBirth" runat="server" style="z-index: 1; left: 214px; top: 138px; position: absolute"></asp:TextBox>
         <p>
-            <asp:TextBox ID="TextBoxEmail" runat="server" style="z-index: 1; left: 214px; top: 184px; position: absolute"></asp:TextBox>
-            <asp:CheckBox ID="CheckBoxAdmin" runat="server" style="z-index: 1; left: 214px; top: 64px; position: absolute" Text="Admin?" />
+            <asp:Label ID="lblDateOfBirth" runat="server" Text="Date Of Birth:"></asp:Label>
+            <asp:TextBox ID="TextBoxDateOfBirth" runat="server"></asp:TextBox>
         </p>
-        <asp:TextBox ID="TextBoxHourlyPay" runat="server" style="z-index: 1; left: 214px; top: 271px; position: absolute"></asp:TextBox>
-        <asp:TextBox ID="TextBoxLastName" runat="server" style="z-index: 1; left: 214px; top: 352px; position: absolute; bottom: 303px"></asp:TextBox>
-        <asp:TextBox ID="TextBoxPassword" runat="server" style="z-index: 1; left: 214px; top: 382px; position: absolute"></asp:TextBox>
-        <asp:TextBox ID="TextBoxPhoneNumber" runat="server" style="z-index: 1; left: 214px; top: 423px; position: absolute"></asp:TextBox>
-        <asp:TextBox ID="TextBoxStaffID" runat="server" style="z-index: 1; left: 214px; top: 470px; position: absolute"></asp:TextBox>
-        <asp:Label ID="Label1" runat="server" style="z-index: 1; left: 136px; top: 102px; position: absolute" Text="Date Joined"></asp:Label>
+
         <p>
-            &nbsp;</p>
-        <p>
-        <asp:TextBox ID="TextBoxFirstName" runat="server" style="z-index: 1; left: 214px; top: 232px; position: absolute"></asp:TextBox>
-        </p>
-        <asp:TextBox ID="TextBoxJobTitle" runat="server" style="z-index: 1; left: 214px; top: 316px; position: absolute; height: 22px;"></asp:TextBox>
-        <p>
-            <asp:Button ID="ButtonCancel" runat="server" style="z-index: 1; left: 286px; top: 516px; position: absolute" Text="Cancel" />
+            
+            <asp:Label ID="lblDateJoined" runat="server" Text="Date Joined"></asp:Label>
+            <asp:TextBox ID="TextBoxDateJoined" runat="server"></asp:TextBox>
         </p>
         <p>
-            <asp:Button ID="ButtonOK" runat="server" style="z-index: 1; left: 216px; top: 516px; position: absolute" Text="OK" OnClick="ButtonOK_Click" />
+            <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
+            <asp:TextBox ID="TextBoxEmail" runat="server"></asp:TextBox>
+            
         </p>
-        <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 128px; top: 136px; position: absolute" Text="Date Of Birth"></asp:Label>
-        <asp:Label ID="Label3" runat="server" style="z-index: 1; left: 165px; top: 186px; position: absolute" Text="Email"></asp:Label>
-        <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 140px; top: 232px; position: absolute; height: 20px" Text="First Name"></asp:Label>
-        <asp:Label ID="Label5" runat="server" style="z-index: 1; left: 139px; top: 270px; position: absolute" Text="Hourly Pay"></asp:Label>
-        <asp:Label ID="Label6" runat="server" style="z-index: 1; left: 151px; top: 321px; position: absolute; bottom: 328px" Text="Job Title"></asp:Label>
-        <asp:Label ID="Label7" runat="server" style="z-index: 1; left: 143px; top: 354px; position: absolute" Text="Last Name"></asp:Label>
-        <asp:Label ID="Label8" runat="server" style="z-index: 1; left: 144px; top: 382px; position: absolute" Text="Password"></asp:Label>
-        <asp:Label ID="Label9" runat="server" style="z-index: 1; left: 171px; top: 423px; position: absolute" Text="Tel"></asp:Label>
-        <asp:Label ID="Label10" runat="server" style="z-index: 1; left: 162px; top: 472px; position: absolute; height: 19px" Text="StaffID"></asp:Label>
-        <asp:Label ID="LabelError" runat="server" style="z-index: 1; left: 174px; top: 567px; position: absolute"></asp:Label>
+        <p>
+            <asp:Label ID="lblHourlyPay" runat="server" Text="Hourly Pay"></asp:Label>
+            <asp:TextBox ID="TextBoxHourlyPay" runat="server"></asp:TextBox>
+        
+        </p>
+        <p>
+             <asp:Label ID="lblLastName" runat="server" Text="Last Name"></asp:Label>
+            <asp:TextBox ID="TextBoxLastName" runat="server"></asp:TextBox>
+           
+        </p>
+        <p>
+            <asp:Label ID="Label8" runat="server" Text="Password"></asp:Label>
+            <asp:TextBox ID="TextBoxPassword" runat="server"></asp:TextBox>
+                    
+        </p>
+        <p>
+              <asp:Label ID="Label9" runat="server" Text="Tel"></asp:Label>
+            <asp:TextBox ID="TextBoxPhoneNumber" runat="server"></asp:TextBox>
+              
+        </p>
+
+        <p>
+            <asp:Label ID="Label10" runat="server" Text="StaffID"></asp:Label>
+              <asp:TextBox ID="TextBoxStaffID" runat="server"></asp:TextBox>
+            
+                 
+        </p>
+        <p>
+                  <asp:Label ID="Label4" runat="server" Text="First Name"></asp:Label>
+                  <asp:TextBox ID="TextBoxFirstName" runat="server"></asp:TextBox>
+        
+
+      
+        </p>
+        <p>
+                    <asp:Label ID="Label6" runat="server" Text="Job Title"></asp:Label>
+                   <asp:TextBox ID="TextBoxJobTitle" runat="server"></asp:TextBox>
+           
+        </p>
+        
+        <p>
+            <asp:Button ID="ButtonCancel" runat="server" Text="Cancel" />
+        </p>
+        <p>
+            <asp:Button ID="ButtonOK" runat="server" Text="OK" OnClick="ButtonOK_Click" />
+        <p>
+            <asp:CheckBox ID="CheckBoxAdmin" runat="server" Text="Admin?" />
+         </p>
+         </p>
+        <p>
+            <asp:Label ID="LabelError" runat="server"></asp:Label>
+        </p>
+
+ 
+     
+
+    
+   
     </form>
 </body>
 </html>
