@@ -31,7 +31,7 @@ namespace Toys4U_Testing
         [TestMethod]
         public void EmailAddressOK()
         {
-            //create an instance of the class we want to create
+            //create an instance of the class we want to create.
             clsCustomer AnCustomer = new clsCustomer();
             //create some test data to assign to the property
             string TestData = "Abdisuldan@gmail.com";
