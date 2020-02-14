@@ -11,34 +11,35 @@ namespace Toys4U_Classes
         //constructor for the class
         public clsStaffCollection()
         {
-            //create the items of test data
-            clsStaff TestItem = new clsStaff();
-            //set its propertiesdd
-            //TestItem.DateOfBirth = 01/'01/2000;
-            TestItem.DateJoined = DateTime.Now.Date;
-            TestItem.Email = "callumjohnsimpson@hotmail.com";
-            TestItem.HourlyPay = 7.77m;
-            TestItem.LastName = "Simpson";
-            TestItem.Password = "Something!";
-            TestItem.PhoneNumber = "07465 659874";
-            TestItem.FirstName = "Callum";
-            TestItem.JobTitle = "Manager";
-            //add the item to the list 
-            mStaffList.Add(TestItem);
-            //re initialise the object for some new data 
-            TestItem = new clsStaff();
-            //set its properties
-            //TestItem.DateOfBirth = 01/'01/2000;
-            TestItem.DateJoined = DateTime.Now.Date;
-            TestItem.Email = "random@hotmail.com";
-            TestItem.HourlyPay = 6.77m;
-            TestItem.LastName = "";
-            TestItem.Password = "Something!";
-            TestItem.PhoneNumber = "02345 675243";
-            TestItem.FirstName = "John";
-            TestItem.JobTitle = "Clerk";
-            //add the item to the list
-            mStaffList.Add(TestItem);
+            //var for the index
+            Int32 Index = 0;
+            //var to store the recrod count 
+            Int32 RecordCount = 0;
+            //object for data conneciton
+            clsDataConnection DB = new clsDataConnection();
+            //execute the stored proceduire
+            DB.Execute("sproc_tblStaff_SelectAll");
+            //get the count of records
+            //while there are recrods to procesds
+            while (Index < RecordCount)
+            {
+                //create a blank staff
+                clsStaff AnStaff = new clsStaff();
+                //read in the fields from the current record
+                //TestStaff.DateOfBirth = 01/'01/2000; AnStaff.DateJoined = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateJoined"]);
+                AnStaff.Email = Convert.ToString(DB.DataTable.Rows[Index]["Email"]);
+                AnStaff.HourlyPay = Convert.ToDecimal(DB.DataTable.Rows[Index]["HourlyPay"]);
+                AnStaff.LastName = Convert.ToString(DB.DataTable.Rows[Index]["LastName"]);
+                AnStaff.Password = Convert.ToString(DB.DataTable.Rows[Index]["Password"]);
+                AnStaff.PhoneNumber = Convert.ToString(DB.DataTable.Rows[Index]["PhoneNumber"]);
+                AnStaff.FirstName = Convert.ToString(DB.DataTable.Rows[Index]["FirstName"]);
+                AnStaff.JobTitle = Convert.ToString(DB.DataTable.Rows[Index]["JobTitle"]);
+               
+                //add the record to the private data member
+                mStaffList.Add(AnStaff);
+                //point at the next record
+                Index++;
+            }
 
         }
 
