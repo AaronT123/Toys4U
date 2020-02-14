@@ -65,6 +65,29 @@ namespace Toys4U_Testing
         }
 
 
-      
-    }
+        [TestMethod]
+        public void ThisStaffPropertyOK()
+        {
+
+            //create an instance of the class we want to create 
+            clsStaffCollection AllStaff = new clsStaffCollection();
+            //create some test data to assign to the property
+            clsStaff TestStaff = new clsStaff();
+            //set the properties of the test object 
+            //TestItem.DateOfBirth = 01/'01/2000;
+            TestStaff.DateJoined = DateTime.Now.Date;
+            TestStaff.Email = "callumjohnsimpson@hotmail.com";
+            TestStaff.HourlyPay = 7.77m;
+            TestStaff.LastName = "Simpson";
+            TestStaff.Password = "Something!";
+            TestStaff.PhoneNumber = "07465 659874";
+            TestStaff.FirstName = "Callum";
+            TestStaff.JobTitle = "Manager";
+            //assign the data to the property
+            AllStaff.ThisStaff = TestStaff;
+            //test to see that the two values are the same
+            Assert.AreEqual(AllStaff.ThisStaff, TestStaff);
+        }
+
+        }
 }

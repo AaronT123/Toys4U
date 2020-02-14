@@ -10,5 +10,6 @@ namespace Toys4U_Classes
 
         public List<clsStaff> StaffList { get; set; }
         public int Count { get; set; }
+        public clsStaff ThisStaff { get; set; }
     }
 }
