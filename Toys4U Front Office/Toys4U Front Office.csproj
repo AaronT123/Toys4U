@@ -78,7 +78,6 @@
     <Content Include="AnCustomer.aspx" />
     <Content Include="AnOrder.aspx" />
     <Content Include="CustomerViewer.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="OrderViewer.aspx" />
     <Content Include="StaffViewer.aspx" />
     <Content Include="Web.config" />
