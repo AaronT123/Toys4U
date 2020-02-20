@@ -71,19 +71,18 @@
     <Content Include="AnProduct.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DeliveryViewer.aspx" />
-    <Content Include="obj\Debug\Toys4U Front Office.csproj.FileListAbsolute.txt" />
     <Content Include="ProductViewer.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AnStaff.aspx" />
     <Content Include="AnCustomer.aspx" />
     <Content Include="AnOrder.aspx" />
     <Content Include="CustomerViewer.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="OrderViewer.aspx" />
     <Content Include="StaffViewer.aspx" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADelivery.aspx.cs">
@@ -142,9 +141,6 @@
     <Compile Include="DeliveryViewer.aspx.designer.cs">
       <DependentUpon>DeliveryViewer.aspx</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="ProductViewer.aspx.cs">
       <DependentUpon>ProductViewer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,8 +164,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="obj\Debug\Toys4U Front Office.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\Toys4U Front Office.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -180,7 +174,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
-    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Toys4U Classes\Toys4U Classes.csproj">

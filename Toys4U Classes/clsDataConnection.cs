@@ -215,4 +215,5 @@ namespace Toys4U_Classes
                 dataTable = value;
             }
         }
-    } //this closes the namespace!
+    }
+}//this closes the namespace!
