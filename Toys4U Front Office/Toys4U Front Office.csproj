@@ -67,23 +67,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ADelivery.aspx" />
     <Content Include="AnProduct.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="obj\Debug\Toys4U Front Office.csproj.FileListAbsolute.txt" />
+    <Content Include="DeliveryViewer.aspx" />
     <Content Include="ProductViewer.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AnStaff.aspx" />
     <Content Include="AnCustomer.aspx" />
     <Content Include="AnOrder.aspx" />
     <Content Include="CustomerViewer.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="OrderViewer.aspx" />
     <Content Include="StaffViewer.aspx" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADelivery.aspx.cs">
+      <DependentUpon>ADelivery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADelivery.aspx.designer.cs">
+      <DependentUpon>ADelivery.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AnProduct.aspx.cs">
       <DependentUpon>AnProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,6 +134,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DeliveryViewer.aspx.cs">
+      <DependentUpon>DeliveryViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeliveryViewer.aspx.designer.cs">
+      <DependentUpon>DeliveryViewer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProductViewer.aspx.cs">
       <DependentUpon>ProductViewer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -149,7 +164,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="obj\Debug\Toys4U Front Office.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -160,7 +174,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
-    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Toys4U Classes\Toys4U Classes.csproj">
