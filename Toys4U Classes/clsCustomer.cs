@@ -10,5 +10,6 @@
         public string PhoneNumber { get; set; }
         public string PostCode { get; set; }
         public string StreetName { get; set; }
+        public string HouseNo { get; set; }
     }
 }
