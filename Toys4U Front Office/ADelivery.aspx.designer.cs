@@ -166,15 +166,6 @@ namespace Toys4U_Front_Office {
         protected global::System.Web.UI.WebControls.TextBox txtDateEstimated;
         
         /// <summary>
-        /// chkActive control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkActive;
-        
-        /// <summary>
         /// btnOK control.
         /// </summary>
         /// <remarks>

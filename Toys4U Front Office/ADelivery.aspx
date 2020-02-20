@@ -33,9 +33,8 @@
         <asp:Label ID="lblDateEstimated" runat="server" style="z-index: 1; left: 15px; top: 225px; position: absolute" Text="Date Estimated"></asp:Label>
         <asp:TextBox ID="txtDateEstimated" runat="server" style="z-index: 1; left: 125px; top: 225px; position: absolute"></asp:TextBox>
         <!-- Other Controls -->
-        <asp:CheckBox ID="chkActive" runat="server" style="z-index: 1; left: 20px; top: 275px; position: absolute" />
-        <asp:Button ID="btnOK" runat="server" style="z-index: 1; left: 20px; top: 315px; position: absolute" Text="OK" OnClick="btnOK_Click" />
-        <asp:Button ID="btnCancel" runat="server" style="z-index: 1; left: 100px; top: 315px; position: absolute" Text="Cancel" />
+        <asp:Button ID="btnOK" runat="server" style="z-index: 1; left: 125px; top: 255px; position: absolute" Text="OK" OnClick="btnOK_Click" />
+        <asp:Button ID="btnCancel" runat="server" style="z-index: 1; left: 192px; top: 255px; position: absolute" Text="Cancel" />
     </form>
 </body>
 </html>
