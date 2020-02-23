@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Toys4U_Front_Office
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class StaffList : System.Web.UI.Page
     {
         //this function handles the load event for the page
         protected void Page_Load(object sender, EventArgs e)
@@ -23,14 +23,16 @@ namespace Toys4U_Front_Office
 
         void DisplayStaff()
         {
-            //create an instance of the staff collection
-            Toys4U_Classes.clsStaffCollection Staffs = new Toys4U_Classes.clsStaffCollection();
-            //set the data source to the list oif staff in the collection
+            ////create an instance of the staff collection
+            //Toys4U_Classes.clsStaffCollection Staffs = new Toys4U_Classes.clsStaffCollection();
+            ////set the data source to the list of staff in the collection
             //lstStaff.DataSource = Staffs.StaffList;
+            ////set the name of the primary key
             //lstStaff.DataValueField = "StaffNo";
             ////bind the data to the list
+            //lstStaff.DataTextField = "FirstName";
+            ////bind the data to the list 
             //lstStaff.DataBind();
         }
-
     }
 }
