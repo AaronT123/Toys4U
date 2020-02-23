@@ -41,7 +41,7 @@ namespace Toys4U_Front_Office
             //add the new recprd
             Add();
             //all done so redirect back to the main page
-            Response.Redirect("Default.aspx");
+            Response.Redirect("StaffList.aspx");
 
         }
 
