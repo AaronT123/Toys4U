@@ -229,7 +229,7 @@ namespace Toys4U_Front_Office {
         protected global::System.Web.UI.WebControls.CheckBox CheckBoxAdmin;
         
         /// <summary>
-        /// LabelError control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
