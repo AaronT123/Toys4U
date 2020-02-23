@@ -15,6 +15,11 @@ namespace Toys4U_Classes
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
         public int StaffID { get; set; }
+
+        public void Find(int primaryKey)
+        {
+
+        }
     }
 
   

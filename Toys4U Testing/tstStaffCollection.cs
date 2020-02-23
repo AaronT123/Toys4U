@@ -130,6 +130,38 @@ namespace Toys4U_Testing
         //    Assert.AreEqual(AllStaff.Count, 2);
 
         //}
+
+
+        [TestMethod]
+        public void AddMethodOK()
+        {
+            //create a instance of the classd we want to create 
+            clsStaffCollection AllStaff = new clsStaffCollection();
+            //create the item of test data
+            clsStaff TestItem = new clsStaff();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set it primary key
+            //TestItem.DateOfBirth = 01/'01/2000;
+            TestItem.DateJoined = DateTime.Now.Date;
+            TestItem.Email = "callumjohnsimpson@hotmail.com";
+            TestItem.HourlyPay = 7.77m;
+            TestItem.LastName = "Simpson";
+            TestItem.Password = "Something!";
+            TestItem.PhoneNumber = "07465 659874";
+            TestItem.FirstName = "Callum";
+            TestItem.JobTitle = "Manager";
+            //Set ThisStaff to the test data
+            AllStaff.ThisStaff = TestItem;
+            //Add the record 
+            PrimaryKey = AllStaff.Add();
+            //set the primaru key of the test data
+            TestItem.StaffID = PrimaryKey;
+            //Find the record
+            AllStaff.ThisStaff.Find(PrimaryKey);
+            //testy to see that the two values are the same
+            Assert.AreEqual(AllStaff.ThisStaff, TestItem);
+        }
     }
 
 }
