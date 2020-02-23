@@ -20,6 +20,11 @@ namespace Toys4U_Classes
         {
 
         }
+
+        public string Valid(string text1, string text2, string text3)
+        {
+            throw new NotImplementedException();
+        }
     }
 
   
