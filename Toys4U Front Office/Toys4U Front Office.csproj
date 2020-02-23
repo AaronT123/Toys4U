@@ -72,9 +72,6 @@
     <Content Include="DeliveryViewer.aspx" />
     <Content Include="ProductViewer.aspx" />
     <Content Include="StaffList.aspx" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AnStaff.aspx" />
@@ -165,12 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
