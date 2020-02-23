@@ -19,7 +19,7 @@
             <asp:Button ID="Button4" runat="server" style="z-index: 1; left: 101px; top: 294px; position: absolute" Text="Display All" />
             <asp:ListBox ID="ListBox1" runat="server" style="z-index: 1; left: 10px; top: 15px; position: absolute; height: 175px; width: 429px"></asp:ListBox>
         </p>
-        <asp:Button ID="Button3" runat="server" style="z-index: 1; left: 16px; top: 346px; position: absolute; height: 26px; right: 992px" Text="Add" />
+        <asp:Button ID="btnAdd" runat="server" style="z-index: 1; left: 16px; top: 346px; position: absolute; height: 26px; right: 992px" Text="Add" OnClick="btnAdd_Click" />
         <asp:Label ID="Label1" runat="server" style="z-index: 1; left: 20px; top: 194px; position: absolute; width: 138px" Text="Enter a staff"></asp:Label>
       
     </form>

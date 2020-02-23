@@ -23,7 +23,7 @@ namespace Toys4U_Front_Office
 
         void DisplayStaff()
         {
-            ////create an instance of the staff collection
+           ////create an instance of the staff collection
             //Toys4U_Classes.clsStaffCollection Staffs = new Toys4U_Classes.clsStaffCollection();
             ////set the data source to the list of staff in the collection
             //lstStaff.DataSource = Staffs.StaffList;
@@ -33,6 +33,15 @@ namespace Toys4U_Front_Office
             //lstStaff.DataTextField = "FirstName";
             ////bind the data to the list 
             //lstStaff.DataBind();
+        }
+
+        //event handler for the add button
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            //store -1 into the session object to indicate this is a new record
+            Session["StaffID"] = -1;
+            //redirect to the data entry page
+            Response.Redirect("AnStaff.aspx");
         }
     }
 }
