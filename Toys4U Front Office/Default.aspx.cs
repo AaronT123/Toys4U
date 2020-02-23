@@ -16,20 +16,24 @@ namespace Toys4U_Front_Office
             if (IsPostBack == false)
             {
                 //UPDATE THE LIST BOX
-                DisplayStaff()
+                DisplayStaff();
             }
 
         }
 
         void DisplayStaff()
         {
-            //create an instance of the staff collection
-            Toys4U_Classes.clsStaffCollection Staffs = new Toys4U_Classes.clsStaffCollection();
-            //set the data source to the list oif staff in the collection
-            lstStaff.DataSource = Staffs.StaffList;
-            lstStaff.DataValueField = "StaffNo";
-            //bind the data to the list
-            lstStaff.DataBind();
+            ////create an instance of the staff collection
+            //Toys4U_Classes.clsStaffCollection Staffs = new Toys4U_Classes.clsStaffCollection();
+            ////set the data source to the list of staff in the collection
+            //lstStaff.DataSource = Staffs.StaffList;
+            ////set the name of the primary key
+            //lstStaff.DataValueField = "StaffNo";
+            ////bind the data to the list
+            //lstStaff.DataTextField = "FirstName";
+            ////bind the data to the list 
+            //lstStaff.DataBind();
+        }
 
     }
 }

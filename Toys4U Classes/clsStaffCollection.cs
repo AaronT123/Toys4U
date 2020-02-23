@@ -6,8 +6,8 @@ namespace Toys4U_Classes
     public class clsStaffCollection
     {
         //private data member for the list
-        List<clsStaff> mStaffList = new List<clsStaff>();
-        
+        List<clsStaff> mStaffList = new List<clsStaff>()
+
         //constructor for the class
         public clsStaffCollection()
         {
