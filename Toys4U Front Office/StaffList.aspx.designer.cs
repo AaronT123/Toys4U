@@ -49,13 +49,13 @@ namespace Toys4U_Front_Office {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// Button5 control.
+        /// btnEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
+        protected global::System.Web.UI.WebControls.Button btnEdit;
         
         /// <summary>
         /// Button4 control.

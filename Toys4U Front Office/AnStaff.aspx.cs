@@ -10,6 +10,9 @@ namespace Toys4U_Front_Office
 {
     public partial class AnStaff : System.Web.UI.Page
     {
+        //var to store the staff id with page level scope
+        Int32 StaffId;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
