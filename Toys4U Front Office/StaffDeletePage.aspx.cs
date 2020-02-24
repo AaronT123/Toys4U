@@ -33,5 +33,14 @@ namespace Toys4U_Front_Office
             SomeStaff.Delete();
 
         }
+        //event handler for yes button
+        protected void btnYes_Click(object sender, EventArgs e)
+        {
+            //delete the record
+            DeleteStaff();
+            //redirect back to the main page
+            Response.Redirect("StaffList.aspx");
+
+        }
     }
 }
