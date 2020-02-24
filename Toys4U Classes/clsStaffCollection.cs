@@ -126,7 +126,23 @@ namespace Toys4U_Classes
 
         public void Update()
         {
-            throw new NotImplementedException();
+            //adds a new record to the database based on the values of mThisStaff
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@StaffId", mThisStaff.StaffID);
+            DB.AddParameter("@Admin", mThisStaff.Admin);
+            DB.AddParameter("@DateJoined", mThisStaff.DateJoined);
+            DB.AddParameter("@DateOfBirth", mThisStaff.DateOfBirth);
+            DB.AddParameter("@Email", mThisStaff.Email);
+            DB.AddParameter("@FirstName", mThisStaff.FirstName);
+            DB.AddParameter("@HourlyPay", mThisStaff.HourlyPay);
+            DB.AddParameter("@JobTitle", mThisStaff.JobTitle);
+            DB.AddParameter("@LastName", mThisStaff.LastName);
+            DB.AddParameter("@PhoneNumberh", mThisStaff.PhoneNumber);
+            DB.AddParameter("@Password", mThisStaff.Password);
+            //execute the query returning the primary key value
+            DB.Execute("sproc_tblStaff_Insert");
         }
     }
 }
