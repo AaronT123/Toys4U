@@ -246,8 +246,14 @@ namespace Toys4U_Testing
             //find the record
             AllStaff.ThisStaff.Find(PrimaryKey);
             //test to see ThisStaff matches the test DATA
-            Assert.AreEqual(AllStaff.ThisStaff, TestItem);
-    }
+                Assert.AreEqual(AllStaff.ThisStaff, TestItem);
+        }
+
+
+
+        //[TestMethod]
+        //public void ReportByMethodOK()
+
 
     }
 
