@@ -162,6 +162,46 @@ namespace Toys4U_Testing
             //testy to see that the two values are the same
             Assert.AreEqual(AllStaff.ThisStaff, TestItem);
         }
+
+
+
+        [TestMethod]
+        public void DeleteMethodOK()
+        {
+
+            //create an instance of the class we want to create
+            clsStaffCollection AllStaff = new clsStaffCollection();
+            //create the item of test data
+            clsStaff TestItem = new clsStaff();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.DateJoined = DateTime.Now.Date;
+            TestItem.Email = "callumjohnsimpson@hotmail.com";
+            TestItem.HourlyPay = 7.77m;
+            TestItem.LastName = "Simpson";
+            TestItem.Password = "Something!";
+            TestItem.PhoneNumber = "07465 659874";
+            TestItem.FirstName = "Callum";
+
+            TestItem.JobTitle = "Manager";
+            //set this staff to the test data
+            AllStaff.ThisStaff = TestItem;
+            //ADD THE RECORD
+            PrimaryKey = AllStaff.Add();
+            //set the primary key of the test data
+            TestItem.StaffID = PrimaryKey;
+            //find the record
+            AllStaff.ThisStaff.Find(PrimaryKey);
+            //delete the rtecord
+            AllStaff.Delete();
+            //now find the record
+            Boolean Found = AllStaff.ThisStaff.Find(PrimaryKey);
+            //Test to see that the record was not found 
+            Assert.IsFalse(Found);
+
+
+        }
     }
 
 }
