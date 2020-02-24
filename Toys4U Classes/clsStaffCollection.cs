@@ -123,5 +123,10 @@ namespace Toys4U_Classes
             //execute the stored procedure
             DB.Execute("sproc_tblStaff_Delete");
         }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

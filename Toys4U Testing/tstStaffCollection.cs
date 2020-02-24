@@ -202,6 +202,55 @@ namespace Toys4U_Testing
 
 
         }
+
+
+
+        [TestMethod]
+        public void UpdateMethodOK()
+        {
+            //create an instance of the class we waznt to create
+            clsStaffCollection AllStaff = new clsStaffCollection();
+            //create the item of test data
+            clsStaff TestItem = new clsStaff();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.DateJoined = DateTime.Now.Date;
+            TestItem.Email = "callumjohnsimpson@hotmail.com";
+            TestItem.HourlyPay = 7.77m;
+            TestItem.LastName = "Simpson";
+            TestItem.Password = "Something!";
+            TestItem.PhoneNumber = "07465 659874";
+            TestItem.FirstName = "Callum";
+
+            TestItem.JobTitle = "Manager";
+            //set this staff to the test data
+            AllStaff.ThisStaff = TestItem;
+            //ADD THE RECORD
+            PrimaryKey = AllStaff.Add();
+            //set the primary key of the test data
+            TestItem.StaffID = PrimaryKey;
+
+            //modify the test data
+            TestItem.DateJoined = DateTime.Now.Date;
+            TestItem.Email = "grimreaper@hotmail.com";
+            TestItem.HourlyPay = 8.88m;
+            TestItem.LastName = "Slater"
+            TestItem.Password = "pass";
+            TestItem.PhoneNumber = "07465 889124";
+            TestItem.FirstName = "John";
+            //set the record based on the new test data
+            AllStaff.ThisStaff = TestItem;
+            //update the record
+            AllStaff.Update();
+            //find the record
+            AllStaff.ThisStaff.Find(PrimaryKey);
+            //test to see ThisStaff matches the test DATA
+            Assert.AreEqual(AllStaff.ThisStaff, TestItem);
     }
+
+    }
+
+      
 
 }
