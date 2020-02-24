@@ -13,8 +13,37 @@ namespace Toys4U_Front_Office
         //var to store the staff id with page level scope
         Int32 StaffId;
 
+        //event handler for the page load event 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //get the number of the staff to be processed 
+            StaffId = Convert.ToInt32(Session["StaffId"]);
+            if (IsPostBack == false)
+            {
+                //populate the list of staff
+                DisplayStaff();
+            }
+        }
+
+        void DisplayStaff()
+        {
+            //create an instance of the somestaff 
+            clsStaffCollection SomeStaff = new clsStaffCollection();
+            //find the record to update
+            SomeStaff.ThisStaff.Find(StaffId);
+            //display the data for this record
+            CheckBoxAdmin.Checked = SomeStaff.ThisStaff.Admin;
+            TextBoxDateOfBirth.Text = SomeStaff.ThisStaff.DateOfBirth.ToString();
+            TextBoxDateJoined.Text = SomeStaff.ThisStaff.DateJoined.ToString();
+            TextBoxEmail.Text = SomeStaff.ThisStaff.Email;
+            TextBoxHourlyPay.Text = SomeStaff.ThisStaff.HourlyPay.ToString();
+            TextBoxLastName.Text = SomeStaff.ThisStaff.LastName;
+            TextBoxPassword.Text = SomeStaff.ThisStaff.Password;
+            TextBoxPhoneNumber.Text = SomeStaff.ThisStaff.PhoneNumber;
+            TextBoxFirstName.Text = SomeStaff.ThisStaff.FirstName;
+            TextBoxJobTitle.Text = SomeStaff.ThisStaff.JobTitle;
+
+
 
         }
 
