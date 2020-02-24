@@ -22,6 +22,12 @@ namespace Toys4U_Front_Office
             {
                 //populate the list of staff
                 DisplayStaff();
+                //if this is not a new recprd
+                if (StaffId != -1)
+                {
+                    //display the current data for the record
+                    DisplayStaff();
+                }
             }
         }
 
