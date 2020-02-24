@@ -71,6 +71,7 @@
     <Content Include="AnProduct.aspx" />
     <Content Include="DeliveryViewer.aspx" />
     <Content Include="ProductViewer.aspx" />
+    <Content Include="StaffDeletePage.aspx" />
     <Content Include="StaffList.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +146,13 @@
     <Compile Include="OrderViewer.aspx.designer.cs">
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffDeletePage.aspx.cs">
+      <DependentUpon>StaffDeletePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffDeletePage.aspx.designer.cs">
+      <DependentUpon>StaffDeletePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="StaffList.aspx.cs">
       <DependentUpon>StaffList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
