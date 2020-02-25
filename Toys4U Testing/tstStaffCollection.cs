@@ -270,7 +270,15 @@ namespace Toys4U_Testing
         }
 
 
-
+        [TestMethod]
+        public void ReportByJobTitleTestDataFound()
+        {
+            //create an instance of the filtered data
+            clsStaffCollection FilteredStaff = new clsStaffCollection();
+            //var to store outcome
+            Boolean OK = true;
+            //this is where youre at , page 38. 
+        }
       
 
     }
