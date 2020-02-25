@@ -18,12 +18,13 @@ namespace Toys4U_Classes
 
         public Boolean Find(int PrimaryKey)
         {
-             return true;
+            return false;
         }
 
         public string Valid(string text1, string text2, string text3)
         {
-            throw new NotImplementedException();
+            string Error = "";
+            return Error;
         }
     }
 

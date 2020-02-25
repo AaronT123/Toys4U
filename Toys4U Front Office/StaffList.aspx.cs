@@ -89,5 +89,10 @@ namespace Toys4U_Front_Office
                 lblError.Text = "Please select a record to delete from the list";
             }
         }
+
+        protected void btnDisplayAll_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

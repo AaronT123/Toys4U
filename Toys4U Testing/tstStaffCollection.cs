@@ -119,7 +119,7 @@ namespace Toys4U_Testing
             //test to see that the two values are tghe same
             Assert.AreEqual(AllStaff.Count, TestList.Count);
         }
-        
+
         //old redundant test, hence commented out 
         //[TestMethod]
         //public void TwoRecordsPresent()
@@ -142,7 +142,7 @@ namespace Toys4U_Testing
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set it primary key
-            //TestItem.DateOfBirth = 01/'01/2000;
+            TestItem.DateOfBirth = DateTime.Now.Date;
             TestItem.DateJoined = DateTime.Now.Date;
             TestItem.Email = "callumjohnsimpson@hotmail.com";
             TestItem.HourlyPay = 7.77m;
@@ -176,6 +176,7 @@ namespace Toys4U_Testing
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
+            TestItem.DateOfBirth = DateTime.Now.Date;
             TestItem.DateJoined = DateTime.Now.Date;
             TestItem.Email = "callumjohnsimpson@hotmail.com";
             TestItem.HourlyPay = 7.77m;
@@ -215,6 +216,7 @@ namespace Toys4U_Testing
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
+            TestItem.DateOfBirth = DateTime.Now.Date;
             TestItem.DateJoined = DateTime.Now.Date;
             TestItem.Email = "callumjohnsimpson@hotmail.com";
             TestItem.HourlyPay = 7.77m;
@@ -232,10 +234,11 @@ namespace Toys4U_Testing
             TestItem.StaffID = PrimaryKey;
 
             //modify the test data
+            TestItem.DateOfBirth = DateTime.Now.Date;
             TestItem.DateJoined = DateTime.Now.Date;
             TestItem.Email = "grimreaper@hotmail.com";
             TestItem.HourlyPay = 8.88m;
-            TestItem.LastName = "Slater"
+            TestItem.LastName = "Slater";
             TestItem.Password = "pass";
             TestItem.PhoneNumber = "07465 889124";
             TestItem.FirstName = "John";
@@ -246,17 +249,29 @@ namespace Toys4U_Testing
             //find the record
             AllStaff.ThisStaff.Find(PrimaryKey);
             //test to see ThisStaff matches the test DATA
-                Assert.AreEqual(AllStaff.ThisStaff, TestItem);
+            Assert.AreEqual(AllStaff.ThisStaff, TestItem);
         }
 
 
 
-        //[TestMethod]
-        //public void ReportByMethodOK()
+        [TestMethod]
+        public void ReportByFirstNameMethodOK()
+        {
+            //create an instance of the class containing unfiltered results
+            clsStaffCollection AllStaff = new clsStaffCollection();
+            //create aN instance of the filtered data
+            clsStaffCollection FilteredStaff = new clsStaffCollection();
+            //apply a blank string (should return all records);
+            FilteredStaff.ReportByJobTitle("");
+            //test to see that the two values are the same
+            Assert.AreEqual(AllStaff.Count, FilteredStaff.Count);
 
 
-    }
+        }
+
+
 
       
 
+    }
 }

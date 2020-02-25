@@ -21,6 +21,8 @@ namespace Toys4U_Classes
             clsDataConnection DB = new clsDataConnection();
             //execute the stored proceduire
             DB.Execute("sproc_tblStaff_SelectAll");
+            //populate the arry list with the data table
+            PopulateArray(DB);
             //get the count of records
             //while there are recrods to procesds
             while (Index < RecordCount)
@@ -28,7 +30,8 @@ namespace Toys4U_Classes
                 //create a blank staff
                 clsStaff AnStaff = new clsStaff();
                 //read in the fields from the current record
-                //TestStaff.DateOfBirth = 01/'01/2000; AnStaff.DateJoined = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateJoined"]);
+                AnStaff.DateOfBirth = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateOfBirth"]);
+                AnStaff.DateJoined = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateJoined"]);
                 AnStaff.Email = Convert.ToString(DB.DataTable.Rows[Index]["Email"]);
                 AnStaff.HourlyPay = Convert.ToDecimal(DB.DataTable.Rows[Index]["HourlyPay"]);
                 AnStaff.LastName = Convert.ToString(DB.DataTable.Rows[Index]["LastName"]);
@@ -74,7 +77,7 @@ namespace Toys4U_Classes
                 //we shall worry about this later
             }
         }
-        
+  
         //public property for thisStaff
         public clsStaff ThisStaff
         {
@@ -106,7 +109,7 @@ namespace Toys4U_Classes
             DB.AddParameter("@HourlyPay", mThisStaff.HourlyPay);
             DB.AddParameter("@JobTitle", mThisStaff.JobTitle);
             DB.AddParameter("@LastName", mThisStaff.LastName);
-            DB.AddParameter("@PhoneNumberh", mThisStaff.PhoneNumber);
+            DB.AddParameter("@PhoneNumber", mThisStaff.PhoneNumber);
             DB.AddParameter("@Password", mThisStaff.Password);
             //execute the query returning the primary key value
             return DB.Execute("sproc_tblStaff_Insert");
@@ -122,6 +125,8 @@ namespace Toys4U_Classes
             DB.AddParameter("@StaffId", mThisStaff.StaffID);
             //execute the stored procedure
             DB.Execute("sproc_tblStaff_Delete");
+            
+
         }
 
         public void Update()
@@ -139,10 +144,61 @@ namespace Toys4U_Classes
             DB.AddParameter("@HourlyPay", mThisStaff.HourlyPay);
             DB.AddParameter("@JobTitle", mThisStaff.JobTitle);
             DB.AddParameter("@LastName", mThisStaff.LastName);
-            DB.AddParameter("@PhoneNumberh", mThisStaff.PhoneNumber);
+            DB.AddParameter("@PhoneNumber", mThisStaff.PhoneNumber);
             DB.AddParameter("@Password", mThisStaff.Password);
             //execute the query returning the primary key value
-            DB.Execute("sproc_tblStaff_Insert");
+            DB.Execute("sproc_tblStaff_Update");
+        }
+
+        public void ReportByJobTitle(string PostCode)
+        {
+            //filters the records based on full or partial post code
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the PostCode parameter to the database
+            DB.AddParameter("@JobTitle", PostCode);
+            //execute the stored procedure
+            DB.Execute("sproc_tblStaff_FilterByJobTitle");
+            //populate the array list with the data table
+            PopulateArray(DB);
+
+        }
+
+        void PopulateArray(clsDataConnection DB)
+        {
+            //populates the array list based on the datatable in the parameter DB
+            //var for the index
+            Int32 Index = 0;
+            //var to store the record count 
+            Int32 RecordCount;
+            //get the count of records
+            RecordCount = DB.Count;
+            //clear the private array list
+            mStaffList = new List<clsStaff>();
+            //while there are records to process
+            while (Index < RecordCount)
+            {
+                //create a blanks staff
+                //read in the fields from the current record
+
+                clsStaff AnStaff = new clsStaff();
+                //read in the fields from the current record
+                AnStaff.DateOfBirth = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateOfBirth"]);
+                AnStaff.DateJoined = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateJoined"]);
+                AnStaff.Email = Convert.ToString(DB.DataTable.Rows[Index]["Email"]);
+                AnStaff.HourlyPay = Convert.ToDecimal(DB.DataTable.Rows[Index]["HourlyPay"]);
+                AnStaff.LastName = Convert.ToString(DB.DataTable.Rows[Index]["LastName"]);
+                AnStaff.Password = Convert.ToString(DB.DataTable.Rows[Index]["Password"]);
+                AnStaff.PhoneNumber = Convert.ToString(DB.DataTable.Rows[Index]["PhoneNumber"]);
+                AnStaff.FirstName = Convert.ToString(DB.DataTable.Rows[Index]["FirstName"]);
+                AnStaff.JobTitle = Convert.ToString(DB.DataTable.Rows[Index]["JobTitle"]);
+
+                //add the record to the private data member
+                mStaffList.Add(AnStaff);
+                //point at the next record
+                Index++;
+            }
+
         }
     }
 }
