@@ -277,7 +277,29 @@ namespace Toys4U_Testing
             clsStaffCollection FilteredStaff = new clsStaffCollection();
             //var to store outcome
             Boolean OK = true;
-            //this is where youre at , page 38. 
+            //apply a post code that doesnt exsist 
+            FilteredStaff.ReportByJobTitle("yyy yyy");
+            //check that the correct number of records are found 
+            if (FilteredStaff.Count == 2)
+            {
+                //check that the first record is ID 36
+                if (FilteredStaff.StaffList[0].StaffID != 36)
+                {
+                    OK = false;
+                }
+                //check that the first record is ID 37
+                if (FilteredStaff.StaffList[1].StaffID != 37)
+                {
+
+                    OK = false; 
+                }
+            }
+            else
+            {
+                OK = false;
+            }
+            //test to see that there are no records
+            Assert.IsTrue(OK);
         }
       
 
