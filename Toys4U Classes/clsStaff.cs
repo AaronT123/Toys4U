@@ -14,7 +14,7 @@ namespace Toys4U_Classes
         public string LastName { get; set; }
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
-        public int StaffID { get; set; }
+        public int StaffNo { get; set; }
 
         public Boolean Find(int PrimaryKey)
         {

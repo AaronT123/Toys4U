@@ -11,32 +11,35 @@ namespace Toys4U_Front_Office
     public partial class AnStaff : System.Web.UI.Page
     {
         //var to store the staff id with page level scope
-        Int32 StaffId;
+        Int32 StaffNo;
 
         //event handler for the page load event 
         protected void Page_Load(object sender, EventArgs e)
         {
             //get the number of the staff to be processed 
-            StaffId = Convert.ToInt32(Session["StaffId"]);
+            StaffNo = Convert.ToInt32(Session["StaffNo"]);
             if (IsPostBack == false)
             {
                 //populate the list of staff
-                DisplayStaff();
-                //if this is not a new recprd
-                if (StaffId != -1)
+                //DisplayStaff();
+                //if this is not a new record
+                if (StaffNo != -1)
                 {
                     //display the current data for the record
-                    DisplayStaff();
+                    DisplayData();
                 }
+ 
+                
+               
             }
         }
 
-        void DisplayStaff()
+        void DisplayData()
         {
             //create an instance of the somestaff 
             clsStaffCollection SomeStaff = new clsStaffCollection();
             //find the record to update
-            SomeStaff.ThisStaff.Find(StaffId);
+            SomeStaff.ThisStaff.Find(StaffNo);
             //display the data for this record
             CheckBoxAdmin.Checked = SomeStaff.ThisStaff.Admin;
             TextBoxDateOfBirth.Text = SomeStaff.ThisStaff.DateOfBirth.ToString();
@@ -48,8 +51,6 @@ namespace Toys4U_Front_Office
             TextBoxPhoneNumber.Text = SomeStaff.ThisStaff.PhoneNumber;
             TextBoxFirstName.Text = SomeStaff.ThisStaff.FirstName;
             TextBoxJobTitle.Text = SomeStaff.ThisStaff.JobTitle;
-
-
 
         }
 

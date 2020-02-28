@@ -24,12 +24,14 @@ namespace Toys4U_Classes
             //populate the arry list with the data table
             PopulateArray(DB);
             //get the count of records
+            RecordCount = DB.Count;
             //while there are recrods to procesds
             while (Index < RecordCount)
             {
                 //create a blank staff
                 clsStaff AnStaff = new clsStaff();
                 //read in the fields from the current record
+                AnStaff.StaffNo = Convert.ToInt32(DB.DataTable.Rows[Index]["StaffId"]);
                 AnStaff.DateOfBirth = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateOfBirth"]);
                 AnStaff.DateJoined = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateJoined"]);
                 AnStaff.Email = Convert.ToString(DB.DataTable.Rows[Index]["Email"]);
@@ -122,7 +124,7 @@ namespace Toys4U_Classes
             //connecgt to the database
             clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
-            DB.AddParameter("@StaffId", mThisStaff.StaffID);
+            DB.AddParameter("@StaffId", 24);
             //execute the stored procedure
             DB.Execute("sproc_tblStaff_Delete");
             
@@ -135,7 +137,7 @@ namespace Toys4U_Classes
             //connect to the database
             clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
-            DB.AddParameter("@StaffId", mThisStaff.StaffID);
+            DB.AddParameter("@StaffId", mThisStaff.StaffNo);
             DB.AddParameter("@Admin", mThisStaff.Admin);
             DB.AddParameter("@DateJoined", mThisStaff.DateJoined);
             DB.AddParameter("@DateOfBirth", mThisStaff.DateOfBirth);
@@ -150,13 +152,13 @@ namespace Toys4U_Classes
             DB.Execute("sproc_tblStaff_Update");
         }
 
-        public void ReportByJobTitle(string PostCode)
+        public void ReportByJobTitle(string JobTitle)
         {
             //filters the records based on full or partial post code
             //connect to the database
             clsDataConnection DB = new clsDataConnection();
             //send the PostCode parameter to the database
-            DB.AddParameter("@JobTitle", PostCode);
+            DB.AddParameter("@JobTitle", JobTitle);
             //execute the stored procedure
             DB.Execute("sproc_tblStaff_FilterByJobTitle");
             //populate the array list with the data table

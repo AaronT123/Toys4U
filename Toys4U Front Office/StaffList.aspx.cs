@@ -9,10 +9,13 @@ namespace Toys4U_Front_Office
 {
     public partial class StaffList : System.Web.UI.Page
     {
-        //this function handles the load event for the page
+        Int32 StaffNo;
+       
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if this is the firct time the page is displayed
+            //get the number of the address to be processed
+
+            StaffNo = Convert.ToInt32(Session["StaffNo"]);
             if (IsPostBack == false)
             {
                 //UPDATE THE LIST BOX
@@ -39,7 +42,7 @@ namespace Toys4U_Front_Office
         protected void btnAdd_Click(object sender, EventArgs e)
         {
             //store -1 into the session object to indicate this is a new record
-            Session["StaffId"] = -1;
+            Session["StaffNo"] = -1;
             //redirect to the data entry page
             Response.Redirect("AnStaff.aspx");
         }
@@ -48,16 +51,16 @@ namespace Toys4U_Front_Office
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             //var to store the primary key value of the record to be deleted
-            Int32 StaffId;
+            Int32 StaffNo;
             //if a record has been selected from the list 
             if (lstStaff.SelectedIndex != -1)
             {
                 //get the primary key of thge record to delete
-                StaffId = Convert.ToInt32(lstStaff.SelectedValue);
+                StaffNo = Convert.ToInt32(lstStaff.SelectedValue);
                 //store the data in the session object
-                Session["StaffId"] = StaffId;
+                Session["StaffNo"] = StaffNo;
                 //redirect to the delete page
-                Response.Redirect("StaffDelete.aspx");
+                Response.Redirect("StaffDeletePage.aspx");
 
             }
             else //if no record has been selected
@@ -71,14 +74,14 @@ namespace Toys4U_Front_Office
         protected void btnEdit_Click(object sender, EventArgs e)
         {
             //var to store the primary key value of the record to be edited
-            Int32 StaffId;
+            Int32 StaffNo;
             //if a record has been selected from the list
             if (lstStaff.SelectedIndex !=-1)
             {
                 //get the primary key value of the record to edit
-                StaffId = Convert.ToInt32(lstStaff.SelectedValue);
+                StaffNo = Convert.ToInt32(lstStaff.SelectedValue);
                 //store the data in the session object
-                Session["StaffId"] = StaffId;
+                Session["StaffNo"] = StaffNo;
                 //redirect to the edit page
                 Response.Redirect("AnStaff.aspx");
 
