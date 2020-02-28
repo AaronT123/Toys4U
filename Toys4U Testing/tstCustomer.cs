@@ -115,7 +115,18 @@ namespace Toys4U_Testing
             //test to see that the two values are the same
             Assert.AreEqual(AnCustomer.StreetName, TestData);
         }
-
+        [TestMethod]
+        public void HouseNoOK()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //create some test data to assign to the property
+            string TestData = "57A";
+            //assign the data to the property
+            AnCustomer.HouseNo = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AnCustomer.HouseNo, TestData);
+        }
 
     }
 }

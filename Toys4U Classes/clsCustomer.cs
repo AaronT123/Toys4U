@@ -1,4 +1,6 @@
-﻿namespace Toys4U_Classes
+﻿using System;
+
+namespace Toys4U_Classes
 {
     public class clsCustomer
     {
@@ -10,5 +12,17 @@
         public string PhoneNumber { get; set; }
         public string PostCode { get; set; }
         public string StreetName { get; set; }
+        public string HouseNo { get; set; }
+
+        public Boolean Find(int primaryKey)
+        {
+            return false;
+        }
+
+        public string Valid(string text1, string text2, string text3, string text4, string text5, string text6, string text7, string text8)
+        {
+            string Error = "";
+            return Error;
+        }
     }
 }
