@@ -24,8 +24,6 @@
         <asp:TextBox ID="txtPhoneNumber" runat="server" style="z-index: 1; left: 168px; top: 212px; position: absolute"></asp:TextBox>
         <asp:TextBox ID="txtPostCode" runat="server" style="z-index: 1; left: 169px; top: 250px; position: absolute"></asp:TextBox>
         <asp:TextBox ID="txtStreetName" runat="server" style="z-index: 1; left: 167px; top: 292px; position: absolute"></asp:TextBox>
-        <asp:TextBox ID="txtCustomerID" runat="server" style="z-index: 1; left: 186px; top: 25px; position: absolute"></asp:TextBox>
-        <asp:Label ID="Label" runat="server" style="z-index: 1; left: 90px; top: 23px; position: absolute" Text="Customer ID:"></asp:Label>
         <asp:Button ID="btnCancel" runat="server" style="z-index: 1; left: 136px; top: 443px; position: absolute" Text="Cancel" />
         <p>
             &nbsp;</p>
