@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-
+using System;
 namespace Toys4U_Classes
 {
     public class clsProductCollection
@@ -10,24 +10,33 @@ namespace Toys4U_Classes
         //contructor for the class
         public clsProductCollection()
         {
-            //create the items of test data 
-            clsProduct TestItem = new clsProduct();
-            //set it properties
-            TestItem.ProductID = 1;
-            TestItem.Name = "Yellow Duck";
-            TestItem.Description = "toddler toy";
-            TestItem.StockQuantity = 4;
-            //add the item to the test list 
-            mProductList.Add(TestItem);
-            // re intialise the object for some new data 
-            TestItem = new clsProduct();
-            //set its properties 
-            TestItem.ProductID = 2;
-            TestItem.Name = "doll";
-            TestItem.Description = "baby doll";
-            TestItem.StockQuantity = 2;
-            //add the item to the test list
-            mProductList.Add(TestItem);
+            //var for the index
+            Int32 Index = 0;
+            //var to store the record count
+            Int32 RecordCount = 0;
+            //object for data connection 
+            clsDataConnection DB = new clsDataConnection();
+            //execute the stored procedure 
+            DB.Execute("sproc_tblProduct_SelectAll");
+            //get the count of records
+            RecordCount = DB.Count;
+            //while there are records to process
+            while (Index < RecordCount)
+            {
+                //create a blank product detail
+                clsProduct AnProduct = new clsProduct();
+                //read in the fields from the current record and collect its data
+                AnProduct.ProductID = Convert.ToInt32(DB.DataTable.Rows[Index]["ProductID"]);
+                AnProduct.Name = Convert.ToString(DB.DataTable.Rows[Index]["Name"]);
+                AnProduct.Description = Convert.ToString(DB.DataTable.Rows[Index]["Description"]);
+                AnProduct.StockQuantity = Convert.ToInt32(DB.DataTable.Rows[Index]["StockQuantity"]);
+                //add the record to the private member
+                mProductList.Add(AnProduct);
+                //point at the next record
+                Index++;
+            }
+
+  
         }
 
         //public property for the product list
