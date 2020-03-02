@@ -14,9 +14,10 @@ namespace Toys4U_Classes
         public string StreetName { get; set; }
         public string HouseNo { get; set; }
 
-        public Boolean Find(int primaryKey)
+        public Boolean Find(int CustomerID)
         {
-            return false;
+            //always return true
+            return true;
         }
 
         public string Valid(string text1, string text2, string text3, string text4, string text5, string text6, string text7, string text8)

@@ -46,18 +46,6 @@ namespace Toys4U_Testing
             Assert.AreEqual(AllCustomers.CustomerList, TestList);
 
         }
-        //[TestMethod]
-        //public void CountPropertyOK()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsCustomerCollection AllCustomers = new clsCustomerCollection();
-        //    //create some test data to assign to the property
-        //    Int32 SomeCount = 2;
-        //    //assign the data to the property
-        //    AllCustomers.Count = SomeCount;
-        //    //test to see that the two values are the same
-        //    Assert.AreEqual(AllCustomers.Count, SomeCount);
-        //}
         [TestMethod]
         public void ThisCustomerPropertyOK()
         {
@@ -209,67 +197,52 @@ namespace Toys4U_Testing
             //test to see that there are no records
             Assert.AreEqual(0, FilteredCustomers.Count);
         }
-        //[TestMethod]
-        //public void ReportByPostCodeTestDataFound()
-        //{
-        //    //create an instance of filtered data
-        //    clsCustomerCollection FilteredCustomers = new clsCustomerCollection();
-        //    //var to store outcome
-        //    Boolean OK = true;
-        //    //apply a post code that doesn't exist
-        //    FilteredCustomers.ReportByPostCode("yyyyyy");
-        //    //check that the correct number of records 
-        //    if (FilteredCustomers.Count == 2)
-        //    {
-        //        //check that the correct number of records are found
-        //        if (FilteredCustomers.CustomerList[0].CustomerID != 36)
-        //        {
-        //            OK = false;
-        //        }
-        //        //check that the first record is ID 37
-        //       if (FilteredCustomers.CustomerList[1].CustomerID != 37)
-        //        {
-        //            OK = false;
-        //        }
+        [TestMethod]
+        public void ReportByPostCodeTestDataFound()
+        {
+            //create an instance of filtered data
+            clsCustomerCollection FilteredCustomers = new clsCustomerCollection();
+            //var to store outcome
+            Boolean OK = true;
+            //apply a post code that doesn't exist
+            FilteredCustomers.ReportByPostCode("yyyyyy");
+            //check that the correct number of records 
+            if (FilteredCustomers.Count == 2)
+            {
+                //check that the correct number of records are found
+                if (FilteredCustomers.CustomerList[0].CustomerID != 55)
+                {
+                    OK = false;
+                }
+                //check that the first record is ID 37
+                if (FilteredCustomers.CustomerList[1].CustomerID != 57)
+                {
+                    OK = false;
+                }
 
-        //    }
-        //    else
-        //    {
-        //        OK = false;
-        //    }
-        //    //test to see that there are no records
-        //    Assert.IsTrue(OK);
-        //}
-        //[TestMethod]
-        //public void ListAndCountOK()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomerCollection AllStaff = new clsCustomerCollection();
-        //    //create some test data to asign to the property
-        //    //in this case the data needs to be a list of objects
-        //    List<clsCustomer> TestList = new List<clsCustomer>();
-        //    //add an item to the list
-        //    //create the item of test data 
-        //    clsCustomer TestItem = new clsCustomer();
-        //    //set its properties
-        //    TestItem.CustomerID = 1;
-        //    TestItem.EmailAddress = "Abdisuldan@gmail.com";
-        //    TestItem.Password = "Password";
-        //    TestItem.FirstName = "Abdi";
-        //    TestItem.LastName = "Suldan";
-        //    TestItem.PhoneNumber = "0116 123 1234";
-        //    TestItem.PostCode = "LE2 3FE";
-        //    TestItem.StreetName = "Happy Lane";
-        //    TestItem.HouseNo = "92";
-        //    //add the item to the test list
-        //    TestList.Add(TestItem);
-        //    //assign the data to the property
-        //    AllStaff.CustomerList = TestList;
-        //    //test to see that the two values are tghe same
-        //    Assert.AreEqual(AllStaff.Count, TestList.Count);
-        //}
+            }
+            else
+            {
+                OK = false;
+            }
+            //test to see that there are no records
+            Assert.IsTrue(OK);
+        }
+       [TestMethod]
+       public void FindMethodOK()
+        {
+            //create an instance of the class we wnat to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use with the methods
+            Int32 CustomerID = 1;
+            //inkoke the method
+            Found = AnCustomer.Find(CustomerID);
+            //test to see that the result is corect
+            Assert.IsTrue(Found);
 
-
+        }
 
     }
 }
