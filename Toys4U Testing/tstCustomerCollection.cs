@@ -230,7 +230,7 @@ namespace Toys4U_Testing
         }
        [TestMethod]
        public void FindMethodOK()
-        {
+       {
             //create an instance of the class we wnat to create
             clsCustomer AnCustomer = new clsCustomer();
             //boolean variable to store the result of the validation
@@ -242,7 +242,7 @@ namespace Toys4U_Testing
             //test to see that the result is corect
             Assert.IsTrue(Found);
 
-        }
+       }
 
     }
 }
