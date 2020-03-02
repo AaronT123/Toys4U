@@ -6,22 +6,22 @@ namespace Toys4U_Classes
     {
         //private data memeber for the CustomerID property
         private Int32 mCustomerID;
-        ////private data memeber for the EmailAddress property
-        //private Int32 mEmailAddress;
-        ////private data memeber for the FirstName property
-        //private Int32 mFirstName;
-        ////private data memeber for the LastName property
-        //private Int32 mLastName;
-        ////private data memeber for the Password property
-        //private Int32 mPassword;
-        ////private data memeber for the PhoneNumber property
-        //private Int32 mPhoneNUmber;
-        ////private data memeber for the PostCode property
-        //private Int32 mPostCode;
-        ////private data memeber for the StreetName property
-        //private Int32 mStreetName;
-        ////private data memeber for the HouseNo property
-        //private Int32 mHouseNo;
+        //private data memeber for the EmailAddress property
+        private string mEmailAddress;
+        //private data memeber for the FirstName property
+        private string mFirstName;
+        //private data memeber for the LastName property
+        private string mLastName;
+        //private data memeber for the Password property
+        private string mPassword;
+        //private data memeber for the PhoneNumber property
+        private string mPhoneNumber;
+        //private data memeber for the PostCode property
+        private string mPostCode;
+        //private data memeber for the StreetName property
+        private string mStreetName;
+        //private data memeber for the HouseNo property
+        private string mHouseNo;
 
         //public property for the Customer ID
         public int CustomerID
@@ -38,21 +38,125 @@ namespace Toys4U_Classes
             }
         }
 
+        //public property for the Email Address
+        public string EmailAddress
+        {
+            get
+            {
+                //return the private data
+                return mEmailAddress;
+            }
+            set
+            {
+                //set the value of the private data member
+                mEmailAddress = value;
+            }
+        }
+        //public property for the Password
+        public string Password
+        {
+            get
+            {
+                //return the private data
+                return mPassword;
+            }
+            set
+            {
+                //set the value of the private data member
+                mPassword = value;
+            }
+        }
+        //public property for the FirstName
+        public string FirstName
+        {
+            get
+            {
+                //return the private data
+                return mFirstName;
+            }
+            set
+            {
+                //set the value of the private data member
+                mFirstName = value;
+            }
+        }
+        //public property for the LastName
+        public string LastName
+        {
+            get
+            {
+                //return the private data
+                return mLastName;
+            }
+            set
+            {
+                //set the value of the private data member
+                mLastName = value;
+            }
+        }
+        //public property for the PhoneNumber
+        public string PhoneNumber
+        {
+            get
+            {
+                //return the private data
+                return mPhoneNumber;
+            }
+            set
+            {
+                //set the value of the private data member
+                mPhoneNumber = value;
+            }
+        }
+        //public property for the PhoneNumber
+        public string PostCode
+        {
+            get
+            {
+                //return the private data
+                return mPostCode;
+            }
+            set
+            {
+                //set the value of the private data member
+                mPostCode = value;
+            }
+        }
+        //public property for the PhoneNumber
+        public string StreetName
+        {
+            get
+            {
+                //return the private data
+                return mStreetName;
+            }
+            set
+            {
+                //set the value of the private data member
+                mStreetName = value;
+            }
+        }
+        //public property for the PhoneNumber
+        public string HouseNo
+        {
+            get
+            {
+                //return the private data
+                return mHouseNo;
+            }
+            set
+            {
+                //set the value of the private data member
+                mHouseNo = value;
+            }
+        }
 
-     
-        public string EmailAddress { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Password { get; set; }
-        public string PhoneNumber { get; set; }
-        public string PostCode { get; set; }
-        public string StreetName { get; set; }
-        public string HouseNo { get; set; }
 
         public Boolean Find(int CustomerID)
         {
             //set the private data memebr to the test data value
             mCustomerID = 104;
+            mEmailAddress = "Test@gmail.com";
             //always return true
             return true;
         }
