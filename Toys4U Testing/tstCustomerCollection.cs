@@ -76,10 +76,10 @@ namespace Toys4U_Testing
             //create the item of test data
             clsCustomer TestItem = new clsCustomer();
             //var to store the primary key
-            Int32 PrimaryKey = 3;
+            Int32 PrimaryKey = 0;
             //set it properites
             TestItem.EmailAddress = "Elitone@gmail.com";
-            TestItem.Password = "Elite_12";
+            TestItem.Password = "Matt_12";
             TestItem.FirstName = "Elite";
             TestItem.LastName = "One";
             TestItem.PhoneNumber = "01161238967";
@@ -107,15 +107,15 @@ namespace Toys4U_Testing
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
-            TestItem.CustomerID = 30;
-            TestItem.EmailAddress = "sam@gmail.com";
-            TestItem.Password = "samsung";
-            TestItem.FirstName = "sam";
-            TestItem.LastName = "more";
-            TestItem.PhoneNumber = "01164876215";
-            TestItem.PostCode = "LE26IK";
-            TestItem.StreetName = "AppleStreet";
-            TestItem.HouseNo = "37";
+            //TestItem.CustomerID = 1;
+            TestItem.EmailAddress = "hello@gmail.com";
+            TestItem.Password = "makda";
+            TestItem.FirstName = "kepa";
+            TestItem.LastName = "anil";
+            TestItem.PhoneNumber = "1166957845";
+            TestItem.PostCode = "PE15DJ";
+            TestItem.StreetName = "Shearrd road";
+            TestItem.HouseNo = "21";
             //set ThisCustomer to the test data
             AllCustomers.ThisCustomer = TestItem;
             //Add the record
@@ -228,21 +228,7 @@ namespace Toys4U_Testing
             //test to see that there are no records
             Assert.IsTrue(OK);
         }
-       [TestMethod]
-       public void FindMethodOK()
-       {
-            //create an instance of the class we wnat to create
-            clsCustomer AnCustomer = new clsCustomer();
-            //boolean variable to store the result of the validation
-            Boolean Found = false;
-            //create some test data to use with the methods
-            Int32 CustomerID = 1;
-            //inkoke the method
-            Found = AnCustomer.Find(CustomerID);
-            //test to see that the result is corect
-            Assert.IsTrue(Found);
-
-       }
+    
 
     }
 }

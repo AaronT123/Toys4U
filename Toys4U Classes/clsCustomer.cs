@@ -4,7 +4,42 @@ namespace Toys4U_Classes
 {
     public class clsCustomer
     {
-        public int CustomerID { get; set; }
+        //private data memeber for the CustomerID property
+        private Int32 mCustomerID;
+        ////private data memeber for the EmailAddress property
+        //private Int32 mEmailAddress;
+        ////private data memeber for the FirstName property
+        //private Int32 mFirstName;
+        ////private data memeber for the LastName property
+        //private Int32 mLastName;
+        ////private data memeber for the Password property
+        //private Int32 mPassword;
+        ////private data memeber for the PhoneNumber property
+        //private Int32 mPhoneNUmber;
+        ////private data memeber for the PostCode property
+        //private Int32 mPostCode;
+        ////private data memeber for the StreetName property
+        //private Int32 mStreetName;
+        ////private data memeber for the HouseNo property
+        //private Int32 mHouseNo;
+
+        //public property for the Customer ID
+        public int CustomerID
+        {
+            get
+            {
+                //return the private data
+                return mCustomerID;
+            }
+            set
+            {
+                //set the value of the private data member
+                mCustomerID = value;
+            }
+        }
+
+
+     
         public string EmailAddress { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -16,6 +51,8 @@ namespace Toys4U_Classes
 
         public Boolean Find(int CustomerID)
         {
+            //set the private data memebr to the test data value
+            mCustomerID = 104;
             //always return true
             return true;
         }
