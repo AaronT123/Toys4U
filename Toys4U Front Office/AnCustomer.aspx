@@ -39,6 +39,19 @@
             &nbsp;</p>
         <asp:Label ID="Label8" runat="server" style="z-index: 1; left: 84px; top: 330px; position: absolute; right: 1360px; height: 16px" Text="House No:"></asp:Label>
         <asp:TextBox ID="txtHouseNo" runat="server" style="z-index: 1; left: 161px; top: 333px; position: absolute"></asp:TextBox>
+        <p>
+        <asp:Label ID="lblError0" runat="server" style="z-index: 1; left: 85px; top: 399px; position: absolute" Text="[lblError]"></asp:Label>
+        </p>
+        <p>
+        <asp:Label ID="lblError1" runat="server" style="z-index: 1; left: 85px; top: 399px; position: absolute" Text="[lblError]"></asp:Label>
+        <asp:Label ID="lblError2" runat="server" style="z-index: 1; left: 85px; top: 399px; position: absolute" Text="[lblError]"></asp:Label>
+        <asp:Label ID="lblError3" runat="server" style="z-index: 1; left: 85px; top: 399px; position: absolute" Text="[lblError]"></asp:Label>
+        <asp:Label ID="lblError4" runat="server" style="z-index: 1; left: 85px; top: 399px; position: absolute" Text="[lblError]"></asp:Label>
+        <asp:Label ID="lblError5" runat="server" style="z-index: 1; left: 85px; top: 399px; position: absolute" Text="[lblError]"></asp:Label>
+        <asp:Label ID="lblError6" runat="server" style="z-index: 1; left: 85px; top: 399px; position: absolute" Text="[lblError]"></asp:Label>
+        <asp:Label ID="lblError7" runat="server" style="z-index: 1; left: 85px; top: 399px; position: absolute" Text="[lblError]"></asp:Label>
+        <asp:Label ID="lblError8" runat="server" style="z-index: 1; left: 85px; top: 399px; position: absolute" Text="[lblError]"></asp:Label>
+        </p>
     </form>
 </body>
 </html>

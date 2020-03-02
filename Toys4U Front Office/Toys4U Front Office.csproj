@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="ADelivery.aspx" />
     <Content Include="AnProduct.aspx" />
+    <Content Include="CustomerDeletePage.aspx" />
+    <Content Include="CustomerList.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DeliveryViewer.aspx" />
     <Content Include="ProductViewer.aspx" />
@@ -119,6 +121,20 @@
     </Compile>
     <Compile Include="AnOrder.aspx.designer.cs">
       <DependentUpon>AnOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDeletePage.aspx.cs">
+      <DependentUpon>CustomerDeletePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerDeletePage.aspx.designer.cs">
+      <DependentUpon>CustomerDeletePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerList.aspx.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerList.aspx.designer.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerViewer.aspx.cs">
       <DependentUpon>CustomerViewer.aspx</DependentUpon>
