@@ -35,7 +35,7 @@ namespace Toys4U_Testing
             clsCustomer AnCustomer = new clsCustomer();
             //create some test data to assign to the property
             string TestData = "Abdisuldan@gmail.com";
-            //assign the data to the property
+            //assign the data to the property/
             AnCustomer.EmailAddress = TestData;
             //test to see that the two values are the same
             Assert.AreEqual(AnCustomer.EmailAddress, TestData);
