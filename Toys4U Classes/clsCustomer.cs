@@ -154,11 +154,34 @@ namespace Toys4U_Classes
 
         public Boolean Find(int CustomerID)
         {
-            //set the private data memebr to the test data value
-            mCustomerID = 104;
-            mEmailAddress = "Test@gmail.com";
-            //always return true
-            return true;
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the CustomerID to search for
+            DB.AddParameter("@CustomerID", CustomerID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblCustomer_FilterByCustomerID");
+            //if one record is found (there should be either one or zero!)
+            if (DB.Count == 1)
+            {
+                //copy the data from the database to the private data member
+                mCustomerID = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerID"]);
+                mEmailAddress = Convert.ToString(DB.DataTable.Rows[0]["EmailAddress"]);
+                mPassword = Convert.ToString(DB.DataTable.Rows[0]["Password"]);
+                mFirstName = Convert.ToString(DB.DataTable.Rows[0]["FirstName"]);
+                mLastName = Convert.ToString(DB.DataTable.Rows[0]["LastName"]);
+                mPhoneNumber = Convert.ToString(DB.DataTable.Rows[0]["PhoneNumber"]);
+                mPostCode = Convert.ToString(DB.DataTable.Rows[0]["PostCode"]);
+                mStreetName = Convert.ToString(DB.DataTable.Rows[0]["StreetName"]);
+                mHouseNo = Convert.ToString(DB.DataTable.Rows[0]["HouseNo"]);
+                //return that everything worked ok
+                return true;
+            }
+            else
+            {
+                //if no record was found
+                return false;
+            }
+           
         }
 
         public string Valid(string text1, string text2, string text3, string text4, string text5, string text6, string text7, string text8)

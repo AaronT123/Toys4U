@@ -135,7 +135,7 @@ namespace Toys4U_Testing
             //boolean variable to store the result of the validation 
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 CustomerID = 1;
+            Int32 CustomerID = 21;
             //invoke the methods
             Found = AnCustomer.Find(CustomerID);
             //test to see that the result is correct
@@ -151,11 +151,11 @@ namespace Toys4U_Testing
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with method
-            Int32 CustomerID = 104;
+            Int32 CustomerID = 21;
             //invoke the method
             Found = AnCustomer.Find(CustomerID);
             //check the CustomerID
-            if (AnCustomer.CustomerID != 104)
+            if (AnCustomer.CustomerID != 21)
             {
                 OK = false;
             }
@@ -172,11 +172,11 @@ namespace Toys4U_Testing
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with method
-            Int32 CustomerID = 104;
+            Int32 CustomerID = 21;
             //invoke the method
             Found = AnCustomer.Find(CustomerID);
             //check the CustomerID
-            if (AnCustomer.EmailAddress != "Test@gmail.com")
+            if (AnCustomer.EmailAddress != "Elitone@gmail.com")
             {
                 OK = false;
             }
@@ -193,11 +193,11 @@ namespace Toys4U_Testing
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with method
-            Int32 CustomerID = 104;
+            Int32 CustomerID = 21;
             //invoke the method
             Found = AnCustomer.Find(CustomerID);
             //check the CustomerID
-            if (AnCustomer.Password != "test1")
+            if (AnCustomer.Password != "Elite_12")
             {
                 OK = false;
             }
@@ -214,11 +214,11 @@ namespace Toys4U_Testing
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with method
-            Int32 CustomerID = 104;
+            Int32 CustomerID = 21;
             //invoke the method
             Found = AnCustomer.Find(CustomerID);
             //check the CustomerID
-            if (AnCustomer.FirstName != "test2")
+            if (AnCustomer.FirstName != "Elite")
             {
                 OK = false;
             }
@@ -235,11 +235,11 @@ namespace Toys4U_Testing
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with method
-            Int32 CustomerID = 104;
+            Int32 CustomerID = 21;
             //invoke the method
             Found = AnCustomer.Find(CustomerID);
             //check the CustomerID
-            if (AnCustomer.LastName != "test3")
+            if (AnCustomer.LastName != "One")
             {
                 OK = false;
             }
@@ -256,11 +256,11 @@ namespace Toys4U_Testing
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with method
-            Int32 CustomerID = 104;
+            Int32 CustomerID = 21;
             //invoke the method
             Found = AnCustomer.Find(CustomerID);
             //check the CustomerID
-            if (AnCustomer.PhoneNumber != "1162583697")
+            if (AnCustomer.PhoneNumber != "1161238967")
             {
                 OK = false;
             }
@@ -277,11 +277,11 @@ namespace Toys4U_Testing
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with method
-            Int32 CustomerID = 104;
+            Int32 CustomerID = 21;
             //invoke the method
             Found = AnCustomer.Find(CustomerID);
             //check the CustomerID
-            if (AnCustomer.PostCode != "LE42HT")
+            if (AnCustomer.PostCode != "LE29HE")
             {
                 OK = false;
             }
@@ -298,11 +298,11 @@ namespace Toys4U_Testing
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with method
-            Int32 CustomerID = 104;
+            Int32 CustomerID = 21;
             //invoke the method
             Found = AnCustomer.Find(CustomerID);
             //check the CustomerID
-            if (AnCustomer.StreetName != "Test")
+            if (AnCustomer.StreetName != "Shop Closed Lane")
             {
                 OK = false;
             }
@@ -319,11 +319,11 @@ namespace Toys4U_Testing
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with method
-            Int32 CustomerID = 104;
+            Int32 CustomerID = 21;
             //invoke the method
             Found = AnCustomer.Find(CustomerID);
             //check the CustomerID
-            if (AnCustomer.HouseNo != "4")
+            if (AnCustomer.HouseNo != "5")
             {
                 OK = false;
             }
