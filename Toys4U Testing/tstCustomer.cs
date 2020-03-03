@@ -96,7 +96,7 @@ namespace Toys4U_Testing
         {
             //create an instance of the class we want to create
             clsCustomer AnCustomer = new clsCustomer();
-            //create some test data to assign to the property
+            //create some test data to assign to the property//
             string TestData = "LE2 3GB";
             //assign the data to the property
             AnCustomer.PostCode = TestData;
