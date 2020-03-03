@@ -173,7 +173,7 @@ namespace Toys4U_Classes
                 mPostCode = Convert.ToString(DB.DataTable.Rows[0]["PostCode"]);
                 mStreetName = Convert.ToString(DB.DataTable.Rows[0]["StreetName"]);
                 mHouseNo = Convert.ToString(DB.DataTable.Rows[0]["HouseNo"]);
-                //return that everything worked ok
+                //return everything that worked ok
                 return true;
             }
             else
