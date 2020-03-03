@@ -190,9 +190,9 @@ namespace Toys4U_Testing
             //creaate some test data to assign to the property
             int TestData = 12345;
             //assign the data to the property
-            AnStaff.StaffID = TestData;
+            AnStaff.StaffNo = TestData;
             //test to see that the two values are the same 
-            Assert.AreEqual(AnStaff.StaffID, TestData);
+            Assert.AreEqual(AnStaff.StaffNo, TestData);
 
 
 

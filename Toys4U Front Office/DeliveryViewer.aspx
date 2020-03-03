@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Toys4U_Front_Office.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeliveryViewer.aspx.cs" Inherits="Toys4U_Front_Office.DeliveryViewer" %>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,6 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            fefe
         </div>
     </form>
 </body>
