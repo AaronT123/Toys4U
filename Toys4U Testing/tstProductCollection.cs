@@ -36,9 +36,9 @@ namespace Toys4U_Testing
             //add items to the test list
             TestList.Add(TestItem);
             //assign the data to the property
-            AllProduct.ProductList = TestList;
+            AllProduct.ProductHome = TestList;
             //test to see that two values are the same
-            Assert.AreEqual(AllProduct.ProductList, TestList);
+            Assert.AreEqual(AllProduct.ProductHome, TestList);
 
         }
         //commented out as its oldd

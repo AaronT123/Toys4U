@@ -40,7 +40,7 @@ namespace Toys4U_Classes
         }
 
         //public property for the product list
-        public List<clsProduct> ProductList
+        public List<clsProduct> ProductHome
         {
             get
             {

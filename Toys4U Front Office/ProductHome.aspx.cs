@@ -25,7 +25,7 @@ namespace Toys4U_Front_Office
             //create an instance of the toys collection
             Toys4U_Classes.clsProductCollection Toys = new Toys4U_Classes.clsProductCollection();
             //set the data source to the list of toys in  the collection
-            LstToys.DataSource = Toys.ProductList;
+            LstToys.DataSource = Toys.ProductHome;
             //set the name of the primary key
             LstToys.DataValueField = "ProductID";
             //set the data feild to display
@@ -45,6 +45,11 @@ namespace Toys4U_Front_Office
         }
 
         protected void BtnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
         {
 
         }
