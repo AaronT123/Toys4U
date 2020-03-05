@@ -206,7 +206,7 @@ namespace Toys4U_Testing
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method 
-            Int32 StaffNo = 1;
+            Int32 StaffNo = 58;
             //invoke the method
             Found = AnStaff.Find(StaffNo);
             //test to see that the result is corect
