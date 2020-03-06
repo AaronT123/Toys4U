@@ -229,6 +229,17 @@ namespace Toys4U_Classes
                 Error = Error + "The LastName must be less than 15 characters : ";
             }
 
+            //if the PhoneNumber is blank
+            if (PhoneNumber.Length == 0)
+            {
+                //record the error
+                Error = Error + "The PhoneNumber may not be blank : ";
+            }
+            if (PhoneNumber.Length > 11)
+            {
+                //record the error
+                Error = Error + "The PhoneNumber must be 11 numbers : ";
+            }
 
             //return any error message
             return Error;
