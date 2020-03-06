@@ -200,6 +200,18 @@ namespace Toys4U_Classes
                 //record the error
                 Error = Error + "The Email Address must be less than 25 characters : ";
             }
+            //if the FirstName is blank
+            if (FirstName.Length == 0)
+            {
+                //record the error
+                Error = Error + "The FirstName may not be blank : ";
+            }
+            //if the FirstName is greater that 25 characters
+            if (FirstName.Length > 15)
+            {
+                //record the error
+                Error = Error + "The FirstName must be less than 15 characters : ";
+            }
             //return any error message
             return Error;
         }
