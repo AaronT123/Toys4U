@@ -20,7 +20,7 @@
         </p>
         <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 185px; top: 518px; position: absolute" Text="[lblError]"></asp:Label>
         <asp:Button ID="btnEdit" runat="server" OnClick="btnEdit_Click" style="z-index: 1; left: 177px; top: 448px; position: absolute" Text="Edit" />
-        <asp:Button ID="btnApply" runat="server" style="z-index: 1; left: 108px; top: 383px; position: absolute" Text="Apply" />
+        <asp:Button ID="btnApply" runat="server" style="z-index: 1; left: 108px; top: 383px; position: absolute" Text="Apply" OnClick="btnApply_Click" />
     </form>
 </body>
 </html>

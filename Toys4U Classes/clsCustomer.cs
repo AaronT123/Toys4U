@@ -184,9 +184,23 @@ namespace Toys4U_Classes
            
         }
 
-        public string Valid(string text1, string text2, string text3, string text4, string text5, string text6, string text7, string text8)
+        public string Valid(string EmailAddress, string Password, string FirstName, string LastName, string PhoneNumber, string PostCode, string StreetName, string HouseNo)
         {
-            string Error = "";
+            //create a string variable to store the error
+            String Error = "";
+            //if the EmailAddress is blank
+            if (EmailAddress.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Email Address may not be blank : ";
+            }
+            //if the EmailAddress is greater that 25 characters
+            if (EmailAddress.Length > 25)
+            {
+                //record the error
+                Error = Error + "The Email Address must be less than 25 characters : ";
+            }
+            //return any error message
             return Error;
         }
     }

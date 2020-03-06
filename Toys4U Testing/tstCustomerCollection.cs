@@ -107,14 +107,13 @@ namespace Toys4U_Testing
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
-            //TestItem.CustomerID = 1;
             TestItem.EmailAddress = "hello@gmail.com";
             TestItem.Password = "makda";
             TestItem.FirstName = "kepa";
             TestItem.LastName = "anil";
             TestItem.PhoneNumber = "1166957845";
             TestItem.PostCode = "PE15DJ";
-            TestItem.StreetName = "Shearrd road";
+            TestItem.StreetName = "Shearrdroad";
             TestItem.HouseNo = "21";
             //set ThisCustomer to the test data
             AllCustomers.ThisCustomer = TestItem;
