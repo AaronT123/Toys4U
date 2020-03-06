@@ -119,7 +119,7 @@ namespace Toys4U_Front_Office
         {
             //create an insatcne of the Customer book
             clsCustomerCollection CustomerBook = new clsCustomerCollection();
-            String Error = CustomerBook.ThisCustomer.Valid(txtEmailAddress.Text, txtPassword.Text, txtFirstName.Text, txtLastName.Text,
+            string Error = CustomerBook.ThisCustomer.Valid(txtEmailAddress.Text, txtPassword.Text, txtFirstName.Text, txtLastName.Text,
                 txtPhoneNumber.Text, txtPostCode.Text, txtStreetName.Text, txtHouseNo.Text);
             //if the data is OK thne add it to the object
             if (Error == "")
