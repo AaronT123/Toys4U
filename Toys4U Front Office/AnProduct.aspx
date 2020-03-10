@@ -21,6 +21,7 @@
         <p>
             <asp:Label ID="lblStockQuantity" runat="server" Text="StockQuantity"></asp:Label>
             <asp:TextBox ID="txtStockquantity" runat="server"></asp:TextBox>
+            <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 271px; top: 214px; position: absolute; height: 18px; width: 211px"></asp:Label>
         </p>
         <p>
             <asp:Button ID="btnOk" runat="server" OnClick="btnOk_Click" Text="OK" />

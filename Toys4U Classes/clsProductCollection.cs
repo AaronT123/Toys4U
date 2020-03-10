@@ -102,10 +102,14 @@ namespace Toys4U_Classes
         public int Add()
         {
             //add a new record to the database based on tne values mThisProduct
-            //set the primary key value of the new record
-            mThisProduct.ProductID = 123;
-            //return the primary key of the new record
-            return mThisProduct.ProductID;
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the store procedure 
+            DB.AddParameter("@Name", mThisProduct.Name);
+            DB.AddParameter("@Description", mThisProduct.Description);
+            DB.AddParameter("@StockQuantity", mThisProduct.StockQuantity);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblProduct_Insert");
         }
     }
 }

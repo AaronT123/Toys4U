@@ -120,7 +120,7 @@ namespace Toys4U_Testing
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
-            TestItem.ProductID = 6;
+            //TestItem.ProductID = 6;
             TestItem.Name = "Rocking Horse";
             TestItem.Description = "Ages 1 - 3.";
             TestItem.StockQuantity = 6;

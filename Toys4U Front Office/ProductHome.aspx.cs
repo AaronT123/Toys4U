@@ -56,7 +56,18 @@ namespace Toys4U_Front_Office
 
         protected void BtnAdd_Click()
         {
+            //store -1 into the session object to indicate this is a new record 
+            //Session["AnProduct"] = -1;
+            //redirect to the data entry page
+            //Response.Redirect("AnProduct.aspx");
+        }
 
+        protected void BtnAdd_Click1(object sender, EventArgs e)
+        {
+            //store -1 into the session object to indicate this is a new record 
+            Session["AnProduct"] = -1;
+            //redirect to the data entry page
+            Response.Redirect("AnProduct.aspx");
         }
     }
 }

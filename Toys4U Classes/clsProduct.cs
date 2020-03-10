@@ -9,9 +9,14 @@ namespace Toys4U_Classes
         public string Description { get; set; }
         public int StockQuantity { get; set; }
 
-        public void Find(int primaryKey)
+        public Boolean Find(int primaryKey)
         {
-            throw new NotImplementedException();
+            return false;
+        }
+
+        public string Valid(string text1, string text2, string text3)
+        {
+            return "";
         }
     }
 }
