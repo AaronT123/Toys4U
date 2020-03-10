@@ -109,5 +109,33 @@ namespace Toys4U_Testing
             //test to see that two values are the same 
             //Assert.AreEqual(AllProduct.Count, 2);
         //}
+
+        [TestMethod]
+        public void AddMethodOK()
+        {
+            //Create an instance of the class we want to create
+            clsProductCollection AllProduct = new clsProductCollection();
+            //create some test data
+            clsProduct TestItem = new clsProduct();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.ProductID = 6;
+            TestItem.Name = "Rocking Horse";
+            TestItem.Description = "Ages 1 - 3.";
+            TestItem.StockQuantity = 6;
+            //set this product to the test data
+            AllProduct.ThisProduct = TestItem;
+            //add the record 
+            PrimaryKey = AllProduct.Add();
+            //set the primary key of this test data
+            TestItem.ProductID = PrimaryKey;
+            //find the record
+            AllProduct.ThisProduct.Find(PrimaryKey);
+            //test to see if the two values are the same
+            Assert.AreEqual(AllProduct.ThisProduct, TestItem);
+
+
+        }
     }
 }

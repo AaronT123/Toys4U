@@ -1,4 +1,6 @@
-﻿namespace Toys4U_Classes
+﻿using System;
+
+namespace Toys4U_Classes
 {
     public class clsProduct
     {
@@ -6,5 +8,10 @@
         public string Name { get; set; }
         public string Description { get; set; }
         public int StockQuantity { get; set; }
+
+        public void Find(int primaryKey)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

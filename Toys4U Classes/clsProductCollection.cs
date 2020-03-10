@@ -80,5 +80,10 @@ namespace Toys4U_Classes
 
 
         public clsProduct ThisProduct { get; set; }
+
+        public int Add()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
