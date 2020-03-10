@@ -6,6 +6,9 @@ namespace Toys4U_Classes
     {
         //private data member for the list
         List<clsProduct> mProductList = new List<clsProduct>();
+        //private data member thisproduct
+        clsProduct mThisProduct = new clsProduct();
+
 
         //contructor for the class
         public clsProductCollection()
