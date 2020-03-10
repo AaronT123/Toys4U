@@ -57,6 +57,21 @@ namespace Toys4U_Classes
             }
         }
 
+        //public property thisProduct
+        public clsProduct ThisProduct
+        {
+            get
+            {
+                //return the private data
+                return mThisProduct;
+            }
+            set
+            {
+                //set the private data
+                mThisProduct = value;
+            }
+        }
+
         //public propert for count
         public int Count
         {
@@ -82,11 +97,15 @@ namespace Toys4U_Classes
 
 
 
-        public clsProduct ThisProduct { get; set; }
+        //public clsProduct ThisProduct { get; set; }
 
         public int Add()
         {
-            throw new NotImplementedException();
+            //add a new record to the database based on tne values mThisProduct
+            //set the primary key value of the new record
+            mThisProduct.ProductID = 123;
+            //return the primary key of the new record
+            return mThisProduct.ProductID;
         }
     }
 }

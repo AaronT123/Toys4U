@@ -53,5 +53,10 @@ namespace Toys4U_Front_Office
         {
 
         }
+
+        protected void BtnAdd_Click()
+        {
+
+        }
     }
 }
