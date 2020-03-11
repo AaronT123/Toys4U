@@ -111,5 +111,30 @@ namespace Toys4U_Classes
             //execute the query returning the primary key value
             return DB.Execute("sproc_tblProduct_Insert");
         }
+
+        public void Delete()
+        {
+            //deletes the record pointed to by his This Product
+            //connect to the database 
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@ProductID", mThisProduct.ProductID);
+            //execute the stored procedure 
+            DB.Execute("sproc_tblProduct_Delete");
+        }
+
+        public void Update()
+        {
+            //update an existing record based on the values of thsi product
+            //connect to the databse
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameteres for the store procedure
+            DB.AddParameter("@ProductID", mThisProduct.ProductID);
+            DB.AddParameter("@Name", mThisProduct.Name);
+            DB.AddParameter("@Description", mThisProduct.Description);
+            DB.AddParameter("@StockQuantity", mThisProduct.StockQuantity);
+            //execute the stored procedure
+            DB.Execute("sproc_tblProduct_Update");
+        }
     }
 }

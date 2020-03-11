@@ -120,7 +120,7 @@ namespace Toys4U_Testing
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
-            //TestItem.ProductID = 6;
+            TestItem.ProductID = 6;
             TestItem.Name = "Rocking Horse";
             TestItem.Description = "Ages 1 - 3.";
             TestItem.StockQuantity = 6;
@@ -136,6 +136,66 @@ namespace Toys4U_Testing
             Assert.AreEqual(AllProduct.ThisProduct, TestItem);
 
 
+        }
+
+        [TestMethod]
+        public void DeleteMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsProductCollection AllProduct = new clsProductCollection();
+            //create the item of test data
+            clsProduct TestItem = new clsProduct();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.ProductID = 6;
+            TestItem.Name = "Rocking Horse";
+            TestItem.Description = "Ages 1 - 3.";
+            TestItem.StockQuantity = 6;
+            //set this product to test the data
+            AllProduct.ThisProduct = TestItem;
+            //add the record
+            PrimaryKey = AllProduct.Add();
+            //find the record
+            AllProduct.ThisProduct.Find(PrimaryKey);
+            //delete the record
+            AllProduct.Delete();
+            //now find the record 
+            Boolean Found = AllProduct.ThisProduct.Find(PrimaryKey);
+            //test to see that the record was not found
+            Assert.IsFalse(Found);
+           
+        }
+
+        [TestMethod]
+        public void UpdateMethodOK()
+        {
+            //create an instance of the class we want to create 
+            clsProductCollection AllProduct = new clsProductCollection();
+            //create the item of test data 
+            clsProduct TestItem = new clsProduct();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties 
+            TestItem.Name = "Rocking Horse";
+            TestItem.Description = "Ages 1 - 3";
+            TestItem.StockQuantity = 6;
+            //set this prodcut to test data
+            AllProduct.ThisProduct = TestItem;
+            //add the record 
+            PrimaryKey = AllProduct.Add();
+            //modify the test data 
+            TestItem.Name = "Rocking Horse 1";
+            TestItem.Description = "Ages 2 - 3.";
+            TestItem.StockQuantity = 35;
+            //set the record based on the new test data
+            AllProduct.ThisProduct = TestItem;
+            //update the record
+            AllProduct.Update();
+            //find the record
+            AllProduct.ThisProduct.Find(PrimaryKey);
+            //test to see this product matches the teset data
+            Assert.AreEqual(AllProduct.ThisProduct, TestItem);
         }
     }
 }

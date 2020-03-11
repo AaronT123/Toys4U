@@ -30,7 +30,7 @@
             <asp:Button ID="BtnDisplayAll" runat="server" Height="57px" OnClick="Button2_Click" Text="Display All" Width="80px" />
         </p>
         <asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click1" />
-        <asp:Button ID="BtnEdit" runat="server" Text="Edit" />
+        <asp:Button ID="BtnEdit" runat="server" Text="Edit" OnClick="BtnEdit_Click" />
         <asp:Button ID="BtnDelete" runat="server" OnClick="BtnDelete_Click" Text="Delete" />
     </form>
 </body>

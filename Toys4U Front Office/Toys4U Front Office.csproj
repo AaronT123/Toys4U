@@ -71,6 +71,7 @@
     <Content Include="AnProduct.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DeliveryViewer.aspx" />
+    <Content Include="ProductDelete.aspx" />
     <Content Include="ProductHome.aspx" />
     <Content Include="ProductViewer.aspx" />
     <Content Include="Web.config">
@@ -141,6 +142,13 @@
     </Compile>
     <Compile Include="DeliveryViewer.aspx.designer.cs">
       <DependentUpon>DeliveryViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDelete.aspx.cs">
+      <DependentUpon>ProductDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDelete.aspx.designer.cs">
+      <DependentUpon>ProductDelete.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductHome.aspx.cs">
       <DependentUpon>ProductHome.aspx</DependentUpon>

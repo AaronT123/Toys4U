@@ -46,6 +46,21 @@ namespace Toys4U_Front_Office
 
         protected void BtnDelete_Click(object sender, EventArgs e)
         {
+            //event handler for the delete button 
+            //var to store the primary key value of the record to be deleted
+            Int32 ProductID;
+            //if a record has been selected from the list
+            if (LstToys.SelectedIndex != -1)
+            {
+                //get the primary key value of the record to delete
+                ProductID = Convert.ToInt32(LstToys.SelectedValue);
+                //store the data in the session object
+                Session["ProductID"] = ProductID;
+                //redirect to the delete page 
+                Response.Redirect("ProductDelete.aspx");
+
+            }
+           
 
         }
 
@@ -69,5 +84,22 @@ namespace Toys4U_Front_Office
             //redirect to the data entry page
             Response.Redirect("AnProduct.aspx");
         }
+
+        protected void BtnEdit_Click(object sender, EventArgs e)
+        {
+            //event handler for the edit button
+            //var to store the primary key value of the record to be edited
+            Int32 ProductID;
+            //if a record has been selected from the list
+            if (LstToys.SelectedIndex != -1)
+            {
+                //get the primary key value of the record to edit
+                ProductID = Convert.ToInt32(LstToys.SelectedValue);
+                //store the data in the session object
+                Session["ProductID"] = ProductID;
+                //redirect to the edit page
+                Response.Redirect("AnProduct.aspx");
+            }
+         
     }
 }
