@@ -7,7 +7,7 @@ namespace Toys4U_Classes
     {
         //private data member for the list
         List<clsStaff> mStaffList = new List<clsStaff>();
-        //privatw edata member thisSt\aff
+        //private edata member thisSt\aff
         clsStaff mThisStaff = new clsStaff();
         
         //constructor for the class
