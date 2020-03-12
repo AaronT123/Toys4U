@@ -80,7 +80,7 @@ namespace Toys4U_Front_Office
             else // if no record has been selected 
             {
                 //display an error
-                lblError.Text = "Please select a record to delete from the list";
+                lblError.Text = "Please select a record to Edit from the list";
             }
         }
 

@@ -209,12 +209,12 @@ namespace Toys4U_Testing
             if (FilteredCustomers.Count == 2)
             {
                 //check that the correct number of records are found
-                if (FilteredCustomers.CustomerList[0].CustomerID != 55)
+                if (FilteredCustomers.CustomerList[0].CustomerID != 37)
                 {
                     OK = false;
                 }
                 //check that the first record is ID 37
-                if (FilteredCustomers.CustomerList[1].CustomerID != 57)
+                if (FilteredCustomers.CustomerList[1].CustomerID != 39)
                 {
                     OK = false;
                 }

@@ -188,6 +188,8 @@ namespace Toys4U_Classes
         {
             //create a string variable to store the error
             String Error = "";
+           
+
             //if the EmailAddress is blank
             if (EmailAddress.Length == 0)
             {
@@ -198,10 +200,10 @@ namespace Toys4U_Classes
             if (EmailAddress.Length > 25)
             {
                 //record the error
-                Error = Error + "The Email Address must be less than 25 characters : ";
+                Error = Error + "The Email Address must be less than 15 characters : ";
             }
 
-
+          
             //if the FirstName is blank
             if (FirstName.Length == 0)
             {
@@ -228,6 +230,26 @@ namespace Toys4U_Classes
                 //record the error
                 Error = Error + "The LastName must be less than 15 characters : ";
             }
+            //if (PhoneNumber != "")
+            //{
+            //    try
+            //    {
+            //        Int32 PhoneNumberCheck = Convert.ToInt32(PhoneNumber);
+            //        return "";
+            //    }
+            //    catch
+            //    {
+            //        return "This is not a number";
+            //    }
+            //}
+            //if (PhoneNumber == "")
+            //{
+            //    return "The PhoneNumber  may not b blank";
+            //}
+            //if (PhoneNumber.Length > 15)
+            //{
+            //    return "The PhoneNumber cannot have more than 15 characters";
+            //}
 
             //if the PhoneNumber is blank
             if (PhoneNumber.Length == 0)
@@ -241,6 +263,44 @@ namespace Toys4U_Classes
                 Error = Error + "The PhoneNumber must be 11 numbers : ";
             }
 
+            //if the PostCode is blank
+            if (PostCode.Length == 0)
+            {
+                //record the error
+                Error = Error + "The postcode may not be blank : ";
+            }
+            if (PostCode.Length > 7)
+            {
+                //record the error
+                Error = Error + "The PhoneNumber must be less than 7 characters  : ";
+            }
+
+            //if the StreetName is blank
+            if (StreetName.Length == 0)
+            {
+                //record the error
+                Error = Error + "The StreetName may not be blank : ";
+            }
+            if (StreetName.Length > 20)
+            {
+                //record the error
+                Error = Error + "The StreetName must be 20 letters : ";
+            }
+
+
+            //if the House No is blank
+            if (HouseNo.Length == 0)
+            {
+                //record the error
+                Error = Error + "The house number must not be blank : ";
+
+            }
+            //if the house no is greater than 6 characters
+            if (HouseNo.Length > 6)
+            {
+                //record the error
+                Error = Error + "The house no must be less than 6 characters : ";
+            }
             //return any error message
             return Error;
         }

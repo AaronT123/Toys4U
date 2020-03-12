@@ -23,7 +23,7 @@ namespace Toys4U_Front_Office
                 //populate the list of customers
                 DisplayCustomer();
                 //if this is not a new record
-                if (CustomerID != -1)
+                if (CustomerID !=-1)
                 {
                     //display the current data for the record 
                     DisplayCustomer();
@@ -47,8 +47,8 @@ namespace Toys4U_Front_Office
             txtStreetName.Text = CustomerBook.ThisCustomer.StreetName;
             txtHouseNo.Text = CustomerBook.ThisCustomer.HouseNo;
 
-
         }
+
         //event handler for the ok button
         protected void btnOK_Click(object sender, EventArgs e)
         {
@@ -56,6 +56,7 @@ namespace Toys4U_Front_Office
             {
                 //add the new record
                 Add();
+              //  Response.Redirect("CustomerList.aspx");
             }
             else
             {
@@ -64,25 +65,9 @@ namespace Toys4U_Front_Office
             }
 
             //All done so redirect back to the main page
-            Response.Redirect("CustomerList.aspx");
+           /// Response.Redirect("CustomerList.aspx");
 
-            ////create and new instance of clsCustomer
-            //clsCustomer AnCustomer = new clsCustomer();
-            ////capture the Customer ID
-            //AnCustomer.CustomerID = Convert.ToInt32(txtCustomerID.Text);
-            //AnCustomer.EmailAddress = txtEmailAddress.Text;
-            //AnCustomer.Password = txtPassword.Text;
-            //AnCustomer.FirstName = txtFirstName.Text;
-            //AnCustomer.LastName = txtLastName.Text;
-            //AnCustomer.PhoneNumber = txtPhoneNumber.Text;
-            //AnCustomer.PostCode = txtPostCode.Text;
-            //AnCustomer.StreetName = txtStreetName.Text;
-
-
-            ////store teh address in the session object
-            //Session["AnCustomer"] = AnCustomer;
-            ////redirect to the viewer page
-            //Response.Redirect("CustomerViewer.aspx");
+            
 
         }
         //function for adding new record
@@ -111,7 +96,8 @@ namespace Toys4U_Front_Office
             else
             {
                 //report an error
-                lblError.Text = "There were problems with the data entered" + Error;
+                //txtEmailAddress.Text = "Hey, we have an error";
+                lblError.Text = "There were problems with the data entered " + Error;
             }
 
         }
