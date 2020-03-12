@@ -341,7 +341,7 @@ namespace Toys4U_Testing
             Int32 StaffNo = 58;
             Found = AnStaff.Find(StaffNo);
             //check the staff no
-            if (AnStaff.FirstName != Test)
+            if (AnStaff.FirstName != "Test")
             {
                 OK = false;
             }
@@ -429,7 +429,7 @@ namespace Toys4U_Testing
             Int32 StaffNo = 58;
             Found = AnStaff.Find(StaffNo);
             //check the staff no
-            if (AnStaff.Password != Test)
+            if (AnStaff.Password != "Test")
             {
                 OK = false;
             }
@@ -459,5 +459,20 @@ namespace Toys4U_Testing
             Assert.IsTrue(OK);
         }
 
-    }
+        //[TestMethod]
+        //public void ValidMethodOk()
+        //{
+        //    //create an instance of the class we want to create
+        //    clsStaff AnStaff = new clsStaff();
+        //    //string variable to store any error message
+        //    String Error = "";
+        //    //invoke the method
+        //    Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber)
+
+        //}
+
+
+
+
+        }
 }

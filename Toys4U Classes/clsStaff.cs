@@ -170,7 +170,7 @@ namespace Toys4U_Classes
             }
         }
 
-        public Boolean Find(int PrimaryKey)
+        public Boolean Find(int StaffNo)
         {//set the private data member to the test data value
             //mStaffNo = 58;
             //mAdmin = true;
@@ -191,12 +191,12 @@ namespace Toys4U_Classes
             //add the parameter for the address no to search for
             DB.AddParameter("StaffNo", StaffNo);
             //execute the stored procedure
-            DB.Execute("sproc_tblStaff_FilterByJobTitle");
+            DB.Execute("sproc_tblStaff_FilterByStaffNo");
             //if one record is found (there should be either one or zero!)
             if (DB.Count ==1)
             {
                 //copy the data from the database to the private data members
-                mStaffNo = Convert.ToInt32(DB.DataTable.Rows[0]["StaffNo"]);
+                mStaffNo = Convert.ToInt32(DB.DataTable.Rows[0]["StaffId"]);
                 mAdmin = Convert.ToBoolean(DB.DataTable.Rows[0]["Admin"]);
                 mDateJoined = Convert.ToDateTime(DB.DataTable.Rows[0]["DateJoined"]);
                 mDateOfBirth = Convert.ToDateTime(DB.DataTable.Rows[0]["DateOfBirth"]);
@@ -217,7 +217,7 @@ namespace Toys4U_Classes
             }
         }
 
-        public string Valid(string text1, string text2, string text3)
+        public string Valid(string DateJoined, string DateOfBirth, string Email, string FirstName, string HourlyPay, string JobTitle, string LastName, string Password, string PhoneNumber)
         {
             string Error = "";
             return Error;
