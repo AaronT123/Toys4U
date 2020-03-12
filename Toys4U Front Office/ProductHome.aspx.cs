@@ -60,7 +60,7 @@ namespace Toys4U_Front_Office
                 Response.Redirect("ProductDelete.aspx");
 
             }
-           
+
 
         }
 
@@ -100,6 +100,7 @@ namespace Toys4U_Front_Office
                 //redirect to the edit page
                 Response.Redirect("AnProduct.aspx");
             }
-         
+
+        }
     }
 }

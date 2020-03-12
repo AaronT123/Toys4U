@@ -197,5 +197,30 @@ namespace Toys4U_Testing
             //test to see this product matches the teset data
             Assert.AreEqual(AllProduct.ThisProduct, TestItem);
         }
+
+        [TestMethod]
+        public void ReportByNameMethodOK()
+        {
+            //create an instance of the class containing unfiltered results 
+            clsProductCollection AllProduct = new clsProductCollection();
+            //create an instance of the filtered data
+            clsProductCollection FilteredProduct = new clsProductCollection();
+            //apply a blank string (should return all records);
+            FilteredProduct.ReportByName("");
+            //test to see that the two values are the same 
+            Assert.AreEqual(AllProduct.Count, FilteredProduct.Count);
+        }
+
+        [TestMethod]
+        public void ReportByNameNoneFound()
+        {
+            //create an instance of the filtered data
+            clsProductCollection FilteredProduct = new clsProductCollection();
+            //apply a name that doesnt exist
+            FilteredProduct.ReportByName("xxxxx");
+            //test to see that there are no records
+            Assert.AreEqual(0, FilteredProduct.Count);
+        }
+           
     }
 }

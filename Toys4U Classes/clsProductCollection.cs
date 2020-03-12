@@ -19,10 +19,13 @@ namespace Toys4U_Classes
             Int32 RecordCount = 0;
             //object for data connection 
             clsDataConnection DB = new clsDataConnection();
-            //execute the stored procedure 
+
+            //execute the stored procedure
             DB.Execute("sproc_tblProduct_SelectAll");
-            //get the count of records
-            RecordCount = DB.Count;
+            //populate the array list with the data table
+            PopulateArray(DB);
+        
+
             //while there are records to process
             while (Index < RecordCount)
             {
@@ -123,18 +126,51 @@ namespace Toys4U_Classes
             DB.Execute("sproc_tblProduct_Delete");
         }
 
+        //for updating records
         public void Update()
         {
-            //update an existing record based on the values of thsi product
-            //connect to the databse
+            
+        }
+
+        public void ReportByName(string Name)
+        {
+            //filterrs the records based on a full or partial name
+            //connect to the database 
             clsDataConnection DB = new clsDataConnection();
-            //set the parameteres for the store procedure
-            DB.AddParameter("@ProductID", mThisProduct.ProductID);
-            DB.AddParameter("@Name", mThisProduct.Name);
-            DB.AddParameter("@Description", mThisProduct.Description);
-            DB.AddParameter("@StockQuantity", mThisProduct.StockQuantity);
+            //send the name parameter to the database
+            DB.AddParameter("@Name", Name);
             //execute the stored procedure
-            DB.Execute("sproc_tblProduct_Update");
+            DB.Execute("sproc_tblProduct_FilterByName");
+            //populate the array list with the data table
+            PopulateArray(DB);
+        }
+
+        void PopulateArray(clsDataConnection DB)
+        {
+            //POPULATE THE ARRAY LIST BASED ON THE DATA TABLE IN THE PARAMETER DB
+            //var for the index
+            Int32 Index = 0;
+            //var to store the record count
+            Int32 RecordCount;
+            //get the count of records
+            RecordCount = DB.Count;
+            //clear the private array list
+            mProductList = new List<clsProduct>();
+            //while there are records to process
+            while (Index < RecordCount)
+            {
+                //create a blacnk product
+                clsProduct AnProduct = new clsProduct();
+                //read in the fields from the current record
+                AnProduct.ProductID = Convert.ToInt32(DB.DataTable.Rows[Index]["ProductID"]);
+                AnProduct.Name = Convert.ToString(DB.DataTable.Rows[Index]["Name"]);
+                AnProduct.Description = Convert.ToString(DB.DataTable.Rows[Index]["Description"]);
+                AnProduct.StockQuantity = Convert.ToInt32(DB.DataTable.Rows[Index]["StockQuantity"]);
+                //add the record to the private data member
+                mProductList.Add(AnProduct);
+                //point at the next record
+                Index++;
+            }
         }
     }
 }
