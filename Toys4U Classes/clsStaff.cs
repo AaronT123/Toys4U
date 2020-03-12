@@ -317,11 +317,67 @@ namespace Toys4U_Classes
 
 
 
+            if (DateOfBirth != "")
+            {
+                try
+                {
+                    DateTime dateofbirth;
+                    DateTime TodaysDate;
+                    int age;
+                    dateofbirth = Convert.ToDateTime(DateOfBirth);
+                    TodaysDate = DateTime.Now;
+                    age = TodaysDate.Year - dateofbirth.Year;
+                    //account for leap
+                    if (TodaysDate.Date > TodaysDate.AddYears(-age)) age--;
+                
+
+                    if (age <18 )
+                    {
+                        Error += "";
+
+                    }
+                    else
+                    {
+
+                        Error += "Too Young";
+                    }
+
+                }
+                catch
+                {
+                    Error += "Date time must be in the format MM/DD/YY/";
+                }
+
+
+            }
+            else
+            {
+                Error += "DateTime cannot be left empty";
+            }
 
 
 
+            if (DateJoined != "")
+            {
+                try
+                {
+                    DateTime datejoined;
+                    datejoined = Convert.ToDateTime(DateJoined);
+                    
+                    
+
+                }
+                catch
+                {
+                    Error += "Date time must be in the format MM/DD/YY/";
+                }
 
 
+            }
+            else
+            {
+                Error += "DateTime cannot be left empty";
+            }
 
 
 
