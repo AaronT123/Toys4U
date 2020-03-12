@@ -25,7 +25,8 @@ namespace Toys4U_Front_Office
             clsCustomerCollection CustomerBook = new clsCustomerCollection();
             //find the record to delete
             CustomerBook.ThisCustomer.Find(CustomerID);
-           
+            //delete the record
+            CustomerBook.Delete();
         }
 
 

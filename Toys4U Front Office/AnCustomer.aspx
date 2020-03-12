@@ -24,19 +24,19 @@
         <asp:TextBox ID="txtPhoneNumber" runat="server" style="z-index: 1; left: 168px; top: 212px; position: absolute"></asp:TextBox>
         <asp:TextBox ID="txtPostCode" runat="server" style="z-index: 1; left: 169px; top: 250px; position: absolute"></asp:TextBox>
         <asp:TextBox ID="txtStreetName" runat="server" style="z-index: 1; left: 167px; top: 292px; position: absolute"></asp:TextBox>
-        <asp:Button ID="btnCancel" runat="server" style="z-index: 1; left: 136px; top: 443px; position: absolute" Text="Cancel" />
+        <asp:Button ID="btnCancel" runat="server" style="z-index: 1; left: 142px; top: 472px; position: absolute" Text="Cancel" />
         <p>
             &nbsp;</p>
         <p>
-        <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" style="z-index: 1; left: 95px; top: 442px; position: absolute" Text="OK" />
-        </p>
-        <p>
-        <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 85px; top: 399px; position: absolute" Text="[lblError]"></asp:Label>
+        <asp:Button ID="btnOK" runat="server" OnClick="btnOK_Click" style="z-index: 1; left: 55px; top: 473px; position: absolute; width: 59px;" Text="OK" />
         </p>
         <p>
             &nbsp;</p>
-        <asp:Label ID="Label8" runat="server" style="z-index: 1; left: 84px; top: 330px; position: absolute; right: 1360px; height: 16px" Text="House No:"></asp:Label>
+        <p>
+            &nbsp;</p>
+        <asp:Label ID="Label8" runat="server" style="z-index: 1; left: 67px; top: 335px; position: absolute; right: 1377px; height: 16px" Text="House No:"></asp:Label>
         <asp:TextBox ID="txtHouseNo" runat="server" style="z-index: 1; left: 161px; top: 333px; position: absolute"></asp:TextBox>
+        <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 119px; top: 402px; position: absolute"></asp:Label>
     </form>
 </body>
 </html>
