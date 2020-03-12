@@ -92,9 +92,9 @@ namespace Toys4U_Testing
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
-            TestItem.OrderID = 1;
+            //TestItem.OrderID = 16;
             TestItem.OrderDate = DateTime.Now.Date;
-            TestItem.CustomerID = 1;
+            TestItem.CustomerID = 16;
             //set ThisOrder to the test data
             AllOrders.ThisOrder = TestItem;
             //add the record

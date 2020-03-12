@@ -18,7 +18,7 @@ namespace Toys4U_Classes
             get
             {
                 //return the private data
-                return OrderID;
+                return mOrderID;
             }
             set
             {
@@ -73,6 +73,8 @@ namespace Toys4U_Classes
             {
                 //copy the data from the database to the private data member
                 mOrderID = Convert.ToInt32(DB.DataTable.Rows[0]["OrderID"]);
+                mOrderDate = Convert.ToDateTime(DB.DataTable.Rows[0]["OrderDate"]);
+                mCustomerID = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerID"]);
                 //return everything that worked ok
                 return true;
             }
