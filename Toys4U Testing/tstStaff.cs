@@ -486,12 +486,12 @@ namespace Toys4U_Testing
 
 
 
-        [TestMethod]
-        public void ValidMethodOk()
-        {
+        //[TestMethod]
+        //public void ValidMethodOk()
+        //{
 
 
 
-        }
+        //}
     }
 }

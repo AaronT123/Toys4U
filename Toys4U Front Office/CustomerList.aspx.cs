@@ -15,7 +15,7 @@ namespace Toys4U_Front_Office
             // this function handles the load event for the page
             if (IsPostBack == false)
             {
-                //update the list vox
+                //update the list box
                 DisplayCustomer();
             }
         }
@@ -86,7 +86,36 @@ namespace Toys4U_Front_Office
 
         protected void btnApply_Click(object sender, EventArgs e)
         {
+            //display only Postcode 
+            DisplayFilterCustomer(txtPostCode.Text);
+        }
 
+        Int32  DisplayFilterCustomer(string PostCodeFilter)
+        {
+            Int32 CustomerID;
+            //string Firstname;
+            string PostCode;
+            clsCustomerCollection CustomerBook = new clsCustomerCollection();
+            Int32 RecordCount;
+            Int32 Index = 0;
+            RecordCount = CustomerBook.Count;
+            lstCustomer.Items.Clear();
+            while(Index < RecordCount)
+            {
+                CustomerID = CustomerBook.CustomerList[Index].CustomerID;
+                //Firstname = CustomerBook.CustomerList[Index].FirstName;
+                PostCode = CustomerBook.CustomerList[Index].PostCode;
+                ListItem NewEntry = new ListItem(PostCode+ "" , CustomerID.ToString());
+                lstCustomer.Items.Add(NewEntry);
+                Index++;
+            }
+            return RecordCount;
+
+        }
+
+        protected void btnDisplayAll_Click(object sender, EventArgs e)
+        {
+            DisplayFilterCustomer("");
         }
     }
 }

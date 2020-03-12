@@ -12,7 +12,7 @@
         </div>
         <asp:ListBox ID="lstCustomer" runat="server" style="z-index: 1; left: 110px; top: 61px; position: absolute; height: 180px; width: 181px; bottom: 615px"></asp:ListBox>
         <asp:TextBox ID="txtPostCode" runat="server" style="z-index: 1; left: 113px; top: 304px; position: absolute; width: 154px;"></asp:TextBox>
-        <asp:Button ID="btnDisplayAll" runat="server" style="z-index: 1; left: 194px; top: 383px; position: absolute" Text="Display All" />
+        <asp:Button ID="btnDisplayAll" runat="server" style="z-index: 1; left: 194px; top: 383px; position: absolute" Text="Display All" OnClick="btnDisplayAll_Click" />
         <asp:Button ID="btnAdd" runat="server" style="z-index: 1; left: 102px; top: 448px; position: absolute; width: 57px;" Text="Add" OnClick="btnAdd_Click" />
         <asp:Button ID="btnDelete" runat="server" style="z-index: 1; left: 253px; top: 447px; position: absolute; width: 61px;" Text="Delete" OnClick="btnDelete_Click" />
         <p>
