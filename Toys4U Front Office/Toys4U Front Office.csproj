@@ -73,6 +73,8 @@
     <Content Include="CustomerList.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DeliveryViewer.aspx" />
+    <Content Include="OrderDelete.aspx" />
+    <Content Include="OrderList.aspx" />
     <Content Include="ProductViewer.aspx" />
     <Content Include="StaffDeletePage.aspx" />
     <Content Include="StaffList.aspx" />
@@ -148,6 +150,20 @@
     </Compile>
     <Compile Include="DeliveryViewer.aspx.designer.cs">
       <DependentUpon>DeliveryViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDelete.aspx.cs">
+      <DependentUpon>OrderDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderDelete.aspx.designer.cs">
+      <DependentUpon>OrderDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductViewer.aspx.cs">
       <DependentUpon>ProductViewer.aspx</DependentUpon>
