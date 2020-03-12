@@ -71,7 +71,6 @@
     <Content Include="AnProduct.aspx" />
     <Content Include="CustomerDelete.aspx" />
     <Content Include="CustomerList.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="DeliveryViewer.aspx" />
     <Content Include="OrderDelete.aspx" />
     <Content Include="OrderList.aspx" />

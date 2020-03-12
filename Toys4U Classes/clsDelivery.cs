@@ -13,5 +13,10 @@ namespace Toys4U_Classes
         public string Postcode { get; set; }
         public DateTime DateAdded { get; set; }
         public DateTime DateEstimated { get; set; }
+
+        public Boolean Find(int DeliveryID)
+        {
+            return false;
+        }
     }
 }
