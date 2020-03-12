@@ -14,7 +14,7 @@ namespace Toys4U_Testing
         string DateOfBirth = "12/12/2012";
         string Email = "cjs@hotmail.com";
         string FirstName = "Callum";
-        string HourlyPay = "12";
+        string HourlyPay = "12.00";
         string JobTitle = "Admin";
         string LastName = "Simpson";
         string Password = "AStrongPassword1!";
@@ -480,18 +480,58 @@ namespace Toys4U_Testing
             String Error = "";
             //invoke the method
             Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void DateofBirthExtremeMin()
+        {
+            //create an instance of the class we want to create
+            clsStaff AnStaff = new clsStaff();
+            //string variable to store any error message
+            DateTime DateNow = DateTime.Now;
+            DateTime TestDate;
 
+            TestDate = DateNow.AddYears(-1200);
+            DateOfBirth = Convert.ToString(TestDate);
+            String Error = "";
+            //invoke the method
+            Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void DateofBirthMinMinusOne()
+        {
+            //create an instance of the class we want to create
+            clsStaff AnStaff = new clsStaff();
+            //string variable to store any error message
+            DateTime DateNow = DateTime.Now;
+            DateTime TestDate;
+
+            TestDate = DateNow.AddYears(-120);
+            DateOfBirth = Convert.ToString(TestDate);
+            String Error = "";
+            //invoke the method
+            Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
+            Assert.AreNotEqual(Error, "");
         }
 
 
-
-
         [TestMethod]
-        public void ValidMethodOk()
+        public void DateofBirthMinBoundary()
         {
+            //create an instance of the class we want to create
+            clsStaff AnStaff = new clsStaff();
+            //string variable to store any error message
+            DateTime DateNow = DateTime.Now;
+            DateTime TestDate;
 
-
-
+            TestDate = DateNow.AddYears(-120).AddDays(2);
+            DateOfBirth = Convert.ToString(TestDate);
+            String Error = "";
+            //invoke the method
+            Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
+            Assert.AreEqual(Error, "");
         }
     }
 }

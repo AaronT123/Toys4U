@@ -379,17 +379,83 @@ namespace Toys4U_Classes
                 Error += "DateTime cannot be left empty";
             }
 
+            if (Email!= "")
+            {
+                try
+                {
+                   
+                    var address = new System.Net.Mail.MailAddress(Email);
+                    Error += "";
+                }
+                catch
+                {
+                    Error += "Email must be in the format xx@yy.zz";
+                }
+
+            }
+
+            
+            if (Password.Length > 0 && Password.Length < 41)
+            {
+                bool ContainsCapitalLetter = false;
+                bool ContainsLowerLetter = false;
+                bool ContainsNumber = false;
+
+                foreach (char c in Password)
+                {
 
 
+                    if (char.IsUpper(c)) ContainsCapitalLetter = true;
+
+                    if (char.IsLower(c)) ContainsLowerLetter = true;
+                    if (char.IsDigit(c)) ContainsNumber = true;
+                }
+                if(ContainsCapitalLetter==false)
+                {
+                    Error += "Please include one capital letter ";
+                }
+                else if (ContainsLowerLetter ==false)
+                {
+                    Error += "Please include one lower letter ";
+                }
+                else if (ContainsNumber==false)
+                {
+                    Error += "Please include one number ";
+                }
+
+            }
+            else
+            {
+                Error += "Password must be between 0 and 41 chararcters";
+
+            }
 
 
-            return Error;
+            if(PhoneNumber!="")
+            {
+       
+               PhoneNumber.Trim();
+               if (PhoneNumber.Length==11)
+                { 
+                    
+                    foreach (char c in PhoneNumber)
+                    {
+
+
+                        if (!Char.IsDigit(c))
+                        {
+                            Error += "The JobTitle name must only contain numbers";
+                        }
+                    }
+                }
+
+            }
+
+
+                return Error;
         }
 
-
-        if(Email)
-        
     }
-
+   
   
 }
