@@ -220,6 +220,113 @@ namespace Toys4U_Classes
         public string Valid(string DateJoined, string DateOfBirth, string Email, string FirstName, string HourlyPay, string JobTitle, string LastName, string Password, string PhoneNumber)
         {
             string Error = "";
+
+            if (FirstName.Length > 0 && FirstName.Length<41)
+            {
+                foreach(char c in FirstName)
+                {
+
+                    if(!Char.IsLetter(c))
+                    {
+                        Error += "The first name must only contain letters";
+                    }
+
+                    Error += "";
+                }
+            }
+            else
+            {
+                Error += "First name must be between 0 and 41 characters";
+            }
+
+
+            if(HourlyPay!="")
+            {
+                try
+                {
+                    decimal hourlypay;
+                    hourlypay = Convert.ToDecimal(HourlyPay);
+                    int decimalplaces = BitConverter.GetBytes(decimal.GetBits(hourlypay)[3])[2];
+                    if(decimalplaces == 2)
+                    {
+                        if(hourlypay>6.14m && hourlypay<1000.01m)
+                        {
+                            Error += "";
+                        }
+                        else
+                        {
+                            Error += "HourlyPay must be between £6.14 and £1000.01";
+                        }
+
+                    }
+                    else
+                    {
+
+                        Error += "Hourly Pay Must have 2 decimal places";
+                    }
+
+                }
+                catch
+                {
+                    Error += "HourlyPay must be a decimal";
+                }
+
+
+            }
+            else
+            {
+                Error += "HourlyPay cannot be left empty";
+            }
+
+
+            if (JobTitle.Length > 0 && JobTitle.Length < 41)
+            {
+                foreach (char c in JobTitle)
+                {
+
+                    if (!Char.IsLetter(c))
+                    {
+                        Error += "The JobTitle name must only contain letters";
+                    }
+
+                    Error += "";
+                }
+            }
+            else
+            {
+                Error += "JobTitle must be between 0 and 41 characters";
+            }
+            if (LastName.Length > 0 && LastName.Length < 41)
+            {
+                foreach (char c in LastName)
+                {
+
+                    if (!Char.IsLetter(c))
+                    {
+                        Error += "The LastName name must only contain letters";
+                    }
+
+                    Error += "";
+                }
+            }
+            else
+            {
+                Error += "LastName must be between 0 and 41 characters";
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             return Error;
         }
 

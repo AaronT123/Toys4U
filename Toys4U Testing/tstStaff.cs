@@ -7,6 +7,18 @@ namespace Toys4U_Testing
     [TestClass]
     public class tstStaff
     {
+
+
+        //some good test data
+        string DateJoined = "11/11/2011";
+        string DateOfBirth = "12/12/2012";
+        string Email = "cjs@hotmail.com";
+        string FirstName = "Callum";
+        string HourlyPay = "12";
+        string JobTitle = "Admin";
+        string LastName = "Simpson";
+        string Password = "AStrongPassword1!";
+        string PhoneNumber = "08765 654653";
         //test method to check if instance can be created
         [TestMethod]
         public void InstanceOK()
@@ -459,20 +471,27 @@ namespace Toys4U_Testing
             Assert.IsTrue(OK);
         }
 
-        //[TestMethod]
-        //public void ValidMethodOk()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsStaff AnStaff = new clsStaff();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //invoke the method
-        //    Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber)
+        [TestMethod]
+        public void ValidMethodOk()
+        {
+            //create an instance of the class we want to create
+            clsStaff AnStaff = new clsStaff();
+            //string variable to store any error message
+            String Error = "";
+            //invoke the method
+            Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
 
-        //}
+        }
 
+
+
+
+        [TestMethod]
+        public void DateJoinedMinLessOne()
+        {
 
 
 
         }
+    }
 }
