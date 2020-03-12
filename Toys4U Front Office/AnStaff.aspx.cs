@@ -91,7 +91,8 @@ namespace Toys4U_Front_Office
             //create an instance of the staff collection
             clsStaffCollection SomeStaff = new clsStaffCollection();
             //validate the data on the web form
-            String Error = SomeStaff.ThisStaff.Valid(TextBoxStaffID.Text, TextBoxFirstName.Text, TextBoxLastName.Text);
+            String Error = "";
+            //Error = SomeStaff.ThisStaff.Valid(TextBoxStaffID.Text, TextBoxFirstName.Text, TextBoxLastName.Text);
             //if the data is ok then add it to the object
             if (Error =="")
             {
