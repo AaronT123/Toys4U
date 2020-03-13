@@ -371,13 +371,20 @@ namespace Toys4U_Classes
                 {
                    
                     var address = new System.Net.Mail.MailAddress(Email);
-                    Error += "";
+                    if (Email.Length>50)
+                    {
+                        Error += "Email must be less than 50 characters";
+                    }
                 }
                 catch
                 {
                     Error += "Email must be in the format xx@yy.zz";
                 }
 
+            }
+            else
+            {
+                Error += "Email must not be blank";
             }
 
             
@@ -420,8 +427,8 @@ namespace Toys4U_Classes
             if(PhoneNumber!="")
             {
        
-               PhoneNumber.Trim();
-               if (PhoneNumber.Length==11)
+               PhoneNumber= System.Text.RegularExpressions.Regex.Replace(PhoneNumber, @" ", "");
+                if (PhoneNumber.Length==11)
                 { 
                     
                     foreach (char c in PhoneNumber)
@@ -430,9 +437,14 @@ namespace Toys4U_Classes
 
                         if (!Char.IsDigit(c))
                         {
-                            Error += "The JobTitle name must only contain numbers";
+                            Error += "The PhoneNumber must only contain Digits";
                         }
                     }
+                }
+               else
+                {
+                    Error += "The PhoneNumber must be 11 digits " + PhoneNumber;
+
                 }
 
             }
