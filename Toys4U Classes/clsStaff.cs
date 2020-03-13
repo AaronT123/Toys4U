@@ -325,7 +325,7 @@ namespace Toys4U_Classes
                 Temp = Convert.ToDateTime(DateOfBirth);
                 DateTime minDate = DateTime.Today.AddYears(-120);
                 DateTime maxDate = DateTime.Today.AddYears(-18);
-                if (Temp < minDate | Temp>maxDate)
+                if (Temp < minDate | Temp > maxDate)
                 {
                     Error += "Age must be between 18 and 100";
                 }
@@ -334,30 +334,30 @@ namespace Toys4U_Classes
             catch//if it failed report an error
             {
                 //set the error message
-                Error = Error + "Date is not valid";
+                Error = Error += "Date is not valid";
             }
 
 
-            if (DateJoined != "")
+
+
+            try
             {
-                try
+                //var to store the data
+                DateTime Temp;
+                //assign the date to the temporary var
+                Temp = Convert.ToDateTime(DateJoined);
+                DateTime minDate = new DateTime(2019, 7, 15, 3, 15, 0);
+                DateTime maxDate = DateTime.Today;
+                if (Temp < minDate | Temp > maxDate)
                 {
-                    DateTime datejoined;
-                    datejoined = Convert.ToDateTime(DateJoined);
-                    
-                    
-
+                    Error += "Age must be between 18 and 100" + minDate;
                 }
-                catch
-                {
-                    Error += "Date time must be in the format MM/DD/YY/";
-                }
-
 
             }
-            else
+            catch//if it failed report an error
             {
-                Error += "DateTime cannot be left empty";
+                //set the error message
+                Error = Error += "Date is not valid";
             }
 
             if (Email!= "")
