@@ -317,44 +317,25 @@ namespace Toys4U_Classes
 
 
 
-            if (DateOfBirth != "")
+          try
             {
-                try
+                //var to store the data
+                DateTime Temp;
+                //assign the date to the temporary var
+                Temp = Convert.ToDateTime(DateOfBirth);
+                DateTime minDate = DateTime.Today.AddYears(-120);
+                DateTime maxDate = DateTime.Today.AddYears(-18);
+                if (Temp < minDate | Temp>maxDate)
                 {
-                    DateTime dateofbirth;
-                    DateTime TodaysDate;
-                    int age;
-                    dateofbirth = Convert.ToDateTime(DateOfBirth);
-                    TodaysDate = DateTime.Now;
-                    age = TodaysDate.Year - dateofbirth.Year;
-                    //account for leap
-                    if (TodaysDate.Date > TodaysDate.AddYears(-age)) age--;
+                    Error += "Age must be between 18 and 100";
+                }
                 
-
-                    if (age <18 )
-                    {
-                        Error += "";
-
-                    }
-                    else
-                    {
-
-                        Error += "Too Young";
-                    }
-
-                }
-                catch
-                {
-                    Error += "Date time must be in the format MM/DD/YY/";
-                }
-
-
             }
-            else
+            catch//if it failed report an error
             {
-                Error += "DateTime cannot be left empty";
+                //set the error message
+                Error = Error + "Date is not valid";
             }
-
 
 
             if (DateJoined != "")

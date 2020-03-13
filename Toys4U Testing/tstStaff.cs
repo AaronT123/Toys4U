@@ -526,7 +526,7 @@ namespace Toys4U_Testing
             DateTime DateNow = DateTime.Now;
             DateTime TestDate;
 
-            TestDate = DateNow.AddYears(-120).AddDays(2);
+            TestDate = DateNow.AddYears(-120);
             DateOfBirth = Convert.ToString(TestDate);
             String Error = "";
             //invoke the method
