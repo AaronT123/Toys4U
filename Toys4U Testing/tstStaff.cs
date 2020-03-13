@@ -10,7 +10,7 @@ namespace Toys4U_Testing
 
 
         //some good test data
-        string DateJoined = "14 , 03 , 1900 , 00, 00, 00";
+        string DateJoined = (DateTime.Now.Date).ToString();
         string DateOfBirth = "12/12/2000";
         string Email = "cjs@hotmail.com";
         string FirstName = "Callum";
@@ -658,7 +658,8 @@ namespace Toys4U_Testing
             
             DateTime TestDate;
 
-            TestDate = new DateTime(1 / 12 / 1950);
+            TestDate = DateTime.Now.AddYears(-1000);
+            TestDate = TestDate.Date;
             DateJoined = Convert.ToString(TestDate);
             String Error = "";
             //invoke the method
@@ -672,10 +673,10 @@ namespace Toys4U_Testing
             //create an instance of the class we want to create
             clsStaff AnStaff = new clsStaff();
             //string variable to store any error message
-           
-            DateTime TestDate;
 
-            TestDate = new DateTime(30 / 11 / 2019);
+            DateTime TestDate = DateTime.Today.AddDays(.1);
+
+           
             DateJoined = Convert.ToString(TestDate);
             String Error = "";
             //invoke the method
@@ -690,10 +691,8 @@ namespace Toys4U_Testing
             //create an instance of the class we want to create
             clsStaff AnStaff = new clsStaff();
             //string variable to store any error message
-          
-            DateTime TestDate;
 
-            TestDate = new DateTime(1 / 12 / 2019);
+            DateTime TestDate = DateTime.Today;
             DateJoined = Convert.ToString(TestDate);
             String Error = "";
             //invoke the method
@@ -707,82 +706,23 @@ namespace Toys4U_Testing
             //create an instance of the class we want to create
             clsStaff AnStaff = new clsStaff();
             //string variable to store any error message
-          
+            string Error = "";
+
             DateTime TestDate;
 
-            TestDate = new DateTime(2 / 12 / 2019);
-            DateJoined = Convert.ToString(TestDate);
-            String Error = "";
-            //invoke the method
-            Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
-            Assert.AreEqual(Error, "");
-        }
-        [TestMethod]
-        public void DateJoinedMaxMinOne()
-        {
-            //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
-            //string variable to store any error message
-            DateTime DateNow = DateTime.Today;
-            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
 
-            TestDate = DateNow.AddDays(-1);
-            DateJoined = Convert.ToString(TestDate);
-            String Error = "";
-            //invoke the method
+            TestDate = TestDate.AddDays(1);
+
+            string DateJoined = TestDate.ToString();
+
             Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
             Assert.AreNotEqual(Error, "");
         }
-        [TestMethod]
-        public void DateJoinedMaxBoundary()
-        {
-            //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
-            //string variable to store any error message
-            DateTime DateNow = DateTime.Today;
-            DateTime TestDate;
+       
+ 
+   
 
-            TestDate = DateNow;
-            DateJoined = Convert.ToString(TestDate);
-            String Error = "";
-            //invoke the method
-            Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
-            Assert.AreEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void DateJoinedMaxPlusOne()
-        {
-            //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
-            //string variable to store any error message
-            DateTime DateNow = DateTime.Today;
-            DateTime TestDate;
-
-            TestDate = DateNow.AddDays(1);
-            DateJoined = Convert.ToString(TestDate);
-            String Error = "";
-            //invoke the method
-            Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void DateJoinedMid()
-        {
-            //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
-            //string variable to store any error message
-            DateTime DateNow = DateTime.Today;
-            DateTime TestDate;
-
-            TestDate = new DateTime(20 / 12 / 2019);
-            DateJoined = Convert.ToString(TestDate);
-            String Error = "";
-            //invoke the method
-            Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
-            Assert.AreEqual(Error, "");
-        }
 
         [TestMethod]
         public void DateJoinedExtremeMax()
@@ -790,13 +730,16 @@ namespace Toys4U_Testing
             //create an instance of the class we want to create
             clsStaff AnStaff = new clsStaff();
             //string variable to store any error message
-            
+            string Error= "";
+
             DateTime TestDate;
 
-            TestDate = new DateTime(12 / 12 / 3333);
-            DateJoined = Convert.ToString(TestDate);
-            String Error = "";
-            //invoke the method
+            TestDate = DateTime.Now.Date;
+
+            TestDate = TestDate.AddYears(100);
+
+            string DateJoined = TestDate.ToString();
+            
             Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
             Assert.AreNotEqual(Error, "");
         }

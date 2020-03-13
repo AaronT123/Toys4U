@@ -296,6 +296,9 @@ namespace Toys4U_Classes
             {
                 Error += "JobTitle must be between 0 and 41 characters";
             }
+
+
+
             if (LastName.Length > 0 && LastName.Length < 41)
             {
                 foreach (char c in LastName)
@@ -315,50 +318,52 @@ namespace Toys4U_Classes
             }
 
 
-
-
-          try
+            try
             {
-                //var to store the data
-                DateTime Temp;
-                //assign the date to the temporary var
-                Temp = Convert.ToDateTime(DateOfBirth);
+
+
+                DateTime Temp = Convert.ToDateTime(DateOfBirth);
                 DateTime minDate = DateTime.Today.AddYears(-120);
                 DateTime maxDate = DateTime.Today.AddYears(-18);
                 if (Temp < minDate | Temp > maxDate)
                 {
                     Error += "Age must be between 18 and 100";
                 }
-                
+
+
             }
             catch//if it failed report an error
             {
                 //set the error message
                 Error = Error += "Date is not valid";
             }
-
-
-
+            
+            
 
             try
             {
-                //var to store the data
-                DateTime Temp;
-                //assign the date to the temporary var
-                Temp = Convert.ToDateTime(DateJoined);
-                DateTime minDate = new DateTime(2019, 7, 15, 3, 15, 0);
-                DateTime maxDate = DateTime.Today;
-                if (Temp < minDate | Temp > maxDate)
-                {
-                    Error += "Age must be between 18 and 100" + minDate;
-                }
 
+
+                //assign the date to the temporary var
+                DateTime Temp = Convert.ToDateTime(DateJoined);
+
+                if (Temp > DateTime.Now.Date)
+                {
+                    Error += "Must of joined today ";
+                }
+                if (Temp < DateTime.Now.Date)
+                {
+                    Error += "Must of joined today ";
+                }
             }
             catch//if it failed report an error
             {
                 //set the error message
                 Error = Error += "Date is not valid";
             }
+
+
+
 
             if (Email!= "")
             {
@@ -433,7 +438,7 @@ namespace Toys4U_Classes
             }
 
 
-                return Error;
+           return Error;
         }
 
     }
