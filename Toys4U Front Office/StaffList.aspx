@@ -9,10 +9,10 @@
 <body style="height: 529px">
  <form id="form1" runat="server">
       
-        <asp:TextBox ID="TextBox1" runat="server" style="z-index: 1; left: 15px; top: 219px; position: absolute; height: 16px; width: 94px;"></asp:TextBox>
+        <asp:TextBox ID="txtJobTitle" runat="server" style="z-index: 1; left: 15px; top: 219px; position: absolute; height: 16px; width: 94px;"></asp:TextBox>
         <asp:Button ID="btnDelete" runat="server" style="z-index: 1; left: 179px; top: 347px; position: absolute; height: 26px;" Text="Delete" OnClick="btnDelete_Click" />
         <p>
-            <asp:Button ID="btnApply" runat="server" style="z-index: 1; left: 50px; top: 293px; position: absolute; height: 26px" Text="Apply" />
+            <asp:Button ID="btnApply" runat="server" style="z-index: 1; left: 50px; top: 293px; position: absolute; height: 26px" Text="Apply" OnClick="btnApply_Click" />
         </p>
         <p>
             <asp:Button ID="btnEdit" runat="server" style="z-index: 1; left: 122px; top: 347px; position: absolute; height: 26px" Text="Edit" OnClick="btnEdit_Click" />

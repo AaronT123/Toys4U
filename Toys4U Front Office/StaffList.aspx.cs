@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Toys4U_Classes;
 
 namespace Toys4U_Front_Office
 {
@@ -95,9 +96,34 @@ namespace Toys4U_Front_Office
 
         protected void btnDisplayAll_Click(object sender, EventArgs e)
         {
-
+            FilterStaff("");
         }
 
-        
+        protected void btnApply_Click(object sender, EventArgs e)
+        {
+            FilterStaff(txtJobTitle.Text);
+        }
+
+        Int32 FilterStaff(string JobTitleFilter)
+        {
+            Int32 StaffNo;
+            string JobTitle;
+            clsStaffCollection ListOfStaff = new clsStaffCollection();
+            ListOfStaff.ReportByJobTitle(JobTitleFilter);
+            Int32 RecordCount;
+            Int32 Index = 0;
+            RecordCount = ListOfStaff.Count;
+            lstStaff.Items.Clear();
+            while(Index<RecordCount)
+            {
+                StaffNo = ListOfStaff.StaffList[Index].StaffNo;
+                JobTitle = ListOfStaff.StaffList[Index].JobTitle;
+                ListItem NewStaff = new ListItem(JobTitle + "", StaffNo.ToString());
+                lstStaff.Items.Add(NewStaff);
+                Index++;
+            }
+            return RecordCount;
+
+        }
     }
 }
