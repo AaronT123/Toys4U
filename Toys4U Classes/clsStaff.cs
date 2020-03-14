@@ -296,6 +296,9 @@ namespace Toys4U_Classes
             {
                 Error += "JobTitle must be between 0 and 41 characters";
             }
+
+
+
             if (LastName.Length > 0 && LastName.Length < 41)
             {
                 foreach (char c in LastName)
@@ -315,81 +318,142 @@ namespace Toys4U_Classes
             }
 
 
+            try
+            {
 
 
-            if (DateOfBirth != "")
+                DateTime Temp = Convert.ToDateTime(DateOfBirth);
+                DateTime minDate = DateTime.Today.AddYears(-120);
+                DateTime maxDate = DateTime.Today.AddYears(-18);
+                if (Temp < minDate | Temp > maxDate)
+                {
+                    Error += "Age must be between 18 and 100";
+                }
+
+
+            }
+            catch//if it failed report an error
+            {
+                //set the error message
+                Error = Error += "Date is not valid";
+            }
+            
+            
+
+            try
+            {
+
+
+                //assign the date to the temporary var
+                DateTime Temp = Convert.ToDateTime(DateJoined);
+
+                if (Temp > DateTime.Now.Date)
+                {
+                    Error += "Must of joined today ";
+                }
+                if (Temp < DateTime.Now.Date)
+                {
+                    Error += "Must of joined today ";
+                }
+            }
+            catch//if it failed report an error
+            {
+                //set the error message
+                Error = Error += "Date is not valid";
+            }
+
+
+
+
+            if (Email!= "")
             {
                 try
                 {
-                    DateTime dateofbirth;
-                    DateTime TodaysDate;
-                    int age;
-                    dateofbirth = Convert.ToDateTime(DateOfBirth);
-                    TodaysDate = DateTime.Now;
-                    age = TodaysDate.Year - dateofbirth.Year;
-                    //account for leap
-                    if (TodaysDate.Date > TodaysDate.AddYears(-age)) age--;
-                
-
-                    if (age <18 )
+                   
+                    var address = new System.Net.Mail.MailAddress(Email);
+                    if (Email.Length>50)
                     {
-                        Error += "";
-
+                        Error += "Email must be less than 50 characters";
                     }
-                    else
-                    {
-
-                        Error += "Too Young";
-                    }
-
                 }
                 catch
                 {
-                    Error += "Date time must be in the format MM/DD/YY/";
+                    Error += "Email must be in the format xx@yy.zz";
                 }
-
 
             }
             else
             {
-                Error += "DateTime cannot be left empty";
+                Error += "Email must not be blank";
             }
 
-
-
-            if (DateJoined != "")
+            
+            if (Password.Length > 0 && Password.Length < 41)
             {
-                try
-                {
-                    DateTime datejoined;
-                    datejoined = Convert.ToDateTime(DateJoined);
-                    
-                    
+                bool ContainsCapitalLetter = false;
+                bool ContainsLowerLetter = false;
+                bool ContainsNumber = false;
 
-                }
-                catch
+                foreach (char c in Password)
                 {
-                    Error += "Date time must be in the format MM/DD/YY/";
-                }
 
+
+                    if (char.IsUpper(c)) ContainsCapitalLetter = true;
+
+                    if (char.IsLower(c)) ContainsLowerLetter = true;
+                    if (char.IsDigit(c)) ContainsNumber = true;
+                }
+                if(ContainsCapitalLetter==false)
+                {
+                    Error += "Please include one capital letter ";
+                }
+                else if (ContainsLowerLetter ==false)
+                {
+                    Error += "Please include one lower letter ";
+                }
+                else if (ContainsNumber==false)
+                {
+                    Error += "Please include one number ";
+                }
 
             }
             else
             {
-                Error += "DateTime cannot be left empty";
+                Error += "Password must be between 0 and 41 chararcters";
+
             }
 
 
+            if(PhoneNumber!="")
+            {
+       
+               PhoneNumber= System.Text.RegularExpressions.Regex.Replace(PhoneNumber, @" ", "");
+                if (PhoneNumber.Length==11)
+                { 
+                    
+                    foreach (char c in PhoneNumber)
+                    {
 
 
+                        if (!Char.IsDigit(c))
+                        {
+                            Error += "The PhoneNumber must only contain Digits";
+                        }
+                    }
+                }
+               else
+                {
+                    Error += "The PhoneNumber must be 11 digits " + PhoneNumber;
 
-            return Error;
+                }
+
+            }
+
+
+           return Error;
         }
 
-
-        
-        
     }
-
+   
   
 }
