@@ -92,7 +92,7 @@ namespace Toys4U_Front_Office
             clsStaffCollection SomeStaff = new clsStaffCollection();
             //validate the data on the web form
             String Error = "";
-            //Error = SomeStaff.ThisStaff.Valid(TextBoxStaffID.Text, TextBoxFirstName.Text, TextBoxLastName.Text);
+            Error = SomeStaff.ThisStaff.Valid(TextBoxDateJoined.Text , TextBoxDateOfBirth.Text, TextBoxEmail.Text, TextBoxFirstName.Text, TextBoxHourlyPay.Text, TextBoxJobTitle.Text, TextBoxLastName.Text, TextBoxPassword.Text, TextBoxPhoneNumber.Text);
             //if the data is ok then add it to the object
             if (Error =="")
             {
@@ -111,12 +111,18 @@ namespace Toys4U_Front_Office
                 //ADD THIS RECORD
                 SomeStaff.Add();
 
-
+                clsStaffSecurity Sec = new clsStaffSecurity();
+                //get the new users detials
+                string EMail = TextBoxEmail.Text;
+                string Password1 = TextBoxPassword.Text;
+                string Password2 = TextBoxPassword2.Text;
+                //try to sign up the new user
+                lblError.Text = Sec.SignUp(EMail, Password1, Password2, true);
             }
             else
             {
                 //report an error 
-                lblError.Text = "There were problems with the data entered " + Error;
+                lblError.Text += "There were problems with the data entered " + Error;
 
             }
 
