@@ -13,6 +13,7 @@
         </div>
         <asp:Button ID="btnYes" runat="server" OnClick="btnYes_Click" style="z-index: 1; left: 12px; top: 45px; position: absolute" Text="Yes" />
         <asp:Button ID="btnNo" runat="server" style="z-index: 1; left: 68px; top: 45px; position: absolute" Text="No" />
+        <asp:Label ID="lblDeliveryID" runat="server" style="z-index: 1; left: 238px; top: 49px; position: absolute" Text="Blank"></asp:Label>
     </form>
 </body>
 </html>

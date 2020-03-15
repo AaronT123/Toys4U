@@ -17,6 +17,7 @@ namespace Toys4U_Front_Office
         {
             //get the number of the address to be deleted from the session object
             DeliveryID = Convert.ToInt32(Session["DeliveryID"]);
+            lblDeliveryID.Text = Convert.ToString(DeliveryID);
         }
 
         protected void btnYes_Click(object sender, EventArgs e)
