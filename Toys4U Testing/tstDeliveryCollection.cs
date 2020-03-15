@@ -163,5 +163,50 @@ namespace Toys4U_Testing
             //test to see that the record was not found
             Assert.IsFalse(Found);
         }
+
+        [TestMethod]
+        public void UpdateMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsDeliveryCollection AllDeliveries = new clsDeliveryCollection();
+            //create the item of test data
+            clsDelivery TestItem = new clsDelivery();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.DeliveryID = 1;
+            TestItem.OrderID = 1;
+            TestItem.HouseNo = "32B";
+            TestItem.Street = "London Road";
+            TestItem.Town = "Oadby";
+            TestItem.City = "Leicester";
+            TestItem.Postcode = "LE2 5DH";
+            TestItem.DateAdded = Convert.ToDateTime("20/12/2020");
+            TestItem.DateEstimated = Convert.ToDateTime("25/12/2020");
+            //set ThisDelivery to the test data
+            AllDeliveries.ThisDelivery = TestItem;
+            //add the record
+            PrimaryKey = AllDeliveries.Add();
+            //set the primary key of the test data
+            TestItem.DeliveryID = PrimaryKey;
+            //modify the test data
+            TestItem.DeliveryID = 1;
+            TestItem.OrderID = 1;
+            TestItem.HouseNo = "32C";
+            TestItem.Street = "London Street";
+            TestItem.Town = "Oadbyyyy";
+            TestItem.City = "Leicestershire";
+            TestItem.Postcode = "LE3 6CF";
+            TestItem.DateAdded = Convert.ToDateTime("22/12/2020");
+            TestItem.DateEstimated = Convert.ToDateTime("28/12/2020");
+            //set the record based on the new test data
+            AllDeliveries.ThisDelivery = TestItem;
+            //update the record
+            AllDeliveries.Update();
+            //find the record
+            AllDeliveries.ThisDelivery.Find(PrimaryKey);
+            //test to see ThisDelivery matches the test data
+            Assert.AreEqual(AllDeliveries.ThisDelivery, TestItem);
+        }
     }
 }

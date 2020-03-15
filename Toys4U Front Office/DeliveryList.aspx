@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" style="z-index: 1; left: 20px; top: 339px; position: absolute" Text="Add" />
-        <asp:Button ID="btnEdit" runat="server" style="z-index: 1; left: 78px; top: 339px; position: absolute" Text="Edit" />
+        <asp:Button ID="btnEdit" runat="server" style="z-index: 1; left: 78px; top: 339px; position: absolute" Text="Edit" OnClick="btnEdit_Click" />
         <asp:Button ID="btnDelete" runat="server" style="z-index: 1; left: 143px; top: 339px; position: absolute" Text="Delete" OnClick="btnDelete_Click" />
         <asp:ListBox ID="lstDelivery" runat="server" style="z-index: 1; left: 10px; top: 15px; position: absolute; height: 176px; width: 309px"></asp:ListBox>
         <div>

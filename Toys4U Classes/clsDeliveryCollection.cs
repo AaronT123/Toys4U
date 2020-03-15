@@ -149,5 +149,24 @@ namespace Toys4U_Classes
             //execute the stored proceedure
             DB.Execute("sproc_tblDelivery_Delete");
         }
+
+        public void Update()
+        {
+            //update an existing record based on the values of thisDelivery
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@DeliveryID", mThisDelivery.DeliveryID);
+            DB.AddParameter("@OrderID", mThisDelivery.OrderID);
+            DB.AddParameter("@HouseNo", mThisDelivery.HouseNo);
+            DB.AddParameter("@Street", mThisDelivery.Street);
+            DB.AddParameter("@Town", mThisDelivery.Town);
+            DB.AddParameter("@City", mThisDelivery.City);
+            DB.AddParameter("@Postcode", mThisDelivery.Postcode);
+            DB.AddParameter("@DateAdded", mThisDelivery.DateAdded);
+            DB.AddParameter("@DateEstimated", mThisDelivery.DateEstimated);
+            //execute the stored procedure
+            DB.Execute("Sproc_tblDelivery_Update");
+        }
     }
 }
