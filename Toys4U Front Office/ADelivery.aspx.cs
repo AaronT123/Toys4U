@@ -23,7 +23,7 @@ namespace Toys4U_Front_Office
             if (IsPostBack == false)
             {
                 //populate the list of Deliveries
-                DisplayDelivery();
+                //DisplayDelivery();
                 //if this is not a new record
                 if (DeliveryID != -1)
                 {
@@ -35,6 +35,7 @@ namespace Toys4U_Front_Office
 
         void DisplayDelivery()
         {
+            //create an instance of deliveries
             clsDeliveryCollection MyDeliveries = new clsDeliveryCollection();
             //find the record to update
             MyDeliveries.ThisDelivery.Find(DeliveryID);
@@ -49,7 +50,7 @@ namespace Toys4U_Front_Office
             txtDateEstimated.Text = Convert.ToString(MyDeliveries.ThisDelivery.DateEstimated);
         }
 
-        //function for addding new records
+        //function for adding new records
         void Add()
         {
             //create an instance of a clsDeliveryCollection
@@ -69,6 +70,39 @@ namespace Toys4U_Front_Office
                 MyDeliveries.ThisDelivery.DateEstimated = Convert.ToDateTime(txtDateEstimated.Text);
                 //add the record
                 MyDeliveries.Add();
+            }
+            else
+            {
+                //report an error
+                lblError.Text = "There were problems with the data entered " + Error;
+            }
+        }
+
+        //function for updating records
+        void Update()
+        {
+            //create an instance of the deliveries
+            clsDeliveryCollection Deliveries = new clsDeliveryCollection();
+            //validate the data on the web form
+            String Error = Deliveries.ThisDelivery.Valid(txtOrderID.Text, txtHouseNo.Text, txtStreet.Text, txtTown.Text, txtCity.Text, txtPostcode.Text, txtDateAdded.Text, txtDateEstimated.Text);
+            // if the data is ok then add it to the object
+            if (Error == "")
+            {
+                //find the record to update
+                Deliveries.ThisDelivery.Find(DeliveryID);
+                //get the data entered by the user
+                Deliveries.ThisDelivery.OrderID = Convert.ToInt32(txtOrderID.Text);
+                Deliveries.ThisDelivery.HouseNo = txtHouseNo.Text;
+                Deliveries.ThisDelivery.Street = txtStreet.Text;
+                Deliveries.ThisDelivery.Town = txtTown.Text;
+                Deliveries.ThisDelivery.City = txtCity.Text;
+                Deliveries.ThisDelivery.Postcode = txtPostcode.Text;
+                Deliveries.ThisDelivery.DateAdded = Convert.ToDateTime(txtDateAdded.Text);
+                Deliveries.ThisDelivery.DateEstimated = Convert.ToDateTime(txtDateEstimated.Text);
+                //update the record
+                Deliveries.Update();
+                //all done so redirect back to the main page
+                Response.Redirect("DeliveryList.aspx");
             }
             else
             {
@@ -103,7 +137,7 @@ namespace Toys4U_Front_Office
             else
             {
                 //update the record
-                //Update();
+                Update();
             }
             //redirect to the viewer page
             Response.Redirect("DeliveryList.aspx");
