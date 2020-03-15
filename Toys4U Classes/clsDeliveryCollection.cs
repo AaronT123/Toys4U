@@ -7,7 +7,8 @@ namespace Toys4U_Classes
     {
         //private data member for the list
         List<clsDelivery> mDeliveryList = new List<clsDelivery>();
-
+        //private data member thisDelivery
+        clsDelivery mThisDelivery = new clsDelivery();
         //constructor for the class
         public clsDeliveryCollection()
         {
@@ -106,9 +107,47 @@ namespace Toys4U_Classes
             }
         }
 
-        public clsDelivery ThisDelivery { get; set; }
+        public int Add()
+        {
+            //adds a new record to the database based on the values of mThisDelivery
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored proceedure
+            DB.AddParameter("@OrderID", mThisDelivery.OrderID);
+            DB.AddParameter("@HouseNo", mThisDelivery.HouseNo);
+            DB.AddParameter("@Street", mThisDelivery.Street);
+            DB.AddParameter("@Town", mThisDelivery.Town);
+            DB.AddParameter("@City", mThisDelivery.City);
+            DB.AddParameter("@Postcode", mThisDelivery.Postcode);
+            DB.AddParameter("@DateAdded", mThisDelivery.DateAdded);
+            DB.AddParameter("@DateEstimated", mThisDelivery.DateEstimated);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblDelivery_Insert");
+        }
 
+        public clsDelivery ThisDelivery
+        {
+            get
+            {
+                //return the private data
+                return mThisDelivery;
+            }
+            set
+            {
+                //set the private data
+                mThisDelivery = value;
+            }
+        }
+
+        public void Delete()
+        {
+            //deletes the reecord pointed to by thisDelivery
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored proceedure
+            DB.AddParameter("@DeliveryID", mThisDelivery.DeliveryID);
+            //execute the stored proceedure
+            DB.Execute("sproc_tblDelivery_Delete");
+        }
     }
-
-
 }
