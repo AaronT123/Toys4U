@@ -73,7 +73,7 @@
          </p>
          </p>
         <p>
-            <asp:Label ID="LabelError" runat="server"></asp:Label>
+            <asp:Label ID="lblError" runat="server"></asp:Label>
         </p>
 
  
