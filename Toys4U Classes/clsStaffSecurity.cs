@@ -77,7 +77,7 @@ public class clsStaffSecurity
                         DB.AddParameter("@AccountEMail", EMail.ToLower());
                         DB.AddParameter("@AccountPassword", HashPassword);
                         DB.AddParameter("@Active", Active);
-                        DB.Execute("sproc_tblStaffAccount_Add");
+                        DB.Execute("sproc_tblStaffAccount_Add"); ;
                         //if active not set to true then request email activation
                         if (Active == false)
                         {

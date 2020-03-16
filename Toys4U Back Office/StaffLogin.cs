@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Toys4U_Classes;
 
 namespace Toys4U_Back_Office
 {
     public partial class StaffLogin : Form
     {
-        private clsSecurity mSec;
+        private clsStaffSecurity mSec;
         public StaffLogin()
         {
             InitializeComponent();
@@ -20,11 +21,11 @@ namespace Toys4U_Back_Office
 
         private void StaffLogin_Load(object sender, EventArgs e)
         {
-            mSec = new clsSecurity();
+            mSec = new clsStaffSecurity();
         }
 
 
-        public clsSecurity Sec
+        public clsStaffSecurity Sec
         {
             get
             {
