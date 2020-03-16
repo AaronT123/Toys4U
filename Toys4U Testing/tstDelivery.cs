@@ -126,5 +126,218 @@ namespace Toys4U_Testing
             //test to see that the two values are the same 
             Assert.AreEqual(ADelivery.DateEstimated, TestData);
         }
+
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use with the method
+            Int32 DeliveryID = 1;
+            //invoke the method
+            Found = ADelivery.Find(DeliveryID);
+            //test to see that the result is correct
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+        public void TestDeliveryIDFound()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if the data is ok
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 DeliveryID = 18;
+            //invoke the method
+            Found = ADelivery.Find(DeliveryID);
+            //check the data
+            if (ADelivery.DeliveryID != 18)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestOrderIDFound()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if the data is ok
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 DeliveryID = 18;
+            //invoke the method
+            Found = ADelivery.Find(DeliveryID);
+            //check the data
+            if (ADelivery.OrderID != 111)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestHouseNoFound()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if the data is ok
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 DeliveryID = 18;
+            //invoke the method
+            Found = ADelivery.Find(DeliveryID);
+            //check the data
+            if (ADelivery.HouseNo != "yyy yyy")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestStreetFound()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if the data is ok
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 DeliveryID = 18;
+            //invoke the method
+            Found = ADelivery.Find(DeliveryID);
+            //check the data
+            if (ADelivery.Street != "yyy yyy")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestTownFound()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if the data is ok
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 DeliveryID = 18;
+            //invoke the method
+            Found = ADelivery.Find(DeliveryID);
+            //check the data
+            if (ADelivery.Town != "yyy yyy")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestCityFound()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if the data is ok
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 DeliveryID = 18;
+            //invoke the method
+            Found = ADelivery.Find(DeliveryID);
+            //check the data
+            if (ADelivery.City != "yyy yyy")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestPostcodeFound()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if the data is ok
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 DeliveryID = 18;
+            //invoke the method
+            Found = ADelivery.Find(DeliveryID);
+            //check the data
+            if (ADelivery.Postcode != "yyy yyy")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestDateAddedFound()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if the data is ok
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 DeliveryID = 18;
+            //invoke the method
+            Found = ADelivery.Find(DeliveryID);
+            //check the data
+            if (ADelivery.DateAdded != Convert.ToDateTime("15/03/2020"))
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestDateEstimatedFound()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if the data is ok
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 DeliveryID = 18;
+            //invoke the method
+            Found = ADelivery.Find(DeliveryID);
+            //check the data
+            if (ADelivery.DateEstimated != Convert.ToDateTime("15/03/2020"))
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
     }
 }
