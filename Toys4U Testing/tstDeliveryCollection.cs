@@ -208,5 +208,62 @@ namespace Toys4U_Testing
             //test to see ThisDelivery matches the test data
             Assert.AreEqual(AllDeliveries.ThisDelivery, TestItem);
         }
+
+        
+        [TestMethod]
+        public void ReportByPostcodeMethodOK()
+        {
+            //create an instance of the class containing unfiltered results
+            clsDeliveryCollection AllDeliveries = new clsDeliveryCollection();
+            //create an instance of the filtered data
+            clsDeliveryCollection FilteredDeliveries = new clsDeliveryCollection();
+            //apply a blank string (should return all records)
+            FilteredDeliveries.ReportByPostcode("");
+            //test to see that the two values are the same
+            Assert.AreEqual(AllDeliveries.Count, FilteredDeliveries.Count);
+        }
+
+        [TestMethod]
+        public void ReportByPostcodeNoneFound()
+        {
+            //create an instance of the filtered data
+            clsDeliveryCollection FilteredDeliveries = new clsDeliveryCollection();
+            //apply a postcode that doesn't exist
+            FilteredDeliveries.ReportByPostcode("xxx xxx");
+            //test to see that there are no records
+            Assert.AreEqual(0, FilteredDeliveries.Count);
+        }
+
+        [TestMethod]
+        public void ReportByPostcodeTestDataFound()
+        {
+            //create an instance of the filtered data
+            clsDeliveryCollection FilteredDeliveries = new clsDeliveryCollection();
+            //var to store outcome
+            Boolean OK = true;
+            //apply a postcode that doesn't exist
+            FilteredDeliveries.ReportByPostcode("yyy yyy");
+            //check that the correct number of records are found
+            if (FilteredDeliveries.Count == 2)
+            {
+                //check that the first record is ID 36
+                if (FilteredDeliveries.DeliveryList[0].DeliveryID != 18)
+                {
+                    OK = false;
+                }
+                //check that the first record is ID 37
+                if (FilteredDeliveries.DeliveryList[1].DeliveryID != 19)
+                {
+                    OK = false;
+                }
+            }
+            else
+            {
+                OK = false;
+            }
+            //test to see that there are no new records
+            Assert.IsTrue(OK);
+        }
+        
     }
 }
