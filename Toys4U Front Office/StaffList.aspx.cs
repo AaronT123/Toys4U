@@ -9,13 +9,13 @@ namespace Toys4U_Front_Office
 {
     public partial class StaffList : System.Web.UI.Page
     {
-        Int32 StaffNo;
+
        
         protected void Page_Load(object sender, EventArgs e)
         {
             //get the number of the address to be processed
 
-            StaffNo = Convert.ToInt32(Session["StaffNo"]);
+        
             if (IsPostBack == false)
             {
                 //UPDATE THE LIST BOX
@@ -97,5 +97,7 @@ namespace Toys4U_Front_Office
         {
 
         }
+
+        
     }
 }

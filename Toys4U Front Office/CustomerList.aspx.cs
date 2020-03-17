@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Toys4U_Classes;
 
 namespace Toys4U_Front_Office
 {
@@ -21,7 +22,7 @@ namespace Toys4U_Front_Office
         void DisplayCustomer()
         {
             //create an instance of the County Collection
-            Toys4U_Classes.clsCustomerCollection Customer = new Toys4U_Classes.clsCustomerCollection();
+            clsCustomerCollection Customer = new clsCustomerCollection();
             //set the data source to the list of countries in the collection
             lstCustomer.DataSource = Customer.CustomerList;
             //set the name of the primary key
@@ -79,8 +80,13 @@ namespace Toys4U_Front_Office
             else // if no record has been selected 
             {
                 //display an error
-                lblError.Text = "Please select a record to delete from the list";
+                lblError.Text = "Please select a record to Edit from the list";
             }
+        }
+
+        protected void btnApply_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
