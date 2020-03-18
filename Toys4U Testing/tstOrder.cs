@@ -8,6 +8,7 @@ using Toys4U_Classes;
 
 namespace Toys4U_Testing
 {
+    [TestClass]
     public class tstOrder
     {
         [TestMethod]
@@ -27,9 +28,9 @@ namespace Toys4U_Testing
             //create some test data to assign to the property
             Int32 TestData = 1;
             //assign the data to the property
-            AnOrder.OrderId = TestData;
+            AnOrder.OrderID = TestData;
             //test to see that the two values are the same
-            Assert.AreEqual(AnOrder.OrderId, TestData);
+            Assert.AreEqual(AnOrder.OrderID, TestData);
         }
 
         [TestMethod]
@@ -47,16 +48,18 @@ namespace Toys4U_Testing
         }
 
         [TestMethod]
-        public void CustomerNoOK()
+        public void CustomerIDOK()
         {
             //create an instance of the class we want to create
             clsOrder AnOrder = new clsOrder();
             //create some test data to assign to the property
             Int32 TestData = 1;
             //assign the data to the property
-            AnOrder.CustomerNo = TestData;
+            AnOrder.CustomerID = TestData;
             //test to see that the two values are the same
-            Assert.AreEqual(AnOrder.CustomerNo, TestData);
+            Assert.AreEqual(AnOrder.CustomerID, TestData);
         }
+
+
     }
 }
