@@ -7,6 +7,17 @@ namespace Toys4U_Testing
     [TestClass]
     public class tstDelivery
     {
+        //good test data
+        //create some test data to pass to the method
+        string OrderID = "1";
+        string HouseNo = "12b";
+        string Street = "Some Street";
+        string Town = "Some Town";
+        string City = "some City";
+        string Postcode = "some postcode";
+        string DateAdded = DateTime.Now.Date.ToString();
+        string DateEstimated = DateTime.Now.Date.ToString();
+
         [TestMethod]
         public void InstanceOK()
         {
@@ -338,6 +349,19 @@ namespace Toys4U_Testing
             }
             //test to see that the result is correct
             Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
         }
     }
 }
