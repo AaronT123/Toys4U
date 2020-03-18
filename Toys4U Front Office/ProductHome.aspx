@@ -24,14 +24,14 @@
         <p>
             &nbsp;</p>
         <p>
-            <asp:Button ID="BtnApply" runat="server" Height="53px" OnClick="BtnApply_Click" Text="Apply" Width="78px" />
+            <asp:Button ID="BtnApply" runat="server" Height="53px" OnClick="BtnApply_Click" Text="Apply" Width="130px" BackColor="#0066FF" ForeColor="#CCCCCC" />
         </p>
         <p>
-            <asp:Button ID="BtnDisplayAll" runat="server" Height="57px" OnClick="Button2_Click" Text="Display All" Width="80px" />
+            <asp:Button ID="BtnDisplayAll" runat="server" Height="57px" OnClick="Button2_Click" Text="Display All" Width="133px" BackColor="#0066FF" ForeColor="#CCCCCC" />
         </p>
-        <asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click1" />
-        <asp:Button ID="BtnEdit" runat="server" Text="Edit" OnClick="BtnEdit_Click" />
-        <asp:Button ID="BtnDelete" runat="server" OnClick="BtnDelete_Click" Text="Delete" />
+        <asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click1" BackColor="#3366FF" />
+        <asp:Button ID="BtnEdit" runat="server" Text="Edit" OnClick="BtnEdit_Click" BackColor="#0066FF" />
+        <asp:Button ID="BtnDelete" runat="server" OnClick="BtnDelete_Click" Text="Delete" BackColor="#0066FF" />
     </form>
 </body>
 </html>

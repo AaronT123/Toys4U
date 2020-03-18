@@ -221,6 +221,42 @@ namespace Toys4U_Testing
             //test to see that there are no records
             Assert.AreEqual(0, FilteredProduct.Count);
         }
-           
+
+        [TestMethod]
+        public void ReportByNameTestDataFound()
+        {
+            //create an instance of the filtered data
+            clsProductCollection FilteredProduct = new clsProductCollection();
+            //var to store outcome
+            Boolean OK = true;
+            //apply name that doesnt exist
+            FilteredProduct.ReportByName("Tennis Ball");
+            //check that the correct number of records are found
+            if (FilteredProduct.Count == 2)
+            {
+                //check that the first record is ID 24
+                if (FilteredProduct.ProductHome[0].ProductID != 24)
+                {
+                    OK = false;
+                }
+                //check that the second record is ID 25
+                if (FilteredProduct.ProductHome[0].ProductID != 25)
+                {
+                    OK = false;
+                }
+            }
+            else
+            {
+                OK = true;
+            }
+            //test to see that there are no records
+            Assert.IsTrue(OK);
+        }
+
+      
+
+        
+
+
     }
 }
