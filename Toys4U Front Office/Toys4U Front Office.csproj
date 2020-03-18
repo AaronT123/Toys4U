@@ -213,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
+    <Folder Include="Images\" />
     <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>

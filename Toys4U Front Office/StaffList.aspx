@@ -13,6 +13,7 @@
         <asp:Button ID="btnDelete" runat="server" style="z-index: 1; left: 179px; top: 347px; position: absolute; height: 26px;" Text="Delete" OnClick="btnDelete_Click" />
         <p>
             <asp:Button ID="btnApply" runat="server" style="z-index: 1; left: 50px; top: 293px; position: absolute; height: 26px" Text="Apply" OnClick="btnApply_Click" />
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.jpg" style="z-index: 1; left: 491px; top: 19px; position: absolute; height: 94px; width: 94px" />
         </p>
         <p>
             <asp:Button ID="btnEdit" runat="server" style="z-index: 1; left: 122px; top: 347px; position: absolute; height: 26px" Text="Edit" OnClick="btnEdit_Click" />
