@@ -36,7 +36,7 @@
       
       
 
-            <asp:Button ID="btnNo" runat="server" style="z-index: 1; left: 339px; top: 170px; position: absolute; width: 53px" Text="No" BackColor="#3366CC" Font-Bold="True" Font-Names="Calibri" ForeColor="White" OnClick="btnNo_Click" />
+            <asp:Button ID="btnNo" runat="server" style="z-index: 1; left: 339px; top: 170px; position: absolute; width: 53px" Text="No" BackColor="#3366CC" Font-Bold="True" Font-Names="Calibri" ForeColor="White" OnClick="btnNo_Click1" />
 
 
             <p>

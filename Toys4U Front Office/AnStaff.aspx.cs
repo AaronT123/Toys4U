@@ -122,5 +122,10 @@ namespace Toys4U_Front_Office
 
 
         }
+
+        protected void ButtonCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("StaffList.aspx");
+        }
     }
 }
