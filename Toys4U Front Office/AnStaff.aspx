@@ -27,6 +27,8 @@
             <asp:Label ID="lblHourlyPay" runat="server" Text="Hourly Pay"></asp:Label>
             <asp:TextBox ID="TextBoxHourlyPay" runat="server"></asp:TextBox>
         
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.jpg" style="z-index: 1; left: 602px; top: 34px; position: absolute; height: 94px; width: 94px" />
+   
         </p>
         <p>
              <asp:Label ID="lblLastName" runat="server" Text="Last Name"></asp:Label>

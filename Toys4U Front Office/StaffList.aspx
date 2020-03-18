@@ -7,6 +7,8 @@
     <title></title>
 </head>
 <body style="height: 529px">
+   
+        
  <form id="form1" runat="server">
       
         <asp:TextBox ID="txtJobTitle" runat="server" style="z-index: 1; left: 277px; top: 128px; position: absolute; height: 16px; width: 125px;"></asp:TextBox>
@@ -62,5 +64,6 @@
       
       
     </form>
+    </div>
 </body>
 </html>
