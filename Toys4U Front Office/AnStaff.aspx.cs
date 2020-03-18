@@ -111,13 +111,7 @@ namespace Toys4U_Front_Office
                 //ADD THIS RECORD
                 SomeStaff.Add();
 
-                clsStaffSecurity Sec = new clsStaffSecurity();
-                //get the new users detials
-                string EMail = TextBoxEmail.Text;
-                string Password1 = TextBoxPassword.Text;
-                string Password2 = TextBoxPassword2.Text;
-                //try to sign up the new user
-                lblError.Text = Sec.SignUp(EMail, Password1, Password2, true);
+            
             }
             else
             {
