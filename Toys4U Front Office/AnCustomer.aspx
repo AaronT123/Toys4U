@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AnCustomer.aspx.cs" Inherits="Toys4U_Front_Office.AnCustomer" %>
+﻿
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AnCustomer.aspx.cs" Inherits="Toys4U_Front_Office.AnCustomer" %>
 
 <!DOCTYPE html>
 
