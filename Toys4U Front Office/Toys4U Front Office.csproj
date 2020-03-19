@@ -79,9 +79,9 @@
     <Content Include="OrderDelete.aspx" />
     <Content Include="OrderLineViewer.aspx" />
     <Content Include="OrderList.aspx" />
+    <Content Include="ProductDelete.aspx" />
+    <Content Include="ProductHome.aspx" />
     <Content Include="ProductViewer.aspx" />
-    <Content Include="StaffDeletePage.aspx" />
-    <Content Include="StaffList.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AnStaff.aspx" />
@@ -203,6 +203,20 @@
     </Compile>
     <Compile Include="OrderList.aspx.designer.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDelete.aspx.cs">
+      <DependentUpon>ProductDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDelete.aspx.designer.cs">
+      <DependentUpon>ProductDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductHome.aspx.cs">
+      <DependentUpon>ProductHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductHome.aspx.designer.cs">
+      <DependentUpon>ProductHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductViewer.aspx.cs">
       <DependentUpon>ProductViewer.aspx</DependentUpon>
