@@ -40,6 +40,7 @@ namespace Toys4U_Testing
             Assert.AreEqual(ADelivery.DeliveryID, TestData);
         }
 
+        [TestMethod]
         public void OrderIDOK()
         {
             //create an instance of the class we want to create
@@ -52,6 +53,7 @@ namespace Toys4U_Testing
             Assert.AreEqual(ADelivery.OrderID, TestData);
         }
 
+        [TestMethod]
         public void HouseNoOK()
         {
             //create an instance of the class we want to create
@@ -64,6 +66,7 @@ namespace Toys4U_Testing
             Assert.AreEqual(ADelivery.HouseNo, TestData);
         }
 
+        [TestMethod]
         public void StreetOK()
         {
             //create an instance of the class we want to create
@@ -76,6 +79,7 @@ namespace Toys4U_Testing
             Assert.AreEqual(ADelivery.Street, TestData);
         }
 
+        [TestMethod]
         public void TownOK()
         {
             //create an instance of the class we want to create
@@ -88,6 +92,7 @@ namespace Toys4U_Testing
             Assert.AreEqual(ADelivery.Town, TestData);
         }
 
+        [TestMethod]
         public void CityOK()
         {
             //create an instance of the class we want to create
@@ -100,6 +105,7 @@ namespace Toys4U_Testing
             Assert.AreEqual(ADelivery.City, TestData);
         }
 
+        [TestMethod]
         public void PostcodeOK()
         {
             //create an instance of the class we want to create
@@ -1206,7 +1212,7 @@ namespace Toys4U_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Postcode = "LE11 2ABC";
+            string Postcode = "LE112ABCD";
             //invoke the method
             Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
             //test to see that the result is correct

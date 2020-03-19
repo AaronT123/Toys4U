@@ -282,19 +282,18 @@ namespace Toys4U_Classes
              * Postcode
              * 
              */
+
+            if (Postcode.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Postcode may not be blank : ";
+            }
+
             if (Postcode.Length < 6)
             {
                 //record the error
                 Error = Error + "The Postcode may not be less than 6 characters (include a space) : ";
             }
-            
-            /*
-            if (Postcode.Length > 8)
-            {
-                //record the error
-                Error = Error + "The Postcode may not be longer than 8 characters : ";
-            }
-            */
             
             Int32 PostcodeSpaceCount = 0;
             foreach (char c in Postcode)
