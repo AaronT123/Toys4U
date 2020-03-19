@@ -277,6 +277,39 @@ namespace Toys4U_Classes
                 //record the error
                 Error = Error + "The City may not be longer than 50 characters : ";
             }
+            /*
+             * 
+             * Postcode
+             * 
+             */
+            if (Postcode.Length < 6)
+            {
+                //record the error
+                Error = Error + "The Postcode may not be less than 6 characters (include a space) : ";
+            }
+            
+            /*
+            if (Postcode.Length > 8)
+            {
+                //record the error
+                Error = Error + "The Postcode may not be longer than 8 characters : ";
+            }
+            */
+            
+            Int32 PostcodeSpaceCount = 0;
+            foreach (char c in Postcode)
+            {
+                if (c == ' ')
+                    PostcodeSpaceCount += 1;
+            }
+            if (PostcodeSpaceCount > 1)
+            {
+                Error = Error + "The postcode may only contain 1 space : ";
+            }
+            if (PostcodeSpaceCount < 1)
+            {
+                Error = Error + "The postcode needs to contain a space : ";
+            }
 
 
             //return any error messages

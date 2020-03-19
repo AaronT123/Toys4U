@@ -1107,7 +1107,35 @@ namespace Toys4U_Testing
          * 
          * 
          */
+        [TestMethod]
+        public void PostcodeEmpty()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Postcode = "";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void PostcodeExtremeMin()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Postcode = "L 1";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
         [TestMethod]
         public void PostcodeMinLessOne()
@@ -1117,7 +1145,7 @@ namespace Toys4U_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Postcode = "";
+            string Postcode = "LE1 2";
             //invoke the method
             Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
             //test to see that the result is correct
@@ -1132,7 +1160,7 @@ namespace Toys4U_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Postcode = "a";
+            string Postcode = "LE1 2A";
             //invoke the method
             Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
             //test to see that the result is correct
@@ -1140,34 +1168,20 @@ namespace Toys4U_Testing
         }
 
         [TestMethod]
-        public void PostcodePlusOne()
+        public void PostcodeMid()
         {
             //create an instance of the class we want to create
             clsDelivery ADelivery = new clsDelivery();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Postcode = "ab";
+            string Postcode = "LE1 2AB";
             //invoke the method
             Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
-        [TestMethod]
-        public void PostcodeMaxLessOne()
-        {
-            //create an instance of the class we want to create
-            clsDelivery ADelivery = new clsDelivery();
-            //string variable to store any error message
-            String Error = "";
-            //create some test data to pass to the method
-            string Postcode = "";
-            //invoke the method
-            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
-            //test to see that the result is correct
-            Assert.AreEqual(Error, "");
-        }
 
         [TestMethod]
         public void PostcodeMax()
@@ -1177,7 +1191,7 @@ namespace Toys4U_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Postcode = "";
+            string Postcode = "LE11 2AB";
             //invoke the method
             Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
             //test to see that the result is correct
@@ -1192,26 +1206,11 @@ namespace Toys4U_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Postcode = "";
+            string Postcode = "LE11 2ABC";
             //invoke the method
             Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void PostcodeMid()
-        {
-            //create an instance of the class we want to create
-            clsDelivery ADelivery = new clsDelivery();
-            //string variable to store any error message
-            String Error = "";
-            //create some test data to pass to the method
-            string Postcode = "";
-            //invoke the method
-            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
-            //test to see that the result is correct
-            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -1224,6 +1223,21 @@ namespace Toys4U_Testing
             //create some test data to pass to the method
             string Postcode = "";
             Postcode = Postcode.PadRight(500, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PostcodeContains1Space()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Postcode = "LE1ABC";
             //invoke the method
             Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
             //test to see that the result is correct
