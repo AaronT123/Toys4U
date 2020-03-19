@@ -167,9 +167,119 @@ namespace Toys4U_Classes
             }
         }
 
-        public string Valid(string text1, string text2, string text3, string text4, string text5, string text6, string text7, string text8)
+        public string Valid(string OrderID, string HouseNo, string Street, string Town, string City, string Postcode, string DateAdded, string DateEstimated)
         {
+            /*
+             * 
+             * OrderID
+             * 
+             */
+            //create a string variable to store the error
             string Error = "";
+            //if the OrderID is blank
+            if (OrderID.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Order ID may not be blank : ";
+            }
+            //if the OrderID is greater than 9 characters
+            if (OrderID.Length > 9)
+            {
+                //record the error
+                Error = Error + "The Order ID may not be longer than 9 characters : ";
+            }
+            //if the OrderID is digits only
+            foreach (char c in OrderID)
+            {
+                if (c < '0' || c > '9')
+                    Error = Error + "The Order ID is not digits only : ";
+            }
+            /*
+             * 
+             * 
+             * THIS CODE WORKS BUT NEED THE APPROPRIATE TEST DATA
+             * IN THE ORDER TABLE AND IN THE OTHER ORDER ID TESTS
+             * THAT FAIL BECAUSE OF THIS
+             * 
+             * 
+             * 
+            //if the OrderID exists in the order table
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the OrderID to search for
+            DB.AddParameter("@OrderID", OrderID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblOrder_FilterByOrderID");
+            //if a record is not found
+            if (DB.Count == 0)
+            {
+                Error = Error + "The Order ID does not exist : ";
+            }
+            */
+
+            /*
+             * 
+             * HouseNo
+             * 
+             */
+            //if the HouseNo is blank
+            if (HouseNo.Length == 0)
+            {
+                //record the error
+                Error = Error + "The House No may not be blank : ";
+            }
+            if (HouseNo.Length > 8)
+            {
+                //record the error
+                Error = Error + "The Order ID may not be longer than 8 characters : ";
+            }
+            /*
+             * 
+             * Street
+             * 
+             */
+            if (Street.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Street may not be blank : ";
+            }
+            if (Street.Length > 50)
+            {
+                //record the error
+                Error = Error + "The Street may not be longer than 50 characters : ";
+            }
+            /*
+             * 
+             * Town
+             * 
+             */
+            if (Town.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Town may not be blank : ";
+            }
+            if (Town.Length > 50)
+            {
+                //record the error
+                Error = Error + "The Town may not be longer than 50 characters : ";
+            }
+            /*
+             * 
+             * City
+             * 
+             */
+            if (City.Length == 0)
+            {
+                //record the error
+                Error = Error + "The City may not be blank : ";
+            }
+            if (City.Length > 50)
+            {
+                //record the error
+                Error = Error + "The City may not be longer than 50 characters : ";
+            }
+
+
+            //return any error messages
             return Error;
         }
 

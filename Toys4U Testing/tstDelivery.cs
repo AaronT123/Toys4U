@@ -363,5 +363,871 @@ namespace Toys4U_Testing
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
+
+        /*
+         * 
+         * 
+         * 
+         * 
+         * OrderID
+         * 
+         * 
+         * 
+         * 
+         */
+
+        [TestMethod]
+        public void OrderIDMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string OrderID = "";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderIDMin()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string OrderID = "1";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderIDMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string OrderID = "11";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderIDMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string OrderID = "11111111";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderIDMax()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string OrderID = "111111111";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderIDMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string OrderID = "1111111111";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderIDMid()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string OrderID = "1111";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderIDExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string OrderID = "";
+            OrderID = OrderID.PadRight(500, '1');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderIDNegative()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string OrderID = "-1";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void OrderIDExistsInDatabase()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string OrderID = "1";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        /*
+         * 
+         * 
+         * This test will fail as the appropriate code in clsDelivery is commented out
+         * 
+         * Check comment in clsDelivery for details
+         * 
+         * 
+        [TestMethod]
+        public void OrderIDDoesNotExist()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string OrderID = "99";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+        */
+
+        /*
+         * 
+         * 
+         * 
+         * 
+         * HouseNo
+         * 
+         * 
+         * 
+         * 
+         */
+
+
+        [TestMethod]
+        public void HouseNoMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HouseNoMin()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "1";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HouseNoMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "1A";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HouseNoMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "1234567";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HouseNoMax()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "12345678";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HouseNoMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "123456789";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HouseNoMid()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "12345";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void HouseNoExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "";
+            HouseNo = HouseNo.PadRight(500, '1');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        /*
+         * 
+         * 
+         * 
+         * 
+         * Street
+         * 
+         * 
+         * 
+         * 
+         */
+
+
+        [TestMethod]
+        public void StreetMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Street = "";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void StreetMin()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Street = "a";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void StreetPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Street = "ab";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void StreetMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Street = "";
+            Street = Street.PadRight(49, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void StreetMax()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Street = "";
+            Street = Street.PadRight(50, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void StreetMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Street = "";
+            Street = Street.PadRight(51, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void StreetMid()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Street = "Some Street";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void StreetExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Street = "";
+            Street = Street.PadRight(500, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        /*
+         * 
+         * 
+         * 
+         * 
+         * Town
+         * 
+         * 
+         * 
+         * 
+         */
+
+
+        [TestMethod]
+        public void TownMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Town = "";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void TownMin()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Town = "a";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void TownPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Town = "ab";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void TownMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Town = "";
+            Town = Town.PadRight(49, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void TownMax()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Town = "";
+            Town = Town.PadRight(50, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void TownMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Town = "";
+            Town = Town.PadRight(51, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void TownMid()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Town = "Some Town";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void TownExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Town = "";
+            Town = Town.PadRight(500, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        /*
+         * 
+         * 
+         * 
+         * 
+         * City
+         * 
+         * 
+         * 
+         * 
+         */
+
+
+        [TestMethod]
+        public void CityMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string City = "";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CityMin()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string City = "a";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CityPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string City = "ab";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CityMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string City = "";
+            City = City.PadRight(49, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CityMax()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string City = "";
+            City = City.PadRight(50, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CityMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string City = "";
+            City = City.PadRight(51, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CityMid()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string City = "Some City";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CityExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string City = "";
+            City = City.PadRight(500, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        /*
+         * 
+         * 
+         * 
+         * 
+         * Postcode
+         * 
+         * 
+         * 
+         * 
+         */
+
+
+        [TestMethod]
+        public void PostcodeMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Postcode = "";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PostcodeMin()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Postcode = "a";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PostcodePlusOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Postcode = "ab";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PostcodeMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Postcode = "";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PostcodeMax()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Postcode = "";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PostcodeMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Postcode = "";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PostcodeMid()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Postcode = "";
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PostcodeExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsDelivery ADelivery = new clsDelivery();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Postcode = "";
+            Postcode = Postcode.PadRight(500, 'a');
+            //invoke the method
+            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
     }
 }
