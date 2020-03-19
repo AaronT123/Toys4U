@@ -22,7 +22,7 @@ namespace Toys4U_Front_Office
             Response.Write(AnStaff.HourlyPay);
             Response.Write(AnStaff.LastName);
             Response.Write(AnStaff.Password);
-            Response.Write(AnStaff.PhoneNumber);
+            Response.Write(AnStaff.PhoneNumber); 
             Response.Write(AnStaff.FirstName);         
             Response.Write(AnStaff.JobTitle);
         
