@@ -272,7 +272,7 @@ namespace Toys4U_Classes
             if (PostCode.Length > 7)
             {
                 //record the error
-                Error = Error + "The PhoneNumber must be less than 7 characters  : ";
+                Error = Error + "The postcode must be less than 7 characters  : ";
             }
 
             //if the StreetName is blank
