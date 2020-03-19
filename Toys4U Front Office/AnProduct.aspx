@@ -18,9 +18,12 @@
         </p>
         <asp:Label ID="lblDescription" runat="server" Text="Description"></asp:Label>
         <asp:TextBox ID="txtDescription" runat="server"></asp:TextBox>
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.jpg" style="z-index: 1; left: 632px; top: 65px; position: absolute; height: 94px; width: 94px" />
+   
         <p>
             <asp:Label ID="lblStockQuantity" runat="server" Text="StockQuantity"></asp:Label>
             <asp:TextBox ID="txtStockquantity" runat="server"></asp:TextBox>
+            <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 271px; top: 214px; position: absolute; height: 18px; width: 211px"></asp:Label>
         </p>
         <p>
             <asp:Button ID="btnOk" runat="server" OnClick="btnOk_Click" Text="OK" />

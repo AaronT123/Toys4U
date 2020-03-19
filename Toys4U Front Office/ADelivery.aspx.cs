@@ -142,5 +142,10 @@ namespace Toys4U_Front_Office
             //redirect to the viewer page
             Response.Redirect("DeliveryList.aspx");
         }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DeliveryList.aspx");
+        }
     }
 }

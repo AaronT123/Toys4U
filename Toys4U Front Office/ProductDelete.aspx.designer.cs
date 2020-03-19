@@ -10,7 +10,7 @@
 namespace Toys4U_Front_Office {
     
     
-    public partial class OrderDelete {
+    public partial class ProductDelete {
         
         /// <summary>
         /// form1 control.
@@ -22,48 +22,39 @@ namespace Toys4U_Front_Office {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Image1 control.
+        /// lblDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Label lblDelete;
         
         /// <summary>
-        /// lblTitle control.
+        /// BtnYes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTitle;
+        protected global::System.Web.UI.WebControls.Button BtnYes;
         
         /// <summary>
-        /// lblOK control.
+        /// BtnNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblOK;
+        protected global::System.Web.UI.WebControls.Button BtnNo;
         
         /// <summary>
-        /// btnYes control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnYes;
-        
-        /// <summary>
-        /// btnNo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNo;
+        protected global::System.Web.UI.WebControls.Label lblError;
     }
 }

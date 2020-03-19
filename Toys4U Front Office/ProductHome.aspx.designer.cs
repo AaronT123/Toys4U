@@ -10,7 +10,7 @@
 namespace Toys4U_Front_Office {
     
     
-    public partial class OrderDelete {
+    public partial class ProductHome {
         
         /// <summary>
         /// form1 control.
@@ -31,39 +31,75 @@ namespace Toys4U_Front_Office {
         protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
-        /// lblTitle control.
+        /// LblToys4U control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTitle;
+        protected global::System.Web.UI.WebControls.Label LblToys4U;
         
         /// <summary>
-        /// lblOK control.
+        /// LstToys control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblOK;
+        protected global::System.Web.UI.WebControls.ListBox LstToys;
         
         /// <summary>
-        /// btnYes control.
+        /// TxtToys control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnYes;
+        protected global::System.Web.UI.WebControls.TextBox TxtToys;
         
         /// <summary>
-        /// btnNo control.
+        /// BtnApply control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNo;
+        protected global::System.Web.UI.WebControls.Button BtnApply;
+        
+        /// <summary>
+        /// BtnDisplayAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnDisplayAll;
+        
+        /// <summary>
+        /// BtnAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnAdd;
+        
+        /// <summary>
+        /// BtnEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnEdit;
+        
+        /// <summary>
+        /// BtnDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnDelete;
     }
 }
