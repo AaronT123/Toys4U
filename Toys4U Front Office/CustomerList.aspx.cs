@@ -61,7 +61,6 @@ namespace Toys4U_Front_Office
                 lblError.Text = "Please select a record to delete from the list";
             }
         }
-
         protected void btnEdit_Click(object sender, EventArgs e)
         {
             //var to store the primary key value of the record to be edited
@@ -83,13 +82,11 @@ namespace Toys4U_Front_Office
                 lblError.Text = "Please select a record to Edit from the list";
             }
         }
-
         protected void btnApply_Click(object sender, EventArgs e)
         {
             //display only Postcode 
             DisplayFilterCustomer(txtPostCode.Text);
         }
-
         Int32  DisplayFilterCustomer(string PostCodeFilter)
         {
             Int32 CustomerID;
@@ -112,7 +109,6 @@ namespace Toys4U_Front_Office
             return RecordCount;
 
         }
-
         protected void btnDisplayAll_Click(object sender, EventArgs e)
         {
             DisplayFilterCustomer(txtPostCode.Text);

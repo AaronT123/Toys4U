@@ -230,38 +230,38 @@ namespace Toys4U_Classes
                 //record the error
                 Error = Error + "The LastName must be less than 15 characters : ";
             }
-            //if (PhoneNumber != "")
-            //{
-            //    try
-            //    {
-            //        Int32 PhoneNumberCheck = Convert.ToInt32(PhoneNumber);
-            //        return "";
-            //    }
-            //    catch
-            //    {
-            //        return "This is not a number";
-            //    }
-            //}
-            //if (PhoneNumber == "")
-            //{
-            //    return "The PhoneNumber  may not b blank";
-            //}
-            //if (PhoneNumber.Length > 15)
-            //{
-            //    return "The PhoneNumber cannot have more than 15 characters";
-            //}
-
-            //if the PhoneNumber is blank
-            if (PhoneNumber.Length == 0)
+            if (PhoneNumber != "")
             {
-                //record the error
-                Error = Error + "The PhoneNumber may not be blank : ";
+                try
+                {
+                    Int32 PhoneNumberCheck = Convert.ToInt32(PhoneNumber);
+                    return "";
+                }
+                catch
+                {
+                    return "This is not a number";
+                }
+            }
+            if (PhoneNumber == "")
+            {
+                return "The PhoneNumber  may not b blank";
             }
             if (PhoneNumber.Length > 11)
             {
-                //record the error
-                Error = Error + "The PhoneNumber must be 11 numbers : ";
+                return "The PhoneNumber cannot have more than 15 characters";
             }
+
+            ////if the PhoneNumber is blank
+            //if (PhoneNumber.Length == 0)
+            //{
+            //    //record the error
+            //    Error = Error + "The PhoneNumber may not be blank : ";
+            //}
+            //if (PhoneNumber.Length > 11)
+            //{
+            //    //record the error
+            //    Error = Error + "The PhoneNumber must be 11 numbers : ";
+            //}
 
             //if the PostCode is blank
             if (PostCode.Length == 0)
