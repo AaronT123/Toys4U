@@ -32,10 +32,14 @@
              <asp:Label ID="lblLastName" runat="server" Text="Last Name"></asp:Label>
             <asp:TextBox ID="TextBoxLastName" runat="server"></asp:TextBox>
            
+             <asp:Label ID="Label11" runat="server" style="z-index: 1; left: 220px; top: 240px; position: absolute" Text="Re Enter Password"></asp:Label>
+           
         </p>
         <p>
             <asp:Label ID="Label8" runat="server" Text="Password"></asp:Label>
             <asp:TextBox ID="TextBoxPassword" runat="server"></asp:TextBox>
+                    
+            <asp:TextBox ID="TextBoxPassword2" runat="server" style="z-index: 1; left: 351px; top: 238px; position: absolute"></asp:TextBox>
                     
         </p>
         <p>
