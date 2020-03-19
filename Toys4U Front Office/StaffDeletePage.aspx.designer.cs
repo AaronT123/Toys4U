@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Toys4U_Front_Office {
-    
-    
-    public partial class StaffDeletePage {
-        
+namespace Toys4U_Front_Office
+{
+
+
+    public partial class StaffDeletePage
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,25 +22,34 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
-        /// Label1 control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
+        protected global::System.Web.UI.WebControls.Image Image1;
+
         /// <summary>
-        /// btnYes control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnYes;
-        
+        protected global::System.Web.UI.WebControls.Label Label2;
+
+        /// <summary>
+        /// LoadLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LoadLabel;
+
         /// <summary>
         /// btnNo control.
         /// </summary>
@@ -47,5 +58,14 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnNo;
+
+        /// <summary>
+        /// btnYes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnYes;
     }
 }

@@ -34,7 +34,7 @@ namespace Toys4U_Front_Office
             //set the name of the primary key
             lstStaff.DataValueField = "StaffNo";
             //bind the data to the list
-            lstStaff.DataTextField = "FirstName";
+            lstStaff.DataTextField = "JobTitle";
             //bind the data to the list 
             lstStaff.DataBind();
         }
