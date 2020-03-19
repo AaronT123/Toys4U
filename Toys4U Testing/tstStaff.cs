@@ -1284,9 +1284,48 @@ namespace Toys4U_Testing
             Assert.AreEqual(Error, "");
         }
 
+<<<<<<<<< Temporary merge branch 1
         [TestMethod]
         public void ValidMethodOk()
         {
+            //create an instance of the class we want to create
+            clsStaff AnStaff = new clsStaff();
+            //string variable to store any error message
+            string Password = "aB12";
+            String Error = "";
+            //invoke the method
+            Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void PasswordMaxMinOne()
+        {
+            //create an instance of the class we want to create
+            clsStaff AnStaff = new clsStaff();
+            //string variable to store any error message
+            string Password = "ab1DEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM";
+            String Error = "";
+            //invoke the method
+            Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void PasswordMaxBoundary()
+        {
+            //create an instance of the class we want to create
+            clsStaff AnStaff = new clsStaff();
+            //string variable to store any error message
+            string Password = "ab1DEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMN";
+            String Error = "";
+            //invoke the method
+            Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
+            Assert.AreEqual(Error, "");
+        }
+=========
+        //[TestMethod]
+        //public void ValidMethodOk()
+        //{
+>>>>>>>>> Temporary merge branch 2
 
         [TestMethod]
         public void PasswordMaxPlusOne()
@@ -1314,6 +1353,33 @@ namespace Toys4U_Testing
             Assert.AreEqual(Error, "");
         }
 
+<<<<<<<<< Temporary merge branch 1
+        [TestMethod]
+        public void PasswordExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsStaff AnStaff = new clsStaff();
+            //string variable to store any error message
+            string Password = "ab1DEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV";
+            String Error = "";
+            //invoke the method
+            Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
+            Assert.AreNotEqual(Error, "");
         }
+        [TestMethod]
+        public void Passwordinvalid()
+        {
+            //create an instance of the class we want to create
+            clsStaff AnStaff = new clsStaff();
+            //string variable to store any error message
+            string Password = "%^%$";
+            String Error = "";
+            //invoke the method
+            Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
+            Assert.AreNotEqual(Error, "");
+        }
+=========
+        //}
+>>>>>>>>> Temporary merge branch 2
     }
 }
