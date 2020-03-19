@@ -1284,7 +1284,7 @@ namespace Toys4U_Testing
             Assert.AreEqual(Error, "");
         }
 
-<<<<<<<<< Temporary merge branch 1
+
         [TestMethod]
         public void ValidMethodOk()
         {
@@ -1321,11 +1321,7 @@ namespace Toys4U_Testing
             Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
             Assert.AreEqual(Error, "");
         }
-=========
-        //[TestMethod]
-        //public void ValidMethodOk()
-        //{
->>>>>>>>> Temporary merge branch 2
+
 
         [TestMethod]
         public void PasswordMaxPlusOne()
@@ -1353,7 +1349,7 @@ namespace Toys4U_Testing
             Assert.AreEqual(Error, "");
         }
 
-<<<<<<<<< Temporary merge branch 1
+
         [TestMethod]
         public void PasswordExtremeMax()
         {
@@ -1378,8 +1374,8 @@ namespace Toys4U_Testing
             Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
             Assert.AreNotEqual(Error, "");
         }
-=========
-        //}
->>>>>>>>> Temporary merge branch 2
+
+
+
     }
 }
