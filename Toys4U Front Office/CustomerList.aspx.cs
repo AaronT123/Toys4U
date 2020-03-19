@@ -93,9 +93,10 @@ namespace Toys4U_Front_Office
         Int32  DisplayFilterCustomer(string PostCodeFilter)
         {
             Int32 CustomerID;
-            //string Firstname;
+            //string PostCode;
             string PostCode;
             clsCustomerCollection CustomerBook = new clsCustomerCollection();
+            CustomerBook.ReportByPostCode(PostCodeFilter);
             Int32 RecordCount;
             Int32 Index = 0;
             RecordCount = CustomerBook.Count;
@@ -103,7 +104,6 @@ namespace Toys4U_Front_Office
             while(Index < RecordCount)
             {
                 CustomerID = CustomerBook.CustomerList[Index].CustomerID;
-                //Firstname = CustomerBook.CustomerList[Index].FirstName;
                 PostCode = CustomerBook.CustomerList[Index].PostCode;
                 ListItem NewEntry = new ListItem(PostCode+ "" , CustomerID.ToString());
                 lstCustomer.Items.Add(NewEntry);
@@ -115,7 +115,7 @@ namespace Toys4U_Front_Office
 
         protected void btnDisplayAll_Click(object sender, EventArgs e)
         {
-            DisplayFilterCustomer("");
+            DisplayFilterCustomer(txtPostCode.Text);
         }
     }
 }
