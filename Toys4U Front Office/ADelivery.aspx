@@ -5,11 +5,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <script>
-  $(function() {
-    $( "txtDateEstimated" ).datepicker({dateFormat: "dd/MM/yyyy"});
-  });
-  </script>
 </head>
 <body style="height: 372px">
     <form id="form1" runat="server">
@@ -34,13 +29,13 @@
         <asp:TextBox ID="txtPostcode" runat="server" style="z-index: 1; left: 125px; top: 165px; position: absolute"></asp:TextBox>
         <!-- Date Added -->
         <asp:Label ID="lblDateAdded" runat="server" style="z-index: 1; left: 34px; top: 195px; position: absolute" Text="Date Added"></asp:Label>
-        <asp:TextBox ID="txtDateAdded" runat="server" style="z-index: 1; left: 125px; top: 195px; position: absolute"></asp:TextBox>
+        <asp:TextBox ID="txtDateAdded" runat="server" style="z-index: 1; left: 125px; top: 195px; position: absolute" TextMode="Date"></asp:TextBox>
         <!-- Date Estimated -->
         <asp:Label ID="lblDateEstimated" runat="server" style="z-index: 1; left: 15px; top: 225px; position: absolute" Text="Date Estimated"></asp:Label>
-        <asp:TextBox ID="txtDateEstimated"  runat="server" style="z-index: 1; left: 125px; top: 225px; position: absolute"></asp:TextBox>
+        <asp:TextBox ID="txtDateEstimated"  runat="server" style="z-index: 1; left: 125px; top: 225px; position: absolute" TextMode="Date"></asp:TextBox>
         <!-- Other Controls -->
         <asp:Button ID="btnOK" runat="server" style="z-index: 1; left: 125px; top: 255px; position: absolute" Text="OK" OnClick="btnOK_Click" />
-        <asp:Button ID="btnCancel" runat="server" style="z-index: 1; left: 192px; top: 255px; position: absolute" Text="Cancel" OnClick="btnCancel_Click" />
+        <asp:Button ID="btnCancel" runat="server" style="z-index: 1; left: 192px; top: 255px; position: absolute" Text="Cancel" OnClick="btnCancel_Click"/>
         <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 23px; top: 297px; position: absolute"></asp:Label>
     </form>
 </body>

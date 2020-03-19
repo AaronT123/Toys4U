@@ -189,37 +189,18 @@ namespace Toys4U_Classes
                 Error = Error + "The Order ID may not be longer than 9 characters : ";
             }
             //if the OrderID is digits only
+            Boolean charInOrderID = false;
             foreach (char c in OrderID)
             {
                 if (c < '0' || c > '9')
-                    Error = Error + "The Order ID is not digits only : ";
+                    charInOrderID = true;
             }
-            /*
-             * 
-             * 
-             * THIS CODE WORKS BUT NEED THE APPROPRIATE TEST DATA
-             * IN THE ORDER TABLE AND IN THE OTHER ORDER ID TESTS
-             * THAT FAIL BECAUSE OF THIS
-             * 
-             * 
-             * 
-            //if the OrderID exists in the order table
-            clsDataConnection DB = new clsDataConnection();
-            //add the parameter for the OrderID to search for
-            DB.AddParameter("@OrderID", OrderID);
-            //execute the stored procedure
-            DB.Execute("sproc_tblOrder_FilterByOrderID");
-            //if a record is not found
-            if (DB.Count == 0)
+            if (charInOrderID == true)
             {
-                Error = Error + "The Order ID does not exist : ";
+                Error = Error + "The Order ID may only be numbers : ";
             }
-            */
-
             /*
-             * 
              * HouseNo
-             * 
              */
             //if the HouseNo is blank
             if (HouseNo.Length == 0)
@@ -230,12 +211,10 @@ namespace Toys4U_Classes
             if (HouseNo.Length > 8)
             {
                 //record the error
-                Error = Error + "The Order ID may not be longer than 8 characters : ";
+                Error = Error + "The House No may not be longer than 8 characters : ";
             }
             /*
-             * 
              * Street
-             * 
              */
             if (Street.Length == 0)
             {
@@ -248,9 +227,7 @@ namespace Toys4U_Classes
                 Error = Error + "The Street may not be longer than 50 characters : ";
             }
             /*
-             * 
              * Town
-             * 
              */
             if (Town.Length == 0)
             {
@@ -263,9 +240,7 @@ namespace Toys4U_Classes
                 Error = Error + "The Town may not be longer than 50 characters : ";
             }
             /*
-             * 
              * City
-             * 
              */
             if (City.Length == 0)
             {
@@ -278,11 +253,8 @@ namespace Toys4U_Classes
                 Error = Error + "The City may not be longer than 50 characters : ";
             }
             /*
-             * 
              * Postcode
-             * 
              */
-
             if (Postcode.Length == 0)
             {
                 //record the error
@@ -309,8 +281,6 @@ namespace Toys4U_Classes
             {
                 Error = Error + "The postcode needs to contain a space : ";
             }
-
-
             //return any error messages
             return Error;
         }
