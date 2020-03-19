@@ -10,7 +10,7 @@
 namespace Toys4U_Front_Office {
     
     
-    public partial class AnOrder {
+    public partial class DeliveryList {
         
         /// <summary>
         /// form1 control.
@@ -22,58 +22,76 @@ namespace Toys4U_Front_Office {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lblOrderId control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblOrderId;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
         
         /// <summary>
-        /// txtOrderId control.
+        /// btnEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOrderId;
+        protected global::System.Web.UI.WebControls.Button btnEdit;
         
         /// <summary>
-        /// lblOrderDate control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblOrderDate;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
         
         /// <summary>
-        /// txtOrderDate control.
+        /// lstDelivery control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOrderDate;
+        protected global::System.Web.UI.WebControls.ListBox lstDelivery;
         
         /// <summary>
-        /// lblCustomerNo control.
+        /// lblEnterID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCustomerNo;
+        protected global::System.Web.UI.WebControls.Label lblEnterID;
         
         /// <summary>
-        /// txtCustomerID control.
+        /// btnApply control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCustomerID;
+        protected global::System.Web.UI.WebControls.Button btnApply;
+        
+        /// <summary>
+        /// btnDisplayAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDisplayAll;
+        
+        /// <summary>
+        /// TextBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
         /// lblError control.
@@ -83,23 +101,5 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblError;
-        
-        /// <summary>
-        /// btnOK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnOK;
-        
-        /// <summary>
-        /// btnCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancel;
     }
 }
