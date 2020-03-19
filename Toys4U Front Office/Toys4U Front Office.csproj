@@ -69,8 +69,13 @@
   <ItemGroup>
     <Content Include="ADelivery.aspx" />
     <Content Include="AnProduct.aspx" />
-    <Content Include="Default.aspx" />
+    <Content Include="CustomerDelete.aspx" />
+    <Content Include="CustomerList.aspx" />
+    <Content Include="DeliveryDelete.aspx" />
+    <Content Include="DeliveryList.aspx" />
     <Content Include="DeliveryViewer.aspx" />
+    <Content Include="OrderDelete.aspx" />
+    <Content Include="OrderList.aspx" />
     <Content Include="ProductDelete.aspx" />
     <Content Include="ProductHome.aspx" />
     <Content Include="ProductViewer.aspx" />
@@ -119,6 +124,20 @@
     <Compile Include="AnOrder.aspx.designer.cs">
       <DependentUpon>AnOrder.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CustomerDelete.aspx.cs">
+      <DependentUpon>CustomerDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerDelete.aspx.designer.cs">
+      <DependentUpon>CustomerDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerList.aspx.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerList.aspx.designer.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CustomerViewer.aspx.cs">
       <DependentUpon>CustomerViewer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,12 +145,19 @@
     <Compile Include="CustomerViewer.aspx.designer.cs">
       <DependentUpon>CustomerViewer.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="DeliveryDelete.aspx.cs">
+      <DependentUpon>DeliveryDelete.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="DeliveryDelete.aspx.designer.cs">
+      <DependentUpon>DeliveryDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryList.aspx.cs">
+      <DependentUpon>DeliveryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeliveryList.aspx.designer.cs">
+      <DependentUpon>DeliveryList.aspx</DependentUpon>
     </Compile>
     <Compile Include="DeliveryViewer.aspx.cs">
       <DependentUpon>DeliveryViewer.aspx</DependentUpon>
@@ -139,6 +165,20 @@
     </Compile>
     <Compile Include="DeliveryViewer.aspx.designer.cs">
       <DependentUpon>DeliveryViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDelete.aspx.cs">
+      <DependentUpon>OrderDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderDelete.aspx.designer.cs">
+      <DependentUpon>OrderDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductDelete.aspx.cs">
       <DependentUpon>ProductDelete.aspx</DependentUpon>
@@ -168,6 +208,20 @@
     <Compile Include="OrderViewer.aspx.designer.cs">
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffDeletePage.aspx.cs">
+      <DependentUpon>StaffDeletePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffDeletePage.aspx.designer.cs">
+      <DependentUpon>StaffDeletePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffList.aspx.cs">
+      <DependentUpon>StaffList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffList.aspx.designer.cs">
+      <DependentUpon>StaffList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="StaffViewer.aspx.cs">
       <DependentUpon>StaffViewer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -188,6 +242,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
+    <Folder Include="Images\" />
     <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>

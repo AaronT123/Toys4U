@@ -119,7 +119,7 @@ namespace Toys4U_Testing
             //test to see that the two values are tghe same
             Assert.AreEqual(AllStaff.Count, TestList.Count);
         }
-        
+
         //old redundant test, hence commented out 
         //[TestMethod]
         //public void TwoRecordsPresent()
@@ -130,6 +130,190 @@ namespace Toys4U_Testing
         //    Assert.AreEqual(AllStaff.Count, 2);
 
         //}
-    }
 
+
+        [TestMethod]
+        public void AddMethodOK()
+        {
+            //create a instance of the classd we want to create 
+            clsStaffCollection AllStaff = new clsStaffCollection();
+            //create the item of test data
+            clsStaff TestItem = new clsStaff();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set it primary key
+            TestItem.DateOfBirth = DateTime.Now.Date;
+            TestItem.DateJoined = DateTime.Now.Date;
+            TestItem.Email = "callumjohnsimpson@hotmail.com";
+            TestItem.HourlyPay = 7.77m;
+            TestItem.LastName = "Simpson";
+            TestItem.Password = "Something!";
+            TestItem.PhoneNumber = "07465 659874";
+            TestItem.FirstName = "Callum";
+            TestItem.JobTitle = "Manager";
+            //Set ThisStaff to the test data
+            AllStaff.ThisStaff = TestItem;
+            //Add the record 
+            PrimaryKey = AllStaff.Add();
+            //set the primaru key of the test data
+            TestItem.StaffNo = PrimaryKey;
+            //Find the record
+            AllStaff.ThisStaff.Find(PrimaryKey);
+            //testy to see that the two values are the same
+            Assert.AreEqual(AllStaff.ThisStaff, TestItem);
+        }
+
+
+
+        [TestMethod]
+        public void DeleteMethodOK()
+        {
+
+            //create an instance of the class we want to create
+            clsStaffCollection AllStaff = new clsStaffCollection();
+            //create the item of test data
+            clsStaff TestItem = new clsStaff();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.DateOfBirth = DateTime.Now.Date;
+            TestItem.DateJoined = DateTime.Now.Date;
+            TestItem.Email = "callumjohnsimpson@hotmail.com";
+            TestItem.HourlyPay = 7.77m;
+            TestItem.LastName = "Simpson";
+            TestItem.Password = "Something!";
+            TestItem.PhoneNumber = "07465 659874";
+            TestItem.FirstName = "Callum";
+
+            TestItem.JobTitle = "Manager";
+            //set this staff to the test data
+            AllStaff.ThisStaff = TestItem;
+            //ADD THE RECORD
+            PrimaryKey = AllStaff.Add();
+            //set the primary key of the test data
+            TestItem.StaffNo = PrimaryKey;
+            //find the record
+            AllStaff.ThisStaff.Find(PrimaryKey);
+            //delete the rtecord
+            AllStaff.Delete();
+            //now find the record
+            Boolean Found = AllStaff.ThisStaff.Find(PrimaryKey);
+            //Test to see that the record was not found 
+            Assert.IsFalse(Found);
+
+
+        }
+
+
+
+        [TestMethod]
+        public void UpdateMethodOK()
+        {
+            //create an instance of the class we waznt to create
+            clsStaffCollection AllStaff = new clsStaffCollection();
+            //create the item of test data
+            clsStaff TestItem = new clsStaff();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.DateOfBirth = DateTime.Now.Date;
+            TestItem.DateJoined = DateTime.Now.Date;
+            TestItem.Email = "callumjohnsimpson@hotmail.com";
+            TestItem.HourlyPay = 7.77m;
+            TestItem.LastName = "Simpson";
+            TestItem.Password = "Something!";
+            TestItem.PhoneNumber = "07465 659874";
+            TestItem.FirstName = "Callum";
+
+            TestItem.JobTitle = "Manager";
+            //set this staff to the test data
+            AllStaff.ThisStaff = TestItem;
+            //ADD THE RECORD
+            PrimaryKey = AllStaff.Add();
+            //set the primary key of the test data
+            TestItem.StaffNo = PrimaryKey;
+
+            //modify the test data
+            TestItem.DateOfBirth = DateTime.Now.Date;
+            TestItem.DateJoined = DateTime.Now.Date;
+            TestItem.Email = "grimreaper@hotmail.com";
+            TestItem.HourlyPay = 8.88m;
+            TestItem.LastName = "Slater";
+            TestItem.Password = "pass";
+            TestItem.PhoneNumber = "07465 889124";
+            TestItem.FirstName = "John";
+            //set the record based on the new test data
+            AllStaff.ThisStaff = TestItem;
+            //update the record
+            AllStaff.Update();
+            //find the record
+            AllStaff.ThisStaff.Find(PrimaryKey);
+            //test to see ThisStaff matches the test DATA
+            Assert.AreEqual(AllStaff.ThisStaff, TestItem);
+        }
+
+
+
+        //[TestMethod]
+        //public void ReportByJobTitleMethodOK()
+        //{
+        //    //create an instance of the class containing unfiltered results
+        //    clsStaffCollection AllStaff = new clsStaffCollection();
+        //    //create aN instance of the filtered data
+        //    clsStaffCollection FilteredStaff = new clsStaffCollection();
+        //    //apply a blank string (should return all records);
+        //    FilteredStaff.ReportByJobTitle("");
+        //    //test to see that the two values are the same
+        //    Assert.AreEqual(AllStaff.Count, FilteredStaff.Count);
+
+        //}
+
+
+        [TestMethod]
+        public void ReportByJobTitleNoneFound()
+        {
+            //create an instance of the filtered data
+            clsStaffCollection FilteredStaff = new clsStaffCollection();
+            //apple a post code that doesn't exist
+            FilteredStaff.ReportByJobTitle("xxx xxx");
+            //test to see that there are no records
+            Assert.AreEqual(0, FilteredStaff.Count);
+
+        }
+
+
+        //[TestMethod]
+        //public void ReportByJobTitleTestDataFound()
+        //{
+        //    //create an instance of the filtered data
+        //    clsStaffCollection FilteredStaff = new clsStaffCollection();
+        //    //var to store outcome
+        //    Boolean OK = true;
+        //    //apply a post code that doesnt exsist 
+        //    FilteredStaff.ReportByJobTitle("yyy yyy");
+        //    //check that the correct number of records are found 
+        //    if (FilteredStaff.Count == 2)
+        //    {
+        //        //check that the first record is ID 36
+        //        if (FilteredStaff.StaffList[0].StaffNo != 17)
+        //        {
+        //            OK = false;
+        //        }
+        //        //check that the first record is ID 37
+        //        if (FilteredStaff.StaffList[1].StaffNo != 18)
+        //        {
+
+        //            OK = false; 
+        //        }
+        //    }
+        //    else
+        //    {
+        //        OK = false;
+        //    }
+        //    //test to see that there are no records
+        //    Assert.IsTrue(OK);
+        //}
+      
+
+    }
 }
