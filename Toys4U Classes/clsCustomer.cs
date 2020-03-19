@@ -255,7 +255,7 @@ namespace Toys4U_Classes
                 Error = Error + "The PhoneNumber must be less than 7 characters  : ";
             }
 
-            //if the StreetName is blank
+            //if the StreetName is blank.
             if (StreetName.Length == 0)
             {
                 //record the error
