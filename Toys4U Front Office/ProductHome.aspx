@@ -15,14 +15,17 @@
     <form id="form1" runat="server">
         <div>
         </div>
+        <br />
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.jpg" style="z-index: 1; left: 509px; top: 159px; position: absolute; height: 129px; width: 137px" />
+   
+        <br />
+        <p>
+            <asp:Label ID="LblToys4U" runat="server" Font-Italic="False" Font-Overline="False" Font-Size="XX-Large" style="z-index: 1; left: 113px; top: 36px; position: absolute; height: 53px; width: 174px" Text="Toys4U"></asp:Label>
+        </p>
         <asp:ListBox ID="LstToys" runat="server" Height="200px" Width="384px"></asp:ListBox>
-        <br />
-        <br />
         <p>
             <asp:TextBox ID="TxtToys" runat="server"></asp:TextBox>
         </p>
-        <p>
-            &nbsp;</p>
         <p>
             <asp:Button ID="BtnApply" runat="server" Height="53px" OnClick="BtnApply_Click" Text="Apply" Width="130px" BackColor="#0066FF" ForeColor="#CCCCCC" />
         </p>
