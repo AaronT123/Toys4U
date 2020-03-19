@@ -200,7 +200,7 @@ namespace Toys4U_Classes
             if (EmailAddress.Length > 25)
             {
                 //record the error
-                Error = Error + "The Email Address must be less than 15 characters : ";
+                Error = Error + "The Email Address must be less than 25 characters : ";
             }
 
 
