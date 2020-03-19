@@ -67,13 +67,13 @@ namespace Toys4U_Front_Office {
         protected global::System.Web.UI.WebControls.Label lblCustomerNo;
         
         /// <summary>
-        /// txtCustomerNo control.
+        /// txtCustomerID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCustomerNo;
+        protected global::System.Web.UI.WebControls.TextBox txtCustomerID;
         
         /// <summary>
         /// lblError control.

@@ -110,5 +110,18 @@ namespace Toys4U_Classes
             //execute the stored procedure
             DB.Execute("sproc_tblOrder_Delete");
         }
+
+        public void Update()
+        {
+            //update an existing redcord based on the values of this Order
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("OrderID", mThisOrder.OrderID);
+            DB.AddParameter("@OrderDate", mThisOrder.OrderDate);
+            DB.AddParameter("@CustomerID", mThisOrder.CustomerID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblOrder_Update");
+        }
     }
 }
