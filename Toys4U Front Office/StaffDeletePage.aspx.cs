@@ -18,6 +18,7 @@ namespace Toys4U_Front_Office
         {
             //get the number of the address to be deleted from the session object
             StaffNo = Convert.ToInt32(Session["StaffNo"]);
+            LoadLabel.Text = "Are you sure you want to delete the selected staff with ID:" + StaffNo;
         }
 
 
@@ -41,6 +42,13 @@ namespace Toys4U_Front_Office
             //redirect back to the main page
             Response.Redirect("StaffList.aspx");
 
+        }
+
+        
+
+        protected void btnNo_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("StaffList.aspx");
         }
     }
 }

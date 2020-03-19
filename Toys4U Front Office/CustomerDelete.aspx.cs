@@ -37,5 +37,10 @@ namespace Toys4U_Front_Office
             //redirect back to the main page
             Response.Redirect("CustomerList.aspx");
         }
+
+        protected void btnNo_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CustomerList.aspx");
+        }
     }
 }

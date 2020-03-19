@@ -68,13 +68,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ADelivery.aspx" />
+    <Content Include="AnOrderLine.aspx" />
     <Content Include="AnProduct.aspx" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="CustomerDelete.aspx" />
     <Content Include="CustomerList.aspx" />
     <Content Include="DeliveryDelete.aspx" />
     <Content Include="DeliveryList.aspx" />
     <Content Include="DeliveryViewer.aspx" />
     <Content Include="OrderDelete.aspx" />
+    <Content Include="OrderLineViewer.aspx" />
     <Content Include="OrderList.aspx" />
     <Content Include="ProductDelete.aspx" />
     <Content Include="ProductHome.aspx" />
@@ -95,6 +98,13 @@
     </Compile>
     <Compile Include="ADelivery.aspx.designer.cs">
       <DependentUpon>ADelivery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnOrderLine.aspx.cs">
+      <DependentUpon>AnOrderLine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnOrderLine.aspx.designer.cs">
+      <DependentUpon>AnOrderLine.aspx</DependentUpon>
     </Compile>
     <Compile Include="AnProduct.aspx.cs">
       <DependentUpon>AnProduct.aspx</DependentUpon>
@@ -123,6 +133,13 @@
     </Compile>
     <Compile Include="AnOrder.aspx.designer.cs">
       <DependentUpon>AnOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerDelete.aspx.cs">
       <DependentUpon>CustomerDelete.aspx</DependentUpon>
@@ -172,6 +189,13 @@
     </Compile>
     <Compile Include="OrderDelete.aspx.designer.cs">
       <DependentUpon>OrderDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderLineViewer.aspx.cs">
+      <DependentUpon>OrderLineViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderLineViewer.aspx.designer.cs">
+      <DependentUpon>OrderLineViewer.aspx</DependentUpon>
     </Compile>
     <Compile Include="OrderList.aspx.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>

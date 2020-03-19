@@ -71,6 +71,7 @@ namespace Toys4U_Front_Office
                 OrderBook.ThisOrder.CustomerID = Convert.ToInt32(txtCustomerID.Text);
                 //add the record
                 OrderBook.Add();
+                Response.Redirect("OrderList.aspx");
             }
             else
             {

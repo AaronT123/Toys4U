@@ -56,19 +56,14 @@ namespace Toys4U_Front_Office
             {
                 //add the new record
                 Add();
-              //  Response.Redirect("CustomerList.aspx");
+               
             }
             else
             {
                 //update the record
                 Update();
             }
-
-            //All done so redirect back to the main page
-           /// Response.Redirect("CustomerList.aspx");
-
-            
-
+           
         }
         //function for adding new record
         void Add()
@@ -92,13 +87,15 @@ namespace Toys4U_Front_Office
                 CustomerBook.ThisCustomer.HouseNo = txtHouseNo.Text;
                 //add the record
                 CustomerBook.Add();
+                //All done so redirect back to the main page
+                Response.Redirect("CustomerList.aspx");
             }
             else
             {
                 //report an error
-                //txtEmailAddress.Text = "Hey, we have an error";
                 lblError.Text = "There were problems with the data entered " + Error;
             }
+           
 
         }
         void Update()
@@ -133,6 +130,10 @@ namespace Toys4U_Front_Office
                 lblError.Text = "There were problem with the data entered" + Error;
             }
         }
-
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            //All done so redirect back to the main page
+            Response.Redirect("CustomerList.aspx");
+        }
     }
 }
