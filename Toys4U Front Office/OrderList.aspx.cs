@@ -62,5 +62,31 @@ namespace Toys4U_Front_Office
                 lblError.Text = "Please select a record to delete from the list";
             }
         }
+
+        protected void btnEdit_Click(object sender, EventArgs e)
+        {
+            //var to store the primary key value of the record to be updated
+            Int32 OrderID;
+            //if a record has been selected from the list
+            if (lstOrders.SelectedIndex != -1)
+            {
+                //get the primary key value of the record to edit
+                OrderID = Convert.ToInt32(lstOrders.SelectedValue);
+                //store the data in the session object
+                Session["OrderID"] = OrderID;
+                //redirect to the edit page
+                Response.Redirect("AnOrder.aspx");
+            }
+            else //if no record has been selected
+            {
+                //display an error
+                lblError.Text = "Please select a record to edit from the list";
+            }
+        }
+
+        protected void lstOrders_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

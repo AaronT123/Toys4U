@@ -693,460 +693,460 @@ namespace Toys4U_Testing
             Assert.AreNotEqual(Error, "");
         }
 
-        //[TestMethod]
-        //public void PhoneNumberMinLessOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PhoneNumber = ""; //this should fail
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreNotEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PhoneNumberMin()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PhoneNumber = "01165987463"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PhoneNumberMinPlusOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PhoneNumber = "011659874638"; //this should fail
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreNotEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PhoneNumberMaxLessOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PhoneNumber = "0116598746"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PhoneNumberMax()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PhoneNumber = "01165987468"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PhoneNumberMaxPlusOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PhoneNumber = "011659874687"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreNotEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PhoneNumberMid()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PhoneNumber = "0116598"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PhoneNumberExtremeMax()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PhoneNumber = "";
-        //    PhoneNumber = PhoneNumber.PadRight(20, '4');//this should fail
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreNotEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PostCodeMinLessOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PostCode = ""; //this should trigger an error
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreNotEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PostCodeMin()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PostCode = "LE1"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PostCodeMinPlusOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PostCode = "LE63"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PostCodeMaxLessOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PostCode = "LE651A"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PostCodeMax()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PostCode = "LE651AE"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PostCodeMaxPlusOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PostCode = "LE651AER"; //this should fail
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreNotEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PostCodeMid()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PostCode = "LE64YG"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void PostCodeExtremeMax()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string PostCode = "";
-        //    PostCode = PostCode.PadRight(20, '4');//this should fail
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreNotEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void StreetNameMinLessOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string StreetName = ""; //this should trigger an error
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreNotEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void StreetNameMin()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string StreetName = "HatterLane"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void StreetNameMinPlusOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string StreetName = "HatternLane"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void StreetNameMaxLessOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string StreetName = "DeMontFortUniversit"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void StreetNameMax()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string StreetName = "DeMontFortUniversity"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void StreetNameMaxPlusOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string StreetName = "DeMontFortUniversitys"; //this should fail
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreNotEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void StreetNameMid()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string StreetName = "DeMontFort"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void StreetNameExtremeMax()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string StreetName = "";
-        //    StreetName = StreetName.PadRight(50, 'r');//this should fail
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreNotEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void HouseNoMinLessOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass the method
-        //    string HouseNo = "";
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the result is correct
-        //    Assert.AreNotEqual(Error, "");
+        [TestMethod]
+        public void PhoneNumberMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PhoneNumber = ""; //this should fail
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void PhoneNumberMin()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PhoneNumber = "01165987463"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void PhoneNumberMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PhoneNumber = "011659874638"; //this should fail
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void PhoneNumberMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PhoneNumber = "0116598746"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void PhoneNumberMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PhoneNumber = "01165987468"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void PhoneNumberMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PhoneNumber = "011659874687"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void PhoneNumberMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PhoneNumber = "0116598"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void PhoneNumberExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PhoneNumber = "";
+            PhoneNumber = PhoneNumber.PadRight(20, '4');//this should fail
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void PostCodeMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PostCode = ""; //this should trigger an error
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void PostCodeMin()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PostCode = "LE1"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void PostCodeMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PostCode = "LE63"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void PostCodeMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PostCode = "LE651A"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void PostCodeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PostCode = "LE651AE"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void PostCodeMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PostCode = "LE651AER"; //this should fail
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void PostCodeMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PostCode = "LE64YG"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void PostCodeExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string PostCode = "";
+            PostCode = PostCode.PadRight(20, '4');//this should fail
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void StreetNameMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string StreetName = ""; //this should trigger an error
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void StreetNameMin()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string StreetName = "HatterLane"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void StreetNameMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string StreetName = "HatternLane"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void StreetNameMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string StreetName = "DeMontFortUniversit"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void StreetNameMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string StreetName = "DeMontFortUniversity"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void StreetNameMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string StreetName = "DeMontFortUniversitys"; //this should fail
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void StreetNameMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string StreetName = "DeMontFort"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void StreetNameExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string StreetName = "";
+            StreetName = StreetName.PadRight(50, 'r');//this should fail
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreNotEqual(Error, "");
+        }
+        [TestMethod]
+        public void HouseNoMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass the method
+            string HouseNo = "";
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
 
-        //}
-        //[TestMethod]
-        //public void HouseNoMin()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string HouseNo = "1"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void HouseNoMinPlusOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string HouseNo = "12"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void HouseNoMaxLessOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string HouseNo = "123AB"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void HouseNoMax()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string HouseNo = "123ABC"; // this should be ok
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the result is correct
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void HouseNoMaxPlusOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string HouseNo = "1234ABC"; //this should fail
-        //    //invoke the method 
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the result is correct
-        //    Assert.AreNotEqual(Error, "");
-        //}
+        }
+        [TestMethod]
+        public void HouseNoMin()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "1"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void HouseNoMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "12"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void HouseNoMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "123AB"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void HouseNoMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "123ABC"; // this should be ok
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void HouseNoMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "1234ABC"; //this should fail
+            //invoke the method 
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
-        //[TestMethod]
-        //public void HouseNoMid()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string HouseNo = "123"; //this should pass
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreEqual(Error, "");
-        //}
-        //[TestMethod]
-        //public void HouseNoExtremeMax()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsCustomer AnCustomer = new clsCustomer();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create some test data to pass to the method
-        //    string HouseNo = "";
-        //    HouseNo = HouseNo.PadRight(50, '1');//this should fail
-        //    //invoke the method
-        //    Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
-        //    //test to see that the test is coorect
-        //    Assert.AreNotEqual(Error, "");
-        //}
+        [TestMethod]
+        public void HouseNoMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "123"; //this should pass
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void HouseNoExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer AnCustomer = new clsCustomer();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string HouseNo = "";
+            HouseNo = HouseNo.PadRight(50, '1');//this should fail
+            //invoke the method
+            Error = AnCustomer.Valid(EmailAddress, Password, FirstName, LastName, PhoneNumber, PostCode, StreetName, HouseNo);
+            //test to see that the test is coorect
+            Assert.AreNotEqual(Error, "");
+        }
 
     }
 }
