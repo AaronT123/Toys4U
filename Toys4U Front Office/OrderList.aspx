@@ -9,16 +9,22 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ListBox ID="lstOrders" runat="server" style="z-index: 1; left: 10px; top: 15px; position: absolute; height: 215px; width: 242px"></asp:ListBox>
-            <asp:TextBox ID="txtOrderID" runat="server" style="z-index: 1; left: 19px; top: 260px; position: absolute"></asp:TextBox>
-            <asp:Label ID="lblOrderID" runat="server" style="z-index: 1; left: 22px; top: 236px; position: absolute" Text="Please Enter Order ID"></asp:Label>
+            <asp:TextBox ID="txtOrderID" runat="server" style="z-index: 1; left: 289px; top: 144px; position: absolute"></asp:TextBox>
+            <asp:Label ID="lblOrderID" runat="server" style="z-index: 1; left: 289px; top: 117px; position: absolute" Text="Filter by Order ID:" Font-Bold="True" ForeColor="#3366CC"></asp:Label>
         </div>
-        <asp:Button ID="btnApply" runat="server" style="z-index: 1; left: 19px; top: 301px; position: absolute; width: 112px" Text="Apply" />
-        <asp:Button ID="btnDisplay" runat="server" style="z-index: 1; left: 135px; top: 301px; position: absolute; width: 120px" Text="Display All" />
-        <asp:Button ID="btnAdd" runat="server" style="z-index: 1; left: 19px; top: 335px; position: absolute; width: 67px" Text="Add" OnClick="btnAdd_Click" />
-        <asp:Button ID="btnEdit" runat="server" style="z-index: 1; left: 91px; top: 335px; position: absolute; width: 77px" Text="Edit" OnClick="btnEdit_Click" />
-        <asp:Button ID="btnDelete" runat="server" style="z-index: 1; left: 173px; top: 335px; position: absolute; width: 81px" Text="Delete" OnClick="btnDelete_Click" />
-        <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 18px; top: 362px; position: absolute"></asp:Label>
+        <asp:Button ID="btnApply" runat="server" style="z-index: 1; left: 288px; top: 174px; position: absolute; width: 120px" Text="Apply Filter" BackColor="#3366CC" Font-Bold="True" ForeColor="White" />
+        <asp:Button ID="btnDisplay" runat="server" style="z-index: 1; left: 458px; top: 174px; position: absolute; width: 120px" Text="Display All" BackColor="#3366CC" Font-Bold="True" ForeColor="White" />
+        <asp:Button ID="btnAdd" runat="server" style="z-index: 1; left: 289px; top: 362px; position: absolute; width: 125px" Text="Add new order" OnClick="btnAdd_Click" BackColor="#3366CC" Font-Bold="True" ForeColor="White" />
+        <asp:Button ID="btnEdit" runat="server" style="z-index: 1; left: 426px; top: 362px; position: absolute; width: 125px" Text="Edit" OnClick="btnEdit_Click" BackColor="#3366CC" Font-Bold="True" ForeColor="White" />
+        <asp:Button ID="btnDelete" runat="server" style="z-index: 1; left: 563px; top: 362px; position: absolute; width: 125px" Text="Delete" OnClick="btnDelete_Click" BackColor="#3366CC" Font-Bold="True" ForeColor="White" />
+        <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 289px; top: 334px; position: absolute; height: 19px;" Font-Bold="True" ForeColor="Red"></asp:Label>
+            <asp:ListBox ID="lstOrders" runat="server" style="z-index: 1; left: 288px; top: 205px; position: absolute; height: 122px; width: 401px" OnSelectedIndexChanged="lstOrders_SelectedIndexChanged"></asp:ListBox>
+            <p>
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.jpg" style="z-index: 1; left: 600px; top: 10px; position: absolute; height: 94px; width: 94px" />
+   
+            </p>
+        <asp:Label ID="lblTitle" runat="server" Font-Bold="True" Font-Size="30pt" Font-Underline="True" ForeColor="#3366CC" style="z-index: 1; left: 284px; top: 13px; position: absolute" Text="Toys 4U"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="20pt" ForeColor="#3366CC" style="z-index: 1; left: 287px; top: 74px; position: absolute" Text="Order Page"></asp:Label>
     </form>
 </body>
 </html>
