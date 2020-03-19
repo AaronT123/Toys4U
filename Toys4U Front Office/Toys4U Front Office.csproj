@@ -70,6 +70,7 @@
     <Content Include="ADelivery.aspx" />
     <Content Include="AnOrderLine.aspx" />
     <Content Include="AnProduct.aspx" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="CustomerDelete.aspx" />
     <Content Include="CustomerList.aspx" />
     <Content Include="DeliveryDelete.aspx" />
@@ -132,6 +133,13 @@
     </Compile>
     <Compile Include="AnOrder.aspx.designer.cs">
       <DependentUpon>AnOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerDelete.aspx.cs">
       <DependentUpon>CustomerDelete.aspx</DependentUpon>
