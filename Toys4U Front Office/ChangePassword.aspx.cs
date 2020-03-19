@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Toys4U_Front_Office
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class ChangePassword : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

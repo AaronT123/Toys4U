@@ -17,9 +17,9 @@ namespace Toys4U_Front_Office
             //get the data from the session object
             AnOrder = (clsOrder)Session["AnOrder"];
             //display the OrderID for this entry
-            Response.Write(AnOrder.OrderId);
+            Response.Write(AnOrder.OrderID);
             Response.Write(AnOrder.OrderDate);
-            Response.Write(AnOrder.CustomerNo);
+            Response.Write(AnOrder.CustomerID);
         }
     }
 }
