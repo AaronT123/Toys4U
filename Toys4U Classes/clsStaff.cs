@@ -322,7 +322,7 @@ namespace Toys4U_Classes
             catch//if it failed report an error
             {
                 //set the error message
-                Error = Error += "Date is not valid";
+                Error = Error += "Date is not valid, please use the format DD/MM/YYYY";
             }
             
             
@@ -346,7 +346,7 @@ namespace Toys4U_Classes
             catch//if it failed report an error
             {
                 //set the error message
-                Error = Error += "Date is not valid";
+                Error = Error += "Date is not valid please use format DD/MM/YYYY";
             }
 
 
