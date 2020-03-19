@@ -62,7 +62,7 @@
      
             <asp:Button ID="ButtonCancel" runat="server" style="z-index: 1; position: absolute; top: 352px; left: 652px; width: 123px;" Text="Cancel" BackColor="#3366CC" Font-Bold="True" Font-Names="Calibri" ForeColor="White" OnClick="ButtonCancel_Click" />
      
-            <asp:Button ID="ButtonOK" runat="server" style="z-index: 1; position: absolute; top: 357px; left: 375px; width: 127px;" Text="OK" OnClick="ButtonOK_Click" BackColor="#3366CC" Font-Bold="True" Font-Names="Calibri" ForeColor="White"  />
+            <asp:Button ID="ButtonOK" runat="server" style="z-index: 1; position: absolute; top: 319px; left: 650px; width: 127px;" Text="OK" OnClick="ButtonOK_Click" BackColor="#3366CC" Font-Bold="True" Font-Names="Calibri" ForeColor="White"  />
       
             <asp:CheckBox ID="CheckBoxAdmin" runat="server" style="z-index: 1; position: absolute; top: 272px; left: 700px;" Text="Admin?" Font-Bold="True" Font-Names="Calibri" />
        

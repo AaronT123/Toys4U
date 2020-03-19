@@ -171,21 +171,8 @@ namespace Toys4U_Classes
         }
 
         public Boolean Find(int StaffNo)
-        {//set the private data member to the test data value
-            //mStaffNo = 58;
-            //mAdmin = true;
-            //mDateJoined = Convert.ToDateTime("12 / 12 / 2012");
-            //mDateOfBirth = Convert.ToDateTime("12 / 12 / 2012");
-            //mEmail = "test@hotmail.com";
-            //mFirstName = "Test";
-            //mHourlyPay = 999m;
-            //mJobTitle = "Test";
-            //mLastName = "Test";
-            //mPassword = "Test";
-            //mPhoneNumber = "99999 999999";
-            //return true;
-
-
+        {
+         
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
             //add the parameter for the address no to search for
@@ -405,15 +392,15 @@ namespace Toys4U_Classes
                 }
                 if(ContainsCapitalLetter==false)
                 {
-                    Error += "Please include one capital letter ";
+                    Error += "Please include one capital letter in your password  ";
                 }
                 else if (ContainsLowerLetter ==false)
                 {
-                    Error += "Please include one lower letter ";
+                    Error += "Please include one lower letter in your password";
                 }
                 else if (ContainsNumber==false)
                 {
-                    Error += "Please include one number ";
+                    Error += "Please include one number in your password ";
                 }
 
             }

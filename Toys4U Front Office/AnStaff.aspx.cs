@@ -56,34 +56,55 @@ namespace Toys4U_Front_Office
 
         protected void ButtonOK_Click(object sender, EventArgs e)
         {
-            ////create a new instance of the clsStaff
-            //clsStaff AnStaff = new clsStaff();
-            ////capture the data
-            //AnStaff.Admin = CheckBoxAdmin.Checked;
-            //AnStaff.DateOfBirth = Convert.ToDateTime(TextBoxDateOfBirth.Text);
-            //AnStaff.DateJoined = Convert.ToDateTime(TextBoxDateJoined.Text);
-            //AnStaff.Email = TextBoxEmail.Text;
-            //AnStaff.HourlyPay = Convert.ToDecimal(TextBoxHourlyPay.Text);
-            //AnStaff.LastName = TextBoxLastName.Text;
-            //AnStaff.Password = TextBoxPassword.Text;
-            //AnStaff.PhoneNumber = TextBoxPhoneNumber.Text;
-            //AnStaff.FirstName = TextBoxFirstName.Text;
-            //AnStaff.JobTitle = TextBoxJobTitle.Text;
+            if (StaffNo == -1)
+            {
 
-
-
-            ////store the first name in the session object
-            //Session["AnStaff"] = AnStaff;
-            ////redurect to the viewer page
-            //Response.Redirect("StaffViewer.aspx");
-
-            //add the new recprd
-            Add();
-            //all done so redirect back to the main page
-            Response.Redirect("StaffList.aspx");
+                //add the new recprd
+                Add();
+            }
+            else
+            {
+                Update();
+            }
 
         }
 
+        public void Update()
+        {
+            //create an instance of the staff collection
+            clsStaffCollection SomeStaff = new clsStaffCollection();
+            //validate the data on the web form
+            string Error = "";
+            Error = SomeStaff.ThisStaff.Valid(TextBoxDateJoined.Text, TextBoxDateOfBirth.Text, TextBoxEmail.Text, TextBoxFirstName.Text, TextBoxHourlyPay.Text, TextBoxJobTitle.Text, TextBoxLastName.Text, TextBoxPassword.Text, TextBoxPhoneNumber.Text);
+            //if the data is ok then add it to the object
+            if (Error == "")
+            {
+                //get the data entered by the user 
+                SomeStaff.ThisStaff.StaffNo = StaffNo;
+                SomeStaff.ThisStaff.Admin = CheckBoxAdmin.Checked;
+                SomeStaff.ThisStaff.DateOfBirth = Convert.ToDateTime(TextBoxDateOfBirth.Text);
+                SomeStaff.ThisStaff.DateJoined = Convert.ToDateTime(TextBoxDateJoined.Text);
+                SomeStaff.ThisStaff.Email = TextBoxEmail.Text;
+                SomeStaff.ThisStaff.HourlyPay = Convert.ToDecimal(TextBoxHourlyPay.Text);
+                SomeStaff.ThisStaff.LastName = TextBoxLastName.Text;
+                SomeStaff.ThisStaff.Password = TextBoxPassword.Text;
+                SomeStaff.ThisStaff.PhoneNumber = TextBoxPhoneNumber.Text;
+                SomeStaff.ThisStaff.FirstName = TextBoxFirstName.Text;
+                SomeStaff.ThisStaff.JobTitle = TextBoxJobTitle.Text;
+
+                //ADD THIS RECORD
+                SomeStaff.Update();
+                Response.Redirect("StaffList.aspx");
+
+            }
+            else
+            {
+                //report an error 
+                lblError.Text += "There were problems with the data entered " + Error;
+
+            }
+
+        }
 
         //function for adding new records
         void Add()
