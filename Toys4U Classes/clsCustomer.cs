@@ -23,7 +23,7 @@ namespace Toys4U_Classes
         //private data memeber for the HouseNo property
         private string mHouseNo;
 
-        //public property for the Customer ID
+        //public property for the Customer ID.
         public int CustomerID
         {
             get
