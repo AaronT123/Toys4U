@@ -35,7 +35,7 @@ namespace Toys4U_Classes
                 AnProduct.ProductID = Convert.ToInt32(DB.DataTable.Rows[Index]["ProductID"]);
                 AnProduct.Name = Convert.ToString(DB.DataTable.Rows[Index]["Name"]);
                 AnProduct.Description = Convert.ToString(DB.DataTable.Rows[Index]["Description"]);
-                AnProduct.StockQuantity = Convert.ToInt32(DB.DataTable.Rows[Index]["StockQuantity"]);
+                AnProduct.StockQuantity =Convert.ToInt32(DB.DataTable.Rows[Index]["StockQuantity"]);
                 //add the record to the private member
                 mProductList.Add(AnProduct);
                 //point at the next record
@@ -129,7 +129,16 @@ namespace Toys4U_Classes
         //for updating records
         public void Update()
         {
-            
+            //update an existing record based on the values of this product
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure 
+            DB.AddParameter("@ProductID", mThisProduct.ProductID);
+            DB.AddParameter("@Name", mThisProduct.Name);
+            DB.AddParameter("@Description", mThisProduct.Description);
+            DB.AddParameter("@StockQuantity", mThisProduct.StockQuantity);
+            //execute the query returning the primary key value
+            DB.Execute("sproc_tblProduct_Update");
         }
 
         public void ReportByName(string Name)

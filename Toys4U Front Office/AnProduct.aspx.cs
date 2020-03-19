@@ -18,8 +18,7 @@ namespace Toys4U_Front_Office
             ProductID = Convert.ToInt32(Session["ProductID"]);
             if (IsPostBack == false)
             {
-                //populate the list of products
-                DisplayToys();
+             
                 //if this is not a new record
                 if (ProductID !=-1)
                 {
@@ -38,7 +37,7 @@ namespace Toys4U_Front_Office
             //display the data for this record
             txtName.Text = ProductBook.ThisProduct.Name;
             txtDescription.Text = ProductBook.ThisProduct.Description;
-            txtStockquantity.Text = ProductBook.ThisProduct.Description;
+            txtStockquantity.Text = Convert.ToString(ProductBook.ThisProduct.StockQuantity);
         }
 
         protected void btnOk_Click(object sender, EventArgs e)
@@ -59,7 +58,7 @@ namespace Toys4U_Front_Office
         void Add()
         {
             //create an isntance of the product book 
-            Toys4U_Classes.clsProductCollection ProductBook = new Toys4U_Classes.clsProductCollection();
+            clsProductCollection ProductBook = new clsProductCollection();
             //validate the data on the web form
             String Error = ProductBook.ThisProduct.Valid(txtName.Text, txtDescription.Text, txtStockquantity.Text);
             //if the data is OK then add it to the object 
@@ -71,6 +70,7 @@ namespace Toys4U_Front_Office
                 ProductBook.ThisProduct.StockQuantity = Convert.ToInt32(txtStockquantity.Text);
                 //add the record
                 ProductBook.Add();
+                Response.Redirect("ProductHome.aspx");
             }
             else
             {
@@ -82,7 +82,7 @@ namespace Toys4U_Front_Office
         void Update()
         {
             //create an instance of the product book
-            Toys4U_Classes.clsProductCollection ProductBook = new Toys4U_Classes.clsProductCollection();
+            clsProductCollection ProductBook = new clsProductCollection();
             //VALIDATE THE DATA ON THE WEB FROM
             String Error = ProductBook.ThisProduct.Valid(txtName.Text, txtDescription.Text, txtStockquantity.Text);
             //if the data is OK then add it to the the object
@@ -98,7 +98,6 @@ namespace Toys4U_Front_Office
                 ProductBook.Update();
                 //all done so redirect back to main page 
                 Response.Redirect("ProductHome.aspx");
-
 
             }
             else

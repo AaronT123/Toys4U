@@ -60,7 +60,7 @@ namespace Toys4U_Classes
         }
 
         //public property for product stock quantity
-        public int StockQuantity
+        public Int32 StockQuantity
         {
             get
             {
@@ -103,9 +103,43 @@ namespace Toys4U_Classes
 
         }
 
-        public string Valid(string text1, string text2, string text3)
+        
+
+        public string Valid(string name, string description, string stockQuantity)
         {
-            return "";
+            //create a string variable to store the error 
+            String Error = "";
+            //if the product name is blank
+            if (name.Length == 0)
+            {
+                //record the error 
+                Error = Error + "The name cant be blank :";
+
+            }
+            //if the prodcut name is greater than 40 characters
+            if (name.Length > 40)
+            {
+                //record the error
+                Error = Error + "The product name must be less than 40 characters";
+            }
+            try
+            {
+                Int32 stockquantity;
+                stockquantity= Convert.ToInt32(stockQuantity);
+                if (stockquantity<1)
+                {
+                    Error += "Stock must be >0";
+                }
+            }
+            catch
+            {
+                Error += " Stock quantity must be a decimal";
+            }
+
+
+
+            //return any error messages
+            return Error;
         }
     }
 }

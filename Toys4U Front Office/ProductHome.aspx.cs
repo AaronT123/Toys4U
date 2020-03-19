@@ -7,8 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace Toys4U_Front_Office
 {
+
     public partial class ProductHome : System.Web.UI.Page
     {
+       
         //this function handles the load event for the page
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -61,29 +63,9 @@ namespace Toys4U_Front_Office
 
             }
 
-
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void BtnAdd_Click()
-        {
-            //store -1 into the session object to indicate this is a new record 
-            //Session["AnProduct"] = -1;
-            //redirect to the data entry page
-            //Response.Redirect("AnProduct.aspx");
-        }
-
-        protected void BtnAdd_Click1(object sender, EventArgs e)
-        {
-            //store -1 into the session object to indicate this is a new record 
-            Session["AnProduct"] = -1;
-            //redirect to the data entry page
-            Response.Redirect("AnProduct.aspx");
-        }
+       
 
         protected void BtnEdit_Click(object sender, EventArgs e)
         {
@@ -100,6 +82,19 @@ namespace Toys4U_Front_Office
                 //redirect to the edit page
                 Response.Redirect("AnProduct.aspx");
             }
+
+        }
+
+        protected void BtnAdd_Click2(object sender, EventArgs e)
+        {
+            //store -1 into the session object to indicate this is a new record 
+            Session["ProductID"] = -1;
+            //redirect to the data entry page
+            Response.Redirect("AnProduct.aspx");
+        }
+
+        protected void BtnDisplayAll_Click(object sender, EventArgs e)
+        {
 
         }
     }

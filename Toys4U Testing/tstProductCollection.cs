@@ -230,7 +230,7 @@ namespace Toys4U_Testing
             //var to store outcome
             Boolean OK = true;
             //apply name that doesnt exist
-            FilteredProduct.ReportByName("Tennis Ball");
+            FilteredProduct.ReportByName("TennisBall");
             //check that the correct number of records are found
             if (FilteredProduct.Count == 2)
             {
@@ -252,6 +252,8 @@ namespace Toys4U_Testing
             //test to see that there are no records
             Assert.IsTrue(OK);
         }
+
+       
 
       
 
