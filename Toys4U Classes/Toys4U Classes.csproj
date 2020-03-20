@@ -48,9 +48,12 @@
     <Compile Include="clsOrderCollection.cs" />
     <Compile Include="clsOrderLine.cs" />
     <Compile Include="clsProduct.cs" />
-    <Compile Include="clsProductCollection.cs" />
     <Compile Include="clsOrder.cs" />
     <Compile Include="clsDelivery.cs" />
+    <Compile Include="clsProductCollection.cs" />
+    <Compile Include="clsSecurity.cs" />
+    <Compile Include="clsProductCollection.cs" />
+    <Compile Include="clsProductCollection.cs" />
     <Compile Include="clsStaffManagemenT.cs" />
     <Compile Include="clsStaffManagemenTCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
