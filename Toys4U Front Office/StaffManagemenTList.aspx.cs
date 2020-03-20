@@ -85,7 +85,7 @@ namespace Toys4U_Front_Office
         void DisplayStaff()
         {
             //create an instance of the staff collection
-            Toys4U_Classes.clsStaffManagemenTCollection Staffs = new Toys4U_Classes.clsStaffManagemenTCollection();
+            clsStaffManagemenTCollection Staffs = new clsStaffManagemenTCollection();
             //set the data source to the list of staff in the collection
             lstStaff.DataSource = Staffs.StaffList;
             //set the name of the primary key
