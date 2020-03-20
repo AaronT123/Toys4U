@@ -44,10 +44,15 @@
     <Compile Include="clsCustomer.cs" />
     <Compile Include="clsCustomerCollection.cs" />
     <Compile Include="clsDataConnection.cs" />
+    <Compile Include="clsDeliveryCollection.cs" />
+    <Compile Include="clsOrderCollection.cs" />
+    <Compile Include="clsOrderLine.cs" />
     <Compile Include="clsProduct.cs" />
+    <Compile Include="clsProductCollection.cs" />
     <Compile Include="clsOrder.cs" />
     <Compile Include="clsDelivery.cs" />
-    <Compile Include="clsStaff.cs" />
+    <Compile Include="clsStaffManagemenT.cs" />
+    <Compile Include="clsStaffManagemenTCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
