@@ -114,7 +114,7 @@ namespace Toys4U_Testing
             //invoke the method
             Found = AnOrder.Find(OrderID);
             //check the property
-            if (AnOrder.OrderDate != Convert.ToDateTime("12/03/2020"))
+            if (AnOrder.OrderDate != Convert.ToDateTime("20/03/2020"))
             {
                 OK = false;
             }
@@ -136,7 +136,7 @@ namespace Toys4U_Testing
             //invoke the method
             Found = AnOrder.Find(OrderID);
             //check the property
-            if (AnOrder.CustomerID != 16)
+            if (AnOrder.CustomerID != 11)
             {
                 OK = false;
             }
