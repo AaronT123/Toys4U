@@ -264,9 +264,15 @@ namespace Toys4U_Classes
             if (Postcode.Length < 6)
             {
                 //record the error
-                Error = Error + "The Postcode may not be less than 6 characters (include a space) : ";
+                Error = Error + "The Postcode may not be less than 6 characters (including a space) : ";
             }
-            
+
+            if (Postcode.Length > 8)
+            {
+                //record the error
+                Error = Error + "The Postcode may not be more than 8 characters (including a space) : ";
+            }
+
             Int32 PostcodeSpaceCount = 0;
             foreach (char c in Postcode)
             {

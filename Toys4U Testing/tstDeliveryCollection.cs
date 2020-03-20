@@ -246,12 +246,12 @@ namespace Toys4U_Testing
             //check that the correct number of records are found
             if (FilteredDeliveries.Count == 2)
             {
-                //check that the first record is ID 36
+                //check that the first record is ID 18
                 if (FilteredDeliveries.DeliveryList[0].DeliveryID != 18)
                 {
                     OK = false;
                 }
-                //check that the first record is ID 37
+                //check that the first record is ID 19
                 if (FilteredDeliveries.DeliveryList[1].DeliveryID != 19)
                 {
                     OK = false;

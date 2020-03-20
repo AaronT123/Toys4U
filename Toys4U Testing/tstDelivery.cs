@@ -14,7 +14,7 @@ namespace Toys4U_Testing
         string Street = "Some Street";
         string Town = "Some Town";
         string City = "some City";
-        string Postcode = "some postcode";
+        string Postcode = "LE1 XYZ";
         string DateAdded = DateTime.Now.Date.ToString();
         string DateEstimated = DateTime.Now.Date.ToString();
 
@@ -532,30 +532,6 @@ namespace Toys4U_Testing
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
-
-        /*
-         * 
-         * 
-         * This test will fail as the appropriate code in clsDelivery is commented out
-         * 
-         * Check comment in clsDelivery for details
-         * 
-         * 
-        [TestMethod]
-        public void OrderIDDoesNotExist()
-        {
-            //create an instance of the class we want to create
-            clsDelivery ADelivery = new clsDelivery();
-            //string variable to store any error message
-            String Error = "";
-            //create some test data to pass to the method
-            string OrderID = "99";
-            //invoke the method
-            Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
-            //test to see that the result is correct
-            Assert.AreNotEqual(Error, "");
-        }
-        */
 
         /*
          * 
@@ -1212,7 +1188,7 @@ namespace Toys4U_Testing
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to the method
-            string Postcode = "LE112ABCD";
+            string Postcode = "LE11 ABCD";
             //invoke the method
             Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
             //test to see that the result is correct
@@ -1228,7 +1204,7 @@ namespace Toys4U_Testing
             String Error = "";
             //create some test data to pass to the method
             string Postcode = "";
-            Postcode = Postcode.PadRight(500, 'a');
+            Postcode = Postcode.PadRight(250, 'a');
             //invoke the method
             Error = ADelivery.Valid(OrderID, HouseNo, Street, Town, City, Postcode, DateAdded, DateEstimated);
             //test to see that the result is correct
