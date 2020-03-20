@@ -37,5 +37,11 @@ namespace Toys4U_Front_Office
             //delete the record
             Deliveries.Delete();
         }
+
+        protected void btnNo_Click(object sender, EventArgs e)
+        {
+            //redirect back to the main page
+            Response.Redirect("DeliveryList.aspx");
+        }
     }
 }
