@@ -11,7 +11,7 @@ namespace Toys4U_Front_Office
 {
 
 
-    public partial class Default
+    public partial class OrderLineViewer
     {
 
         /// <summary>
