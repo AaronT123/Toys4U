@@ -6,13 +6,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Toys4U_Classes;
 
+
 namespace Toys4U_Front_Office
 {
-    public partial class StaffManagemenTList : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
+	public partial class StaffManagemenTList : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
             if (IsPostBack == false)
             {
                 //UPDATE THE LIST BOX
@@ -32,10 +32,11 @@ namespace Toys4U_Front_Office
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
+            
             //store -1 into the session object to indicate this is a new record
             Session["StaffNo"] = -1;
             //redirect to the data entry page
-            Response.Redirect("AnStaff.aspx");
+            Response.Redirect("AnStaffManagemenT.aspx");
         }
 
         protected void btnEdit_Click(object sender, EventArgs e)
@@ -50,7 +51,7 @@ namespace Toys4U_Front_Office
                 //store the data in the session object
                 Session["StaffNo"] = StaffNo;
                 //redirect to the edit page
-                Response.Redirect("AnStaff.aspx");
+                Response.Redirect("AnStaffManagemenT.aspx");
 
             }
             else//if no record has been selected
@@ -72,7 +73,7 @@ namespace Toys4U_Front_Office
                 //store the data in the session object
                 Session["StaffNo"] = StaffNo;
                 //redirect to the delete page
-                Response.Redirect("StaffDeletePage.aspx");
+                Response.Redirect("StaffManagemenTDeletePage.aspx");
 
             }
             else //if no record has been selected

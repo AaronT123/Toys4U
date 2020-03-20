@@ -18,18 +18,6 @@ namespace Toys4U_Front_Office
             CustomerID = Convert.ToInt32(Session["CustomerID"]);
         }
 
-        void DeleteCustomer()
-        {
-            //function a new instance of the selected record
-            //create a new instance of the Customer book
-            clsCustomerCollection CustomerBook = new clsCustomerCollection();
-            //find the record to delete
-            CustomerBook.ThisCustomer.Find(CustomerID);
-            //delete the record
-            CustomerBook.Delete();
-        }
-
-
         protected void btnYes_Click1(object sender, EventArgs e)
         {
             //delete the record 
@@ -40,7 +28,21 @@ namespace Toys4U_Front_Office
 
         protected void btnNo_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CustomerList.aspx");
+           
+            
+                Response.Redirect("CustomerList.aspx");
+            
+        }
+
+        void DeleteCustomer()
+        {
+            //function a new instance of the selected record
+            //create a new instance of the Customer book
+            clsCustomerCollection CustomerBook = new clsCustomerCollection();
+            //find the record to delete
+            CustomerBook.ThisCustomer.Find(CustomerID);
+            //delete the record
+            CustomerBook.Delete();
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CustomerDelete.aspx.cs" Inherits="Toys4U_Front_Office.CustomerDelete" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CustomerDelete.aspx.cs" Inherits="Toys4U_Front_Office.CustomerDelete" %>
 
 <!DOCTYPE html>
 

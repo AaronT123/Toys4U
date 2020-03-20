@@ -61,8 +61,6 @@
     <Compile Include="tstStaffManagemenT.cs" />
     <Compile Include="tstStaffManagemenTCollection.cs" />
     <Compile Include="tstProductCollection.cs" />
-    <Compile Include="tstStaff.cs" />
-    <Compile Include="tstStaffCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -8,27 +8,30 @@ using Toys4U_Classes;
 
 namespace Toys4U_Front_Office
 {
-    public partial class StaffManagemenTDeletePage : System.Web.UI.Page
-    { //var to store the primary key of the record to be deleted
+	public partial class StaffManagemenTDeletePage : System.Web.UI.Page
+    {
+        //var to store the primary key of the record to be deleted
         Int32 StaffNo;
         protected void Page_Load(object sender, EventArgs e)
-        {
+		{
             //get the number of the address to be deleted from the session object
             StaffNo = Convert.ToInt32(Session["StaffNo"]);
             LoadLabel.Text = "Are you sure you want to delete the selected staff with ID:" + StaffNo;
         }
 
         protected void btnYes_Click(object sender, EventArgs e)
-        {//delete the record
+        {
+            //delete the record
             DeleteStaff();
             //redirect back to the main page
-            Response.Redirect("StaffList.aspx");
+            Response.Redirect("StaffManagemenTList.aspx");
         }
 
         protected void btnNo_Click1(object sender, EventArgs e)
         {
-            Response.Redirect("StaffList.aspx");
+            Response.Redirect("StaffManagemenTList.aspx");
         }
+
         void DeleteStaff()
         {
             //fuction to delete the seceted record
@@ -41,6 +44,5 @@ namespace Toys4U_Front_Office
             SomeStaff.Delete();
 
         }
-
     }
 }

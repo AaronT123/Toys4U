@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Toys4U_Front_Office {
-    
-    
-    public partial class CustomerList {
-        
+namespace Toys4U_Front_Office
+{
+
+
+    public partial class CustomerList
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// lstCustomer control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox lstCustomer;
-        
+
         /// <summary>
         /// txtPostCode control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPostCode;
-        
+
         /// <summary>
         /// btnDisplayAll control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDisplayAll;
-        
+
         /// <summary>
         /// btnAdd control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAdd;
-        
+
         /// <summary>
         /// btnDelete control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDelete;
-        
+
         /// <summary>
         /// lblPostCode control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPostCode;
-        
+
         /// <summary>
         /// lblError control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblError;
-        
+
         /// <summary>
         /// btnApply control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnApply;
-        
+
         /// <summary>
         /// btnEdit control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEdit;
-        
+
         /// <summary>
         /// Image1 control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace Toys4U_Front_Office {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image1;
-        
+
         /// <summary>
         /// Label1 control.
         /// </summary>

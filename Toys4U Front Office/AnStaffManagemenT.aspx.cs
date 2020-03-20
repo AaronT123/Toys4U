@@ -30,6 +30,25 @@ namespace Toys4U_Front_Office
 
             }
         }
+
+        protected void ButtonOK_Click(object sender, EventArgs e)
+        {
+            if (StaffNo == -1)
+            {
+
+                //add the new recprd
+                Add();
+            }
+            else
+            {
+                Update();
+            }
+        }
+
+        protected void ButtonCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("StaffManagemenTList.aspx");
+        }
         void DisplayData()
         {
             //create an instance of the somestaff 
@@ -49,20 +68,8 @@ namespace Toys4U_Front_Office
             TextBoxJobTitle.Text = SomeStaff.ThisStaff.JobTitle;
 
         }
-        protected void ButtonOK_Click(object sender, EventArgs e)
-        {
-            if (StaffNo == -1)
-            {
 
-                //add the new recprd
-                Add();
-            }
-            else
-            {
-                Update();
-            }
 
-        }
         public void Update()
         {
             //create an instance of the staff collection
@@ -88,7 +95,7 @@ namespace Toys4U_Front_Office
 
                 //ADD THIS RECORD
                 SomeStaff.Update();
-                Response.Redirect("StaffList.aspx");
+                Response.Redirect("StaffManagemenTList.aspx");
 
             }
             else
@@ -135,12 +142,6 @@ namespace Toys4U_Front_Office
 
             }
 
-
-        }
-        protected void ButtonCancel_Click(object sender, EventArgs e)
-        {
-
-            Response.Redirect("StaffManagemenTList.aspx");
         }
     }
 }

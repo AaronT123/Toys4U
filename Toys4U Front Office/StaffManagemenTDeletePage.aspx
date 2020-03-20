@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-<form id="form1" runat="server">
+    <form id="form1" runat="server">
      
             <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.jpg" style="z-index: 1; left: 602px; top: 34px; position: absolute; height: 94px; width: 94px" />
    
@@ -42,7 +42,7 @@
             <p>
 
 
-            <asp:Button ID="btnYes" runat="server" style="z-index: 1; left: 281px; top: 170px; position: absolute; width: 51px; height: 26px;" Text="Yes" OnClick="btnYes_Click" BackColor="#3366CC" Font-Bold="True" Font-Names="Calibri" ForeColor="White" />
+            <asp:Button ID="btnYes" runat="server" style="z-index: 1; left: 281px; top: 170px; position: absolute; width: 51px; " Text="Yes" OnClick="btnYes_Click" BackColor="#3366CC" Font-Bold="True" Font-Names="Calibri" ForeColor="White" />
             </p>
     </form>
 </body>

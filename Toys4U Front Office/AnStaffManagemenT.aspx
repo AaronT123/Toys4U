@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-         <form id="form2" runat="server">
+         
 
             <asp:Label ID="lblDateOfBirth" runat="server" style="z-index: 1; left: 278px; top: 87px; position: absolute; height: 23px; width: 94px" Text="Date Of Birth:" Font-Bold="True" Font-Names="Calibri"></asp:Label>
             <asp:TextBox ID="TextBoxDateOfBirth" runat="server" style="z-index: 1; position: absolute; top: 85px; left: 374px; width: 140px;"></asp:TextBox>
@@ -75,7 +75,6 @@
 
     
    
-    </form>
     </form>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-   <form id="form1" runat="server">
+    <form id="form1" runat="server">
       
         <asp:TextBox ID="txtJobTitle" runat="server" style="z-index: 1; left: 277px; top: 128px; position: absolute; height: 16px; width: 125px;"></asp:TextBox>
         <asp:Button ID="btnDelete" runat="server" style="z-index: 1; left: 554px; top: 396px; position: absolute; height: 26px; width: 125px;" Text="Delete" OnClick="btnDelete_Click" BackColor="#3366CC" Font-Bold="True" Font-Names="Calibri" ForeColor="White" />
