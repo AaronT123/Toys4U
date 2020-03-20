@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AnStaff.aspx.cs" Inherits="Toys4U_Front_Office.AnStaff" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AnStaffManagemenT.aspx.cs" Inherits="Toys4U_Front_Office.AnStaffManagemenT" %>
 
 <!DOCTYPE html>
 
@@ -8,6 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+         <form id="form2" runat="server">
 
             <asp:Label ID="lblDateOfBirth" runat="server" style="z-index: 1; left: 278px; top: 87px; position: absolute; height: 23px; width: 94px" Text="Date Of Birth:" Font-Bold="True" Font-Names="Calibri"></asp:Label>
             <asp:TextBox ID="TextBoxDateOfBirth" runat="server" style="z-index: 1; position: absolute; top: 85px; left: 374px; width: 140px;"></asp:TextBox>
@@ -62,7 +63,7 @@
      
             <asp:Button ID="ButtonCancel" runat="server" style="z-index: 1; position: absolute; top: 352px; left: 652px; width: 123px;" Text="Cancel" BackColor="#3366CC" Font-Bold="True" Font-Names="Calibri" ForeColor="White" OnClick="ButtonCancel_Click" />
      
-            <asp:Button ID="ButtonOK" runat="server" style="z-index: 1; position: absolute; top: 321px; left: 652px; width: 123px;" Text="OK" OnClick="ButtonOK_Click" BackColor="#3366CC" Font-Bold="True" Font-Names="Calibri" ForeColor="White"  />
+            <asp:Button ID="ButtonOK" runat="server" style="z-index: 1; position: absolute; top: 319px; left: 650px; width: 127px;" Text="OK" OnClick="ButtonOK_Click" BackColor="#3366CC" Font-Bold="True" Font-Names="Calibri" ForeColor="White"  />
       
             <asp:CheckBox ID="CheckBoxAdmin" runat="server" style="z-index: 1; position: absolute; top: 272px; left: 700px;" Text="Admin?" Font-Bold="True" Font-Names="Calibri" />
        
@@ -74,6 +75,7 @@
 
     
    
+    </form>
     </form>
 </body>
 </html>

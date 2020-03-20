@@ -8,12 +8,9 @@ using Toys4U_Classes;
 
 namespace Toys4U_Front_Office
 {
-    public partial class AnStaff : System.Web.UI.Page
+    public partial class AnStaffManagemenT : System.Web.UI.Page
     {
-        //var to store the staff id with page level scope
         Int32 StaffNo;
-
-        //event handler for the page load event.
         protected void Page_Load(object sender, EventArgs e)
         {
             //get the number of the staff to be processed 
@@ -28,16 +25,15 @@ namespace Toys4U_Front_Office
                     //display the current data for the record
                     DisplayData();
                 }
- 
-                
-               
+
+
+
             }
         }
-
         void DisplayData()
         {
             //create an instance of the somestaff 
-            clsStaffCollection SomeStaff = new clsStaffCollection();
+            clsStaffManagemenTCollection SomeStaff = new clsStaffManagemenTCollection();
             //find the record to update
             SomeStaff.ThisStaff.Find(StaffNo);
             //display the data for this record
@@ -53,10 +49,8 @@ namespace Toys4U_Front_Office
             TextBoxJobTitle.Text = SomeStaff.ThisStaff.JobTitle;
 
         }
-
         protected void ButtonOK_Click(object sender, EventArgs e)
         {
-
             if (StaffNo == -1)
             {
 
@@ -67,15 +61,12 @@ namespace Toys4U_Front_Office
             {
                 Update();
             }
-            
-            
 
         }
-
         public void Update()
         {
             //create an instance of the staff collection
-            clsStaffCollection SomeStaff = new clsStaffCollection();
+            clsStaffManagemenTCollection SomeStaff = new clsStaffManagemenTCollection();
             //validate the data on the web form
             string Error = "";
             Error = SomeStaff.ThisStaff.Valid(TextBoxDateJoined.Text, TextBoxDateOfBirth.Text, TextBoxEmail.Text, TextBoxFirstName.Text, TextBoxHourlyPay.Text, TextBoxJobTitle.Text, TextBoxLastName.Text, TextBoxPassword.Text, TextBoxPhoneNumber.Text);
@@ -83,6 +74,7 @@ namespace Toys4U_Front_Office
             if (Error == "")
             {
                 //get the data entered by the user 
+                SomeStaff.ThisStaff.StaffNo = StaffNo;
                 SomeStaff.ThisStaff.Admin = CheckBoxAdmin.Checked;
                 SomeStaff.ThisStaff.DateOfBirth = Convert.ToDateTime(TextBoxDateOfBirth.Text);
                 SomeStaff.ThisStaff.DateJoined = Convert.ToDateTime(TextBoxDateJoined.Text);
@@ -108,23 +100,22 @@ namespace Toys4U_Front_Office
 
         }
 
-
         //function for adding new records
         void Add()
         {
             //create an instance of the staff collection
-            clsStaffCollection SomeStaff = new clsStaffCollection();
+            clsStaffManagemenTCollection SomeStaff = new clsStaffManagemenTCollection();
             //validate the data on the web form
-            string Error = "";
-            Error = SomeStaff.ThisStaff.Valid(TextBoxDateJoined.Text , TextBoxDateOfBirth.Text, TextBoxEmail.Text, TextBoxFirstName.Text, TextBoxHourlyPay.Text, TextBoxJobTitle.Text, TextBoxLastName.Text, TextBoxPassword.Text, TextBoxPhoneNumber.Text);
+            String Error = "";
+            Error = SomeStaff.ThisStaff.Valid(TextBoxDateJoined.Text, TextBoxDateOfBirth.Text, TextBoxEmail.Text, TextBoxFirstName.Text, TextBoxHourlyPay.Text, TextBoxJobTitle.Text, TextBoxLastName.Text, TextBoxPassword.Text, TextBoxPhoneNumber.Text);
             //if the data is ok then add it to the object
-            if (Error =="")
+            if (Error == "")
             {
                 //get the data entered by the user 
                 SomeStaff.ThisStaff.Admin = CheckBoxAdmin.Checked;
                 SomeStaff.ThisStaff.DateOfBirth = Convert.ToDateTime(TextBoxDateOfBirth.Text);
                 SomeStaff.ThisStaff.DateJoined = Convert.ToDateTime(TextBoxDateJoined.Text);
-                SomeStaff.ThisStaff.Email =TextBoxEmail .Text;
+                SomeStaff.ThisStaff.Email = TextBoxEmail.Text;
                 SomeStaff.ThisStaff.HourlyPay = Convert.ToDecimal(TextBoxHourlyPay.Text);
                 SomeStaff.ThisStaff.LastName = TextBoxLastName.Text;
                 SomeStaff.ThisStaff.Password = TextBoxPassword.Text;
@@ -134,8 +125,8 @@ namespace Toys4U_Front_Office
 
                 //ADD THIS RECORD
                 SomeStaff.Add();
-                Response.Redirect("StaffList.aspx");
-            
+
+
             }
             else
             {
@@ -146,10 +137,10 @@ namespace Toys4U_Front_Office
 
 
         }
-
         protected void ButtonCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("StaffList.aspx");
+
+            Response.Redirect("StaffManagemenTList.aspx");
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Toys4U_Classes
 {
-    public class clsStaff
+    public class clsStaffManagemenT
     {
         //PRIVATE DATA MEMEBER FOR THE PROPERTY
         private Int32 mStaffNo;
@@ -171,20 +171,7 @@ namespace Toys4U_Classes
         }
 
         public Boolean Find(int StaffNo)
-        {//set the private data member to the test data value
-            //mStaffNo = 58;
-            //mAdmin = true;
-            //mDateJoined = Convert.ToDateTime("12 / 12 / 2012");
-            //mDateOfBirth = Convert.ToDateTime("12 / 12 / 2012");
-            //mEmail = "test@hotmail.com";
-            //mFirstName = "Test";
-            //mHourlyPay = 999m;
-            //mJobTitle = "Test";
-            //mLastName = "Test";
-            //mPassword = "Test";
-            //mPhoneNumber = "99999 999999";
-            //return true;
-
+        {
 
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
@@ -193,7 +180,7 @@ namespace Toys4U_Classes
             //execute the stored procedure
             DB.Execute("sproc_tblStaff_FilterByStaffNo");
             //if one record is found (there should be either one or zero!)
-            if (DB.Count ==1)
+            if (DB.Count == 1)
             {
                 //copy the data from the database to the private data members
                 mStaffNo = Convert.ToInt32(DB.DataTable.Rows[0]["StaffId"]);
@@ -221,12 +208,12 @@ namespace Toys4U_Classes
         {
             string Error = "";
 
-            if (FirstName.Length > 0 && FirstName.Length<41)
+            if (FirstName.Length > 0 && FirstName.Length < 41)
             {
-                foreach(char c in FirstName)
+                foreach (char c in FirstName)
                 {
 
-                    if(!Char.IsLetter(c))
+                    if (!Char.IsLetter(c))
                     {
                         Error += "The first name must only contain letters";
                     }
@@ -240,16 +227,16 @@ namespace Toys4U_Classes
             }
 
 
-            if(HourlyPay!="")
+            if (HourlyPay != "")
             {
                 try
                 {
                     decimal hourlypay;
                     hourlypay = Convert.ToDecimal(HourlyPay);
                     int decimalplaces = BitConverter.GetBytes(decimal.GetBits(hourlypay)[3])[2];
-                    if(decimalplaces == 2)
+                    if (decimalplaces == 2)
                     {
-                        if(hourlypay>6.14m && hourlypay<1000.01m)
+                        if (hourlypay > 6.14m && hourlypay < 1000.01m)
                         {
                             Error += "";
                         }
@@ -335,10 +322,10 @@ namespace Toys4U_Classes
             catch//if it failed report an error
             {
                 //set the error message
-                Error = Error += "Date is not valid";
+                Error = Error += "Date is not valid, please use the format DD/MM/YYYY";
             }
-            
-            
+
+
 
             try
             {
@@ -359,19 +346,19 @@ namespace Toys4U_Classes
             catch//if it failed report an error
             {
                 //set the error message
-                Error = Error += "Date is not valid";
+                Error = Error += "Date is not valid please use format DD/MM/YYYY";
             }
 
 
 
 
-            if (Email!= "")
+            if (Email != "")
             {
                 try
                 {
-                   
+
                     var address = new System.Net.Mail.MailAddress(Email);
-                    if (Email.Length>50)
+                    if (Email.Length > 50)
                     {
                         Error += "Email must be less than 50 characters";
                     }
@@ -387,7 +374,7 @@ namespace Toys4U_Classes
                 Error += "Email must not be blank";
             }
 
-            
+
             if (Password.Length > 0 && Password.Length < 41)
             {
                 bool ContainsCapitalLetter = false;
@@ -403,17 +390,17 @@ namespace Toys4U_Classes
                     if (char.IsLower(c)) ContainsLowerLetter = true;
                     if (char.IsDigit(c)) ContainsNumber = true;
                 }
-                if(ContainsCapitalLetter==false)
+                if (ContainsCapitalLetter == false)
                 {
-                    Error += "Please include one capital letter ";
+                    Error += "Please include one capital letter in your password  ";
                 }
-                else if (ContainsLowerLetter ==false)
+                else if (ContainsLowerLetter == false)
                 {
-                    Error += "Please include one lower letter ";
+                    Error += "Please include one lower letter in your password";
                 }
-                else if (ContainsNumber==false)
+                else if (ContainsNumber == false)
                 {
-                    Error += "Please include one number ";
+                    Error += "Please include one number in your password ";
                 }
 
             }
@@ -424,13 +411,13 @@ namespace Toys4U_Classes
             }
 
 
-            if(PhoneNumber!="")
+            if (PhoneNumber != "")
             {
-       
-               PhoneNumber= System.Text.RegularExpressions.Regex.Replace(PhoneNumber, @" ", "");
-                if (PhoneNumber.Length==11)
-                { 
-                    
+
+                PhoneNumber = System.Text.RegularExpressions.Regex.Replace(PhoneNumber, @" ", "");
+                if (PhoneNumber.Length == 11)
+                {
+
                     foreach (char c in PhoneNumber)
                     {
 
@@ -441,7 +428,7 @@ namespace Toys4U_Classes
                         }
                     }
                 }
-               else
+                else
                 {
                     Error += "The PhoneNumber must be 11 digits " + PhoneNumber;
 
@@ -450,10 +437,10 @@ namespace Toys4U_Classes
             }
 
 
-           return Error;
+            return Error;
         }
 
     }
-   
-  
+
+
 }

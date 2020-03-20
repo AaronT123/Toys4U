@@ -24,7 +24,7 @@ namespace Toys4U_Testing
         public void InstanceOK()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //test to see that it exists
             Assert.IsNotNull(AnStaff);
 
@@ -34,7 +34,7 @@ namespace Toys4U_Testing
         public void AdminPropertyOK()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //creaate some test data to assign to the property
             Boolean TestData = true;
             //assign the data to the property
@@ -51,7 +51,7 @@ namespace Toys4U_Testing
         public void DateJoinedPropertyOK()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //creaate some test data to assign to the property
             DateTime TestData = DateTime.Now.Date;
             //assign the data to the property
@@ -68,7 +68,7 @@ namespace Toys4U_Testing
         public void DateOfBirthPropertyOK()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //creaate some test data to assign to the property
             DateTime TestData = new DateTime(2000, 12, 12);
             //assign the data to the property
@@ -84,7 +84,7 @@ namespace Toys4U_Testing
         public void EmailPropertyOK()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //creaate some test data to assign to the property
             string TestData = "callumjohnsimpson@hotmail.com";
             //assign the data to the property
@@ -100,7 +100,7 @@ namespace Toys4U_Testing
         public void FirstNamePropertyOK()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //creaate some test data to assign to the property
             string TestData = "callum";
             //assign the data to the property
@@ -116,7 +116,7 @@ namespace Toys4U_Testing
         public void HourlyPayPropertyOK()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //creaate some test data to assign to the property
             Decimal TestData = 7.78m;
             //assign the data to the property
@@ -133,7 +133,7 @@ namespace Toys4U_Testing
         public void JobTitlePropertyOK()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //creaate some test data to assign to the property
             string TestData = "Web Developer";
             //assign the data to the property
@@ -149,7 +149,7 @@ namespace Toys4U_Testing
         public void LastNamePropertyOK()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //creaate some test data to assign to the property
             string TestData = "callum";
             //assign the data to the property
@@ -166,7 +166,7 @@ namespace Toys4U_Testing
         public void PasswordPropertyOK()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //creaate some test data to assign to the property
             string TestData = "PaSswORD123";
             //assign the data to the property
@@ -182,7 +182,7 @@ namespace Toys4U_Testing
         public void PhoneNumberPropertyOK()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //creaate some test data to assign to the property
             string TestData = "07654 675354";
             //assign the data to the property
@@ -198,7 +198,7 @@ namespace Toys4U_Testing
         public void StaffNoPropertyOK()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //creaate some test data to assign to the property
             int TestData = 12345;
             //assign the data to the property
@@ -214,7 +214,7 @@ namespace Toys4U_Testing
         public void FindMethodOK()
         {
             //CREATE AN INSTANCE OF THE CLASS WE WANT TO CREATE
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method 
@@ -232,7 +232,7 @@ namespace Toys4U_Testing
         {
 
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //boolean variable to store the result of the search
             Boolean Found = false;
             //boolean variable 
@@ -241,7 +241,7 @@ namespace Toys4U_Testing
             Int32 StaffNo = 58;
             Found = AnStaff.Find(StaffNo);
             //check the staff no
-            if (AnStaff.StaffNo !=58)
+            if (AnStaff.StaffNo != 58)
             {
                 OK = false;
             }
@@ -254,7 +254,7 @@ namespace Toys4U_Testing
         {
 
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //boolean variable to store the result of the search
             Boolean Found = false;
             //boolean variable 
@@ -277,7 +277,7 @@ namespace Toys4U_Testing
         {
 
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //boolean variable to store the result of the search
             Boolean Found = false;
             //boolean variable 
@@ -301,7 +301,7 @@ namespace Toys4U_Testing
         {
 
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //boolean variable to store the result of the search
             Boolean Found = false;
             //boolean variable 
@@ -323,7 +323,7 @@ namespace Toys4U_Testing
         {
 
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //boolean variable to store the result of the search
             Boolean Found = false;
             //boolean variable 
@@ -344,7 +344,7 @@ namespace Toys4U_Testing
         {
 
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //boolean variable to store the result of the search
             Boolean Found = false;
             //boolean variable 
@@ -366,7 +366,7 @@ namespace Toys4U_Testing
         {
 
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //boolean variable to store the result of the search
             Boolean Found = false;
             //boolean variable 
@@ -388,7 +388,7 @@ namespace Toys4U_Testing
         {
 
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //boolean variable to store the result of the search
             Boolean Found = false;
             //boolean variable 
@@ -410,7 +410,7 @@ namespace Toys4U_Testing
         {
 
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //boolean variable to store the result of the search
             Boolean Found = false;
             //boolean variable 
@@ -432,7 +432,7 @@ namespace Toys4U_Testing
         {
 
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //boolean variable to store the result of the search
             Boolean Found = false;
             //boolean variable 
@@ -454,7 +454,7 @@ namespace Toys4U_Testing
         {
 
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //boolean variable to store the result of the search
             Boolean Found = false;
             //boolean variable 
@@ -475,7 +475,7 @@ namespace Toys4U_Testing
         public void ValidMethodOk()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             String Error = "";
             //invoke the method
@@ -486,7 +486,7 @@ namespace Toys4U_Testing
         public void DateofBirthExtremeMin()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             DateTime DateNow = DateTime.Today;
             DateTime TestDate;
@@ -503,7 +503,7 @@ namespace Toys4U_Testing
         public void DateofBirthMinMinusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             DateTime DateNow = DateTime.Today;
             DateTime TestDate;
@@ -521,7 +521,7 @@ namespace Toys4U_Testing
         public void DateofBirthMinBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             DateTime DateNow = DateTime.Today;
             DateTime TestDate;
@@ -538,7 +538,7 @@ namespace Toys4U_Testing
         public void DateofBirthMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             DateTime DateNow = DateTime.Today;
             DateTime TestDate;
@@ -554,7 +554,7 @@ namespace Toys4U_Testing
         public void DateofBirthMaxMinOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             DateTime DateNow = DateTime.Today;
             DateTime TestDate;
@@ -570,7 +570,7 @@ namespace Toys4U_Testing
         public void DateofBirthMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             DateTime DateNow = DateTime.Today;
             DateTime TestDate;
@@ -587,7 +587,7 @@ namespace Toys4U_Testing
         public void DateofBirthMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             DateTime DateNow = DateTime.Today;
             DateTime TestDate;
@@ -604,7 +604,7 @@ namespace Toys4U_Testing
         public void DateofBirthMid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             DateTime DateNow = DateTime.Today;
             DateTime TestDate;
@@ -621,7 +621,7 @@ namespace Toys4U_Testing
         public void DateofBirthExtremeMax()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             DateTime DateNow = DateTime.Today;
             DateTime TestDate;
@@ -637,7 +637,7 @@ namespace Toys4U_Testing
         public void DateOfBirthinvalid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
 
             string TestDate = "fff";
@@ -653,9 +653,9 @@ namespace Toys4U_Testing
         public void DateJoinedExtremeMin()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
-            
+
             DateTime TestDate;
 
             TestDate = DateTime.Now.AddYears(-1000);
@@ -671,12 +671,12 @@ namespace Toys4U_Testing
         public void DateJoinedMinMinusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
 
             DateTime TestDate = DateTime.Today.AddDays(.1);
 
-           
+
             DateJoined = Convert.ToString(TestDate);
             String Error = "";
             //invoke the method
@@ -689,7 +689,7 @@ namespace Toys4U_Testing
         public void DateJoinedMinBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
 
             DateTime TestDate = DateTime.Today;
@@ -704,7 +704,7 @@ namespace Toys4U_Testing
         public void DateJoinedMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Error = "";
 
@@ -719,18 +719,18 @@ namespace Toys4U_Testing
             Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
             Assert.AreNotEqual(Error, "");
         }
-       
- 
-   
+
+
+
 
 
         [TestMethod]
         public void DateJoinedExtremeMax()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
-            string Error= "";
+            string Error = "";
 
             DateTime TestDate;
 
@@ -739,7 +739,7 @@ namespace Toys4U_Testing
             TestDate = TestDate.AddYears(100);
 
             string DateJoined = TestDate.ToString();
-            
+
             Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
             Assert.AreNotEqual(Error, "");
         }
@@ -748,10 +748,10 @@ namespace Toys4U_Testing
         public void DateJoinedinvalid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
-           
-            string TestDate = "fff"; 
+
+            string TestDate = "fff";
             DateJoined = Convert.ToString(TestDate);
             String Error = "";
             //invoke the method
@@ -763,13 +763,13 @@ namespace Toys4U_Testing
 
         //email
 
-       
+
 
         [TestMethod]
         public void EmailMinMinusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Email = "";
             String Error = "";
@@ -783,7 +783,7 @@ namespace Toys4U_Testing
         public void EmailMinBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Email = "x@y.zz";
             String Error = "";
@@ -796,7 +796,7 @@ namespace Toys4U_Testing
         public void EmailMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Email = "xx@y.zz";
             String Error = "";
@@ -808,7 +808,7 @@ namespace Toys4U_Testing
         public void EmailMaxMinOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Email = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@y.zz";
             String Error = "";
@@ -820,7 +820,7 @@ namespace Toys4U_Testing
         public void EmailMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Email = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@y.zz";
             String Error = "";
@@ -833,7 +833,7 @@ namespace Toys4U_Testing
         public void EmailMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Email = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@y.zz";
             String Error = "";
@@ -846,7 +846,7 @@ namespace Toys4U_Testing
         public void EmailMid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Email = "xxxxxxxxxxxxxxxx.yyyyyyyyyyy@zzz";
             String Error = "";
@@ -859,7 +859,7 @@ namespace Toys4U_Testing
         public void EmailExtremeMax()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Email = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyYYY.zzzzz";
             String Error = "";
@@ -871,7 +871,7 @@ namespace Toys4U_Testing
         public void Emailinvalid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Email = "%^%$";
             String Error = "";
@@ -882,13 +882,13 @@ namespace Toys4U_Testing
 
         //firstName
 
-      
+
 
         [TestMethod]
         public void FirstNameMinMinusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string FirstName = "";
             String Error = "";
@@ -902,7 +902,7 @@ namespace Toys4U_Testing
         public void FirstNameMinBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string FirstName = "a";
             String Error = "";
@@ -915,7 +915,7 @@ namespace Toys4U_Testing
         public void FirstNameMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string FirstName = "xx";
             String Error = "";
@@ -927,7 +927,7 @@ namespace Toys4U_Testing
         public void FirstNameMaxMinOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string FirstName = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM";
             String Error = "";
@@ -939,7 +939,7 @@ namespace Toys4U_Testing
         public void FirstNameMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string FirstName = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMN";
             String Error = "";
@@ -952,7 +952,7 @@ namespace Toys4U_Testing
         public void FirstNameMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string FirstName = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNO";
             String Error = "";
@@ -965,7 +965,7 @@ namespace Toys4U_Testing
         public void FirstNameMid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string FirstName = "ABCDEFGHIJKLMNOPQRST";
             String Error = "";
@@ -978,7 +978,7 @@ namespace Toys4U_Testing
         public void FirstNameExtremeMax()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string FirstName = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV";
             String Error = "";
@@ -990,7 +990,7 @@ namespace Toys4U_Testing
         public void FirstNameinvalid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string FirstName = "%^%$";
             String Error = "";
@@ -1007,7 +1007,7 @@ namespace Toys4U_Testing
         public void LastNameMinMinusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string LastName = "";
             String Error = "";
@@ -1021,7 +1021,7 @@ namespace Toys4U_Testing
         public void lastNameMinBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string lastName = "a";
             String Error = "";
@@ -1034,7 +1034,7 @@ namespace Toys4U_Testing
         public void LastNameMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string LastName = "xx";
             String Error = "";
@@ -1046,7 +1046,7 @@ namespace Toys4U_Testing
         public void LastNameMaxMinOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string LastName = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM";
             String Error = "";
@@ -1058,7 +1058,7 @@ namespace Toys4U_Testing
         public void LastNameMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string LastName = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMN";
             String Error = "";
@@ -1071,7 +1071,7 @@ namespace Toys4U_Testing
         public void LastNameMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string LastName = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNO";
             String Error = "";
@@ -1084,7 +1084,7 @@ namespace Toys4U_Testing
         public void LastNameMid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string LastName = "ABCDEFGHIJKLMNOPQRST";
             String Error = "";
@@ -1097,7 +1097,7 @@ namespace Toys4U_Testing
         public void LastNameExtremeMax()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string LastName = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV";
             String Error = "";
@@ -1109,7 +1109,7 @@ namespace Toys4U_Testing
         public void LastNameinvalid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string LastName = "%^%$";
             String Error = "";
@@ -1129,7 +1129,7 @@ namespace Toys4U_Testing
         public void JobTitleMinMinusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string JobTitle = "";
             String Error = "";
@@ -1143,7 +1143,7 @@ namespace Toys4U_Testing
         public void JobTitleMinBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string JobTitle = "a";
             String Error = "";
@@ -1156,7 +1156,7 @@ namespace Toys4U_Testing
         public void JobTitleMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string JobTitle = "xx";
             String Error = "";
@@ -1168,7 +1168,7 @@ namespace Toys4U_Testing
         public void JobTitleMaxMinOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string JobTitle = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM";
             String Error = "";
@@ -1180,7 +1180,7 @@ namespace Toys4U_Testing
         public void JobTitleMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string JobTitle = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMN";
             String Error = "";
@@ -1193,7 +1193,7 @@ namespace Toys4U_Testing
         public void JobTitleMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string JobTitle = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNO";
             String Error = "";
@@ -1206,7 +1206,7 @@ namespace Toys4U_Testing
         public void JobTitleMid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string JobTitle = "ABCDEFGHIJKLMNOPQRST";
             String Error = "";
@@ -1219,7 +1219,7 @@ namespace Toys4U_Testing
         public void JobTitleExtremeMax()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string JobTitle = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV";
             String Error = "";
@@ -1231,7 +1231,7 @@ namespace Toys4U_Testing
         public void JobTitleinvalid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string JobTitle = "%^%$";
             String Error = "";
@@ -1247,7 +1247,7 @@ namespace Toys4U_Testing
         public void HourlyPayExtremeMin()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string HourlyPay = "-99.99";
             String Error = "";
@@ -1261,7 +1261,7 @@ namespace Toys4U_Testing
         public void HourlyPayMinMinusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string HourlyPay = "6.14";
             String Error = "";
@@ -1275,7 +1275,7 @@ namespace Toys4U_Testing
         public void HourlyPayMinBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string HourlyPay = "6.15";
             String Error = "";
@@ -1288,7 +1288,7 @@ namespace Toys4U_Testing
         public void HourlyPayMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string HourlyPay = "6.16";
             String Error = "";
@@ -1300,7 +1300,7 @@ namespace Toys4U_Testing
         public void HourlyPayMaxMinOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string HourlyPay = "999.99";
             String Error = "";
@@ -1312,7 +1312,7 @@ namespace Toys4U_Testing
         public void HourlyPayMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string HourlyPay = "1000.00";
             String Error = "";
@@ -1325,7 +1325,7 @@ namespace Toys4U_Testing
         public void HourlyPayMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string HourlyPay = "1000.01";
             String Error = "";
@@ -1338,7 +1338,7 @@ namespace Toys4U_Testing
         public void HourlyPayMid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string HourlyPay = "500.00";
             String Error = "";
@@ -1351,7 +1351,7 @@ namespace Toys4U_Testing
         public void HourlyPayExtremeMax()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string HourlyPay = "1000000000";
             String Error = "";
@@ -1363,7 +1363,7 @@ namespace Toys4U_Testing
         public void HourlyPayinvalid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Email = "%^%$";
             String Error = "";
@@ -1384,7 +1384,7 @@ namespace Toys4U_Testing
         public void PhoneNumberMinMinusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string PhoneNumber = "00000 00000";
             String Error = "";
@@ -1398,7 +1398,7 @@ namespace Toys4U_Testing
         public void PhoneNumberMinBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string PhoneNumber = "00000 000000";
             String Error = "";
@@ -1407,15 +1407,15 @@ namespace Toys4U_Testing
             Assert.AreEqual(Error, "");
         }
 
-      
-     
-      
+
+
+
 
         [TestMethod]
         public void PhoneNumberMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string PhoneNumber = "00000 0000000";
             String Error = "";
@@ -1424,13 +1424,13 @@ namespace Toys4U_Testing
             Assert.AreNotEqual(Error, "");
         }
 
-       
+
 
         [TestMethod]
         public void PhoneNumberExtremeMax()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string PhoneNumber = "0000 00000000000 00000000000 0000000";
             String Error = "";
@@ -1442,7 +1442,7 @@ namespace Toys4U_Testing
         public void PhoneNumberinvalid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string PhoneNumber = "%^%$";
             String Error = "";
@@ -1453,7 +1453,7 @@ namespace Toys4U_Testing
 
 
 
-           //Password
+        //Password
 
 
 
@@ -1461,7 +1461,7 @@ namespace Toys4U_Testing
         public void PasswordMinMinusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Password = "";
             String Error = "";
@@ -1475,7 +1475,7 @@ namespace Toys4U_Testing
         public void PasswordMinBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Password = "aB1";
             String Error = "";
@@ -1488,7 +1488,7 @@ namespace Toys4U_Testing
         public void PasswordMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Password = "aB12";
             String Error = "";
@@ -1500,7 +1500,7 @@ namespace Toys4U_Testing
         public void PasswordMaxMinOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Password = "ab1DEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM";
             String Error = "";
@@ -1512,7 +1512,7 @@ namespace Toys4U_Testing
         public void PasswordMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Password = "ab1DEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMN";
             String Error = "";
@@ -1525,7 +1525,7 @@ namespace Toys4U_Testing
         public void PasswordMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Password = "ab1DEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNO";
             String Error = "";
@@ -1538,7 +1538,7 @@ namespace Toys4U_Testing
         public void PasswordMid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Password = "ab1DEFGHIJKLMNOPQRST";
             String Error = "";
@@ -1551,7 +1551,7 @@ namespace Toys4U_Testing
         public void PasswordExtremeMax()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Password = "ab1DEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUV";
             String Error = "";
@@ -1563,7 +1563,7 @@ namespace Toys4U_Testing
         public void Passwordinvalid()
         {
             //create an instance of the class we want to create
-            clsStaff AnStaff = new clsStaff();
+            clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
             string Password = "%^%$";
             String Error = "";
