@@ -28,11 +28,11 @@ namespace Toys4U_Classes
         //public property for the customer list
         public List<clsCustomer> CustomerList
         {
-           
+
 
             get
             {
-               // return the private data
+                // return the private data
                 return mCustomerList;
             }
             set
@@ -53,7 +53,7 @@ namespace Toys4U_Classes
             {
                 //we shall worry about this later
             }
-          
+
         }
         //constructor for the class
         public clsCustomerCollection()
@@ -64,7 +64,7 @@ namespace Toys4U_Classes
             DB.Execute("sproc_tblCustomer_SelectAll");
             //populate that array list
             PopulateArray(DB);
-        
+
         }
         public int Add()
         {
@@ -125,7 +125,7 @@ namespace Toys4U_Classes
             //populate the array list with data table
             PopulateArray(DB);
         }
-        void PopulateArray (clsDataConnection DB)
+        void PopulateArray(clsDataConnection DB)
         {
             //populate the array list based on the data table in the parameter DB
             //var for the index
