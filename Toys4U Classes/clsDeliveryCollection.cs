@@ -12,38 +12,6 @@ namespace Toys4U_Classes
         //constructor for the class
         public clsDeliveryCollection()
         {
-            /*
-            //var for the index
-            Int32 Index = 0;
-            //var to store the record count
-            Int32 RecordCount = 0;
-            //object for data connection
-            clsDataConnection DB = new clsDataConnection();
-            //execute the stored procedure
-            DB.Execute("sproc_tblDelivery_SelectAll");
-            //get the count of records
-            RecordCount = DB.Count;
-            //while there are records to process
-            while (Index < RecordCount)
-            {
-                //create a blank delivery
-                clsDelivery ADelivery = new clsDelivery();
-                //read in the fileds from the current record
-                ADelivery.DeliveryID = Convert.ToInt32(DB.DataTable.Rows[Index]["DeliveryID"]);
-                ADelivery.OrderID = Convert.ToInt32(DB.DataTable.Rows[Index]["OrderID"]);
-                ADelivery.HouseNo = Convert.ToString(DB.DataTable.Rows[Index]["HouseNo"]);
-                ADelivery.Street = Convert.ToString(DB.DataTable.Rows[Index]["Street"]);
-                ADelivery.Town = Convert.ToString(DB.DataTable.Rows[Index]["Town"]);
-                ADelivery.City = Convert.ToString(DB.DataTable.Rows[Index]["City"]);
-                ADelivery.Postcode = Convert.ToString(DB.DataTable.Rows[Index]["Postcode"]);
-                ADelivery.DateAdded = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAdded"]);
-                ADelivery.DateEstimated = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateEstimated"]);
-                //add the record to the private data member
-                mDeliveryList.Add(ADelivery);
-                //point at the next record
-                Index++;
-            }
-            */
             //object for data connection
             clsDataConnection DB = new clsDataConnection();
             //execute the stored procedure
@@ -51,8 +19,6 @@ namespace Toys4U_Classes
             //populate the array list with the data table
             PopulateArray(DB);
         }
-
-        
 
         //public property for the delivery list
         public List<clsDelivery> DeliveryList
