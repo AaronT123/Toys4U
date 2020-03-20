@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Toys4U_Classes;
 
 namespace Toys4U_Front_Office
 {
@@ -25,7 +26,7 @@ namespace Toys4U_Front_Office
         void DisplayToys()
         {
             //create an instance of the toys collection
-            Toys4U_Classes.clsProductCollection Toys = new Toys4U_Classes.clsProductCollection();
+            clsProductCollection Toys = new clsProductCollection();
             //set the data source to the list of toys in  the collection
             LstToys.DataSource = Toys.ProductHome;
             //set the name of the primary key
