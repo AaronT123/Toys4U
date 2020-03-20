@@ -197,6 +197,7 @@ namespace Toys4U_Testing
             Assert.AreNotEqual(Error, "");
         }
 
+        /*
         [TestMethod]
         public void OrderDateMin()
         {
@@ -215,6 +216,7 @@ namespace Toys4U_Testing
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
+        */
 
         [TestMethod]
         public void OrderDateMinPlusOne()
