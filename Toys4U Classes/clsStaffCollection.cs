@@ -9,16 +9,21 @@ namespace Toys4U_Classes
         List<clsStaff> mStaffList = new List<clsStaff>();
         //private edata member thisSt\aff
         clsStaff mThisStaff = new clsStaff();
-        
+
         //constructor for the class
         public clsStaffCollection()
         {
+            //var for the index
+            Int32 Index = 0;
+            //var to store the recrod count 
+            Int32 RecordCount = 0;
             //object for data conneciton
             clsDataConnection DB = new clsDataConnection();
             //execute the stored proceduire
             DB.Execute("sproc_tblStaff_SelectAll");
             //populate the arry list with the data table
             PopulateArray(DB);
+
         }
 
         //public List<clsStaff> StaffList { get; set; }
@@ -50,7 +55,7 @@ namespace Toys4U_Classes
                 //we shall worry about this later
             }
         }
-  
+
         //public property for thisStaff
         public clsStaff ThisStaff
         {
@@ -98,7 +103,7 @@ namespace Toys4U_Classes
             DB.AddParameter("@StaffId", mThisStaff.StaffNo);
             //execute the stored procedure
             DB.Execute("sproc_tblStaff_Delete");
-            
+
 
         }
 
