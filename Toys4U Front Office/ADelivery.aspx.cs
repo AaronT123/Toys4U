@@ -22,8 +22,6 @@ namespace Toys4U_Front_Office
 
             if (IsPostBack == false)
             {
-                //populate the list of Deliveries
-                //DisplayDelivery();
                 //if this is not a new record
                 if (DeliveryID != -1)
                 {
@@ -46,8 +44,8 @@ namespace Toys4U_Front_Office
             txtTown.Text = MyDeliveries.ThisDelivery.Town;
             txtCity.Text = MyDeliveries.ThisDelivery.City;
             txtPostcode.Text = MyDeliveries.ThisDelivery.Postcode;
-            txtDateAdded.Text = Convert.ToString(MyDeliveries.ThisDelivery.DateAdded);
-            txtDateEstimated.Text = Convert.ToString(MyDeliveries.ThisDelivery.DateEstimated);
+            txtDateAdded.Text = MyDeliveries.ThisDelivery.DateAdded.ToString("yyyy-MM-dd");
+            txtDateEstimated.Text = MyDeliveries.ThisDelivery.DateEstimated.ToString("yyyy-MM-dd");
         }
 
         //function for adding new records
@@ -56,6 +54,7 @@ namespace Toys4U_Front_Office
             //create an instance of a clsDeliveryCollection
             clsDeliveryCollection MyDeliveries = new clsDeliveryCollection();
             //validate the data on the web form
+            lblError.Text = "";
             String Error = MyDeliveries.ThisDelivery.Valid(txtOrderID.Text, txtHouseNo.Text, txtStreet.Text, txtTown.Text, txtCity.Text, txtPostcode.Text, txtDateAdded.Text, txtDateEstimated.Text);
             if (Error == "")
             {
@@ -67,14 +66,16 @@ namespace Toys4U_Front_Office
                 MyDeliveries.ThisDelivery.City = txtCity.Text;
                 MyDeliveries.ThisDelivery.Postcode = txtPostcode.Text;
                 MyDeliveries.ThisDelivery.DateAdded = Convert.ToDateTime(txtDateAdded.Text);
+                MyDeliveries.ThisDelivery.DateAdded.ToString("dd/MM/yyyy");
                 MyDeliveries.ThisDelivery.DateEstimated = Convert.ToDateTime(txtDateEstimated.Text);
+                MyDeliveries.ThisDelivery.DateEstimated.ToString("dd/MM/yyyy");
                 //add the record
                 MyDeliveries.Add();
             }
             else
             {
                 //report an error
-                lblError.Text = "There were problems with the data entered " + Error;
+                lblError.Text = "There were problems with the data entered: " + Error;
             }
         }
 
@@ -84,6 +85,7 @@ namespace Toys4U_Front_Office
             //create an instance of the deliveries
             clsDeliveryCollection Deliveries = new clsDeliveryCollection();
             //validate the data on the web form
+            lblError.Text = "";
             String Error = Deliveries.ThisDelivery.Valid(txtOrderID.Text, txtHouseNo.Text, txtStreet.Text, txtTown.Text, txtCity.Text, txtPostcode.Text, txtDateAdded.Text, txtDateEstimated.Text);
             // if the data is ok then add it to the object
             if (Error == "")
@@ -98,7 +100,9 @@ namespace Toys4U_Front_Office
                 Deliveries.ThisDelivery.City = txtCity.Text;
                 Deliveries.ThisDelivery.Postcode = txtPostcode.Text;
                 Deliveries.ThisDelivery.DateAdded = Convert.ToDateTime(txtDateAdded.Text);
+                Deliveries.ThisDelivery.DateAdded.ToString("dd/MM/yyyy");
                 Deliveries.ThisDelivery.DateEstimated = Convert.ToDateTime(txtDateEstimated.Text);
+                Deliveries.ThisDelivery.DateEstimated.ToString("dd/MM/yyyy");
                 //update the record
                 Deliveries.Update();
                 //all done so redirect back to the main page
@@ -107,32 +111,17 @@ namespace Toys4U_Front_Office
             else
             {
                 //report an error
-                lblError.Text = "There were problems with the data entered " + Error;
+                lblError.Text = "There were problems with the data entered: " + Error;
             }
         }
 
         protected void btnOK_Click(object sender, EventArgs e)
         {
-            /*
-            //create a new instance of clsDelivery
-            clsDelivery ADelivery = new clsDelivery();
-            //capture the Order ID
-            ADelivery.OrderID = Convert.ToInt32(txtOrderID.Text);
-            ADelivery.HouseNo = txtHouseNo.Text;
-            ADelivery.Street = txtStreet.Text;
-            ADelivery.Town = txtTown.Text;
-            ADelivery.City = txtCity.Text;
-            ADelivery.Postcode = txtPostcode.Text;
-            ADelivery.DateAdded = Convert.ToDateTime(txtDateAdded.Text);
-            ADelivery.DateEstimated = Convert.ToDateTime(txtDateEstimated.Text);
-            //store the delivery in the session object
-            Session["ADelivery"] = ADelivery;
-            */
-
             if (DeliveryID == -1)
             {
                 //add the new record
                 Add();
+
             }
             else
             {
@@ -140,6 +129,15 @@ namespace Toys4U_Front_Office
                 Update();
             }
             //redirect to the viewer page
+            if (lblError.Text == "")
+            {
+                Response.Redirect("DeliveryList.aspx");
+            }
+            
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
             Response.Redirect("DeliveryList.aspx");
         }
     }

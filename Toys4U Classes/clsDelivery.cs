@@ -167,9 +167,127 @@ namespace Toys4U_Classes
             }
         }
 
-        public string Valid(string text1, string text2, string text3, string text4, string text5, string text6, string text7, string text8)
+        public string Valid(string OrderID, string HouseNo, string Street, string Town, string City, string Postcode, string DateAdded, string DateEstimated)
         {
+            /*
+             * 
+             * OrderID
+             * 
+             */
+            //create a string variable to store the error
             string Error = "";
+            //if the OrderID is blank
+            if (OrderID.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Order ID may not be blank : ";
+            }
+            //if the OrderID is greater than 9 characters
+            if (OrderID.Length > 9)
+            {
+                //record the error
+                Error = Error + "The Order ID may not be longer than 9 characters : ";
+            }
+            //if the OrderID is digits only
+            Boolean charInOrderID = false;
+            foreach (char c in OrderID)
+            {
+                if (c < '0' || c > '9')
+                    charInOrderID = true;
+            }
+            if (charInOrderID == true)
+            {
+                Error = Error + "The Order ID may only be numbers : ";
+            }
+            /*
+             * HouseNo
+             */
+            //if the HouseNo is blank
+            if (HouseNo.Length == 0)
+            {
+                //record the error
+                Error = Error + "The House No may not be blank : ";
+            }
+            if (HouseNo.Length > 8)
+            {
+                //record the error
+                Error = Error + "The House No may not be longer than 8 characters : ";
+            }
+            /*
+             * Street
+             */
+            if (Street.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Street may not be blank : ";
+            }
+            if (Street.Length > 50)
+            {
+                //record the error
+                Error = Error + "The Street may not be longer than 50 characters : ";
+            }
+            /*
+             * Town
+             */
+            if (Town.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Town may not be blank : ";
+            }
+            if (Town.Length > 50)
+            {
+                //record the error
+                Error = Error + "The Town may not be longer than 50 characters : ";
+            }
+            /*
+             * City
+             */
+            if (City.Length == 0)
+            {
+                //record the error
+                Error = Error + "The City may not be blank : ";
+            }
+            if (City.Length > 50)
+            {
+                //record the error
+                Error = Error + "The City may not be longer than 50 characters : ";
+            }
+            /*
+             * Postcode
+             */
+            if (Postcode.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Postcode may not be blank : ";
+            }
+
+            if (Postcode.Length < 6)
+            {
+                //record the error
+                Error = Error + "The Postcode may not be less than 6 characters (including a space) : ";
+            }
+
+            if (Postcode.Length > 8)
+            {
+                //record the error
+                Error = Error + "The Postcode may not be more than 8 characters (including a space) : ";
+            }
+
+            Int32 PostcodeSpaceCount = 0;
+            foreach (char c in Postcode)
+            {
+                if (c == ' ')
+                    PostcodeSpaceCount += 1;
+            }
+            if (PostcodeSpaceCount > 1)
+            {
+                Error = Error + "The postcode may only contain 1 space : ";
+            }
+            if (PostcodeSpaceCount < 1)
+            {
+                Error = Error + "The postcode needs to contain a space : ";
+            }
+            //return any error messages
             return Error;
         }
 
