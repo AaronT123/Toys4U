@@ -68,19 +68,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AnProduct.aspx" />
+    <Content Include="AnStaffManagemenT.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="obj\Debug\Toys4U Front Office.csproj.FileListAbsolute.txt" />
     <Content Include="ProductViewer.aspx" />
+    <Content Include="StaffManagemenTDeletePage.aspx" />
+    <Content Include="StaffManagemenTList.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AnStaff.aspx" />
     <Content Include="AnCustomer.aspx" />
     <Content Include="AnOrder.aspx" />
     <Content Include="CustomerViewer.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="OrderViewer.aspx" />
-    <Content Include="StaffViewer.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -90,13 +91,6 @@
     </Compile>
     <Compile Include="AnProduct.aspx.designer.cs">
       <DependentUpon>AnProduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AnStaff.aspx.cs">
-      <DependentUpon>AnStaff.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AnStaff.aspx.designer.cs">
-      <DependentUpon>AnStaff.aspx</DependentUpon>
     </Compile>
     <Compile Include="AnCustomer.aspx.cs">
       <DependentUpon>AnCustomer.aspx</DependentUpon>
@@ -112,6 +106,13 @@
     <Compile Include="AnOrder.aspx.designer.cs">
       <DependentUpon>AnOrder.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AnStaffManagemenT.aspx.cs">
+      <DependentUpon>AnStaffManagemenT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnStaffManagemenT.aspx.designer.cs">
+      <DependentUpon>AnStaffManagemenT.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CustomerViewer.aspx.cs">
       <DependentUpon>CustomerViewer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,9 +127,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="ProductViewer.aspx.cs">
       <DependentUpon>ProductViewer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -143,12 +141,19 @@
     <Compile Include="OrderViewer.aspx.designer.cs">
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StaffViewer.aspx.cs">
-      <DependentUpon>StaffViewer.aspx</DependentUpon>
+    <Compile Include="StaffManagemenTDeletePage.aspx.cs">
+      <DependentUpon>StaffManagemenTDeletePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="StaffViewer.aspx.designer.cs">
-      <DependentUpon>StaffViewer.aspx</DependentUpon>
+    <Compile Include="StaffManagemenTDeletePage.aspx.designer.cs">
+      <DependentUpon>StaffManagemenTDeletePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffManagemenTList.aspx.cs">
+      <DependentUpon>StaffManagemenTList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffManagemenTList.aspx.designer.cs">
+      <DependentUpon>StaffManagemenTList.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
