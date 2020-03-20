@@ -83,5 +83,10 @@ namespace Toys4U_Front_Office
                 lblError.Text = "Please select a record to edit from the list";
             }
         }
+
+        protected void lstOrders_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
