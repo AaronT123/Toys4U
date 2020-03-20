@@ -13,10 +13,6 @@ namespace Toys4U_Classes
         //constructor for the class
         public clsStaffManagemenTCollection()
         {
-            //var for the index
-            Int32 Index = 0;
-            //var to store the recrod count 
-            Int32 RecordCount = 0;
             //object for data conneciton
             clsDataConnection DB = new clsDataConnection();
             //execute the stored proceduire

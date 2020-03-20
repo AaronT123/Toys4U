@@ -1023,7 +1023,7 @@ namespace Toys4U_Testing
             //create an instance of the class we want to create
             clsStaffManagemenT AnStaff = new clsStaffManagemenT();
             //string variable to store any error message
-            string lastName = "a";
+            string LastName = "a";
             String Error = "";
             //invoke the method
             Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
