@@ -70,6 +70,7 @@
     <Content Include="ADelivery.aspx" />
     <Content Include="AnOrderLine.aspx" />
     <Content Include="AnProduct.aspx" />
+    <Content Include="AnStaff.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="CustomerDelete.aspx" />
     <Content Include="CustomerList.aspx" />
@@ -84,11 +85,12 @@
     <Content Include="ProductViewer.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AnStaff.aspx" />
     <Content Include="AnCustomer.aspx" />
     <Content Include="AnOrder.aspx" />
     <Content Include="CustomerViewer.aspx" />
     <Content Include="OrderViewer.aspx" />
+    <Content Include="StaffDeletePage.aspx" />
+    <Content Include="StaffList.aspx" />
     <Content Include="StaffViewer.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -113,13 +115,6 @@
     <Compile Include="AnProduct.aspx.designer.cs">
       <DependentUpon>AnProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AnStaff.aspx.cs">
-      <DependentUpon>AnStaff.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AnStaff.aspx.designer.cs">
-      <DependentUpon>AnStaff.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AnCustomer.aspx.cs">
       <DependentUpon>AnCustomer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -133,6 +128,13 @@
     </Compile>
     <Compile Include="AnOrder.aspx.designer.cs">
       <DependentUpon>AnOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnStaff.aspx.cs">
+      <DependentUpon>AnStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnStaff.aspx.designer.cs">
+      <DependentUpon>AnStaff.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>

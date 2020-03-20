@@ -23,7 +23,7 @@ namespace Toys4U_Classes
         //private data memeber for the HouseNo property
         private string mHouseNo;
 
-        //public property for the Customer ID
+        //public property for the Customer ID.
         public int CustomerID
         {
             get
@@ -200,7 +200,7 @@ namespace Toys4U_Classes
             if (EmailAddress.Length > 25)
             {
                 //record the error
-                Error = Error + "The Email Address must be less than 15 characters : ";
+                Error = Error + "The Email Address must be less than 25 characters : ";
             }
 
 
@@ -230,26 +230,6 @@ namespace Toys4U_Classes
                 //record the error
                 Error = Error + "The LastName must be less than 15 characters : ";
             }
-            //if (PhoneNumber != "")
-            //{
-            //    try
-            //    {
-            //        Int32 PhoneNumberCheck = Convert.ToInt32(PhoneNumber);
-            //        return "";
-            //    }
-            //    catch
-            //    {
-            //        return "This is not a number";
-            //    }
-            //}
-            //if (PhoneNumber == "")
-            //{
-            //    return "The PhoneNumber  may not b blank";
-            //}
-            //if (PhoneNumber.Length > 15)
-            //{
-            //    return "The PhoneNumber cannot have more than 15 characters";
-            //}
 
             //if the PhoneNumber is blank
             if (PhoneNumber.Length == 0)
@@ -259,7 +239,7 @@ namespace Toys4U_Classes
             }
             if (PhoneNumber.Length > 11)
             {
-                //record the error
+                //record the error.
                 Error = Error + "The PhoneNumber must be 11 numbers : ";
             }
 
@@ -275,7 +255,7 @@ namespace Toys4U_Classes
                 Error = Error + "The postcode must be less than 7 characters  : ";
             }
 
-            //if the StreetName is blank
+            //if the StreetName is blank.
             if (StreetName.Length == 0)
             {
                 //record the error

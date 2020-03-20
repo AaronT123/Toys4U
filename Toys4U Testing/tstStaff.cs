@@ -1284,11 +1284,6 @@ namespace Toys4U_Testing
             Assert.AreEqual(Error, "");
         }
 
-
-        //[TestMethod]
-        //public void ValidMethodOk()
-        //{
-
         [TestMethod]
         public void HourlyPayMinPlusOne()
         {
@@ -1526,7 +1521,6 @@ namespace Toys4U_Testing
             Assert.AreEqual(Error, "");
         }
 
-
         [TestMethod]
         public void PasswordMaxPlusOne()
         {
@@ -1553,9 +1547,6 @@ namespace Toys4U_Testing
             Assert.AreEqual(Error, "");
         }
 
-
-        //}
-
         [TestMethod]
         public void PasswordExtremeMax()
         {
@@ -1580,6 +1571,5 @@ namespace Toys4U_Testing
             Error = AnStaff.Valid(DateJoined, DateOfBirth, Email, FirstName, HourlyPay, JobTitle, LastName, Password, PhoneNumber);
             Assert.AreNotEqual(Error, "");
         }
-
     }
 }

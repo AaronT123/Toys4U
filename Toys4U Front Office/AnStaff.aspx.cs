@@ -13,7 +13,7 @@ namespace Toys4U_Front_Office
         //var to store the staff id with page level scope
         Int32 StaffNo;
 
-        //event handler for the page load event 
+        //event handler for the page load event.
         protected void Page_Load(object sender, EventArgs e)
         {
             //get the number of the staff to be processed 
